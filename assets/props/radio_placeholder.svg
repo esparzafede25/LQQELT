@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 180" width="240" height="180">
+  <defs>
+    <linearGradient id="radioWood" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#704214"/>
+      <stop offset="50%" stop-color="#4e2c0e"/>
+      <stop offset="100%" stop-color="#2d1704"/>
+    </linearGradient>
+    <radialGradient id="dialGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffecb3"/>
+      <stop offset="70%" stop-color="#e6b800"/>
+      <stop offset="100%" stop-color="#805d00"/>
+    </radialGradient>
+  </defs>
+  <!-- Wooden Cabinet -->
+  <rect x="20" y="30" width="200" height="130" rx="12" fill="url(#radioWood)" stroke="#1a0c02" stroke-width="3"/>
+  <!-- Speaker grill slots -->
+  <g fill="#241406" stroke="#120901" stroke-width="1">
+    <rect x="35" y="48" width="70" height="6" rx="3"/>
+    <rect x="35" y="60" width="70" height="6" rx="3"/>
+    <rect x="35" y="72" width="70" height="6" rx="3"/>
+    <rect x="35" y="84" width="70" height="6" rx="3"/>
+    <rect x="35" y="96" width="70" height="6" rx="3"/>
+    <rect x="35" y="108" width="70" height="6" rx="3"/>
+  </g>
+  <!-- Round tuning dial -->
+  <circle cx="165" cy="85" r="38" fill="#1c1611" stroke="#a08050" stroke-width="4"/>
+  <circle cx="165" cy="85" r="32" fill="url(#dialGlow)" opacity="0.85"/>
+  <!-- Dial frequency markings -->
+  <circle cx="165" cy="85" r="26" fill="none" stroke="#52390a" stroke-width="1" stroke-dasharray="2,5"/>
+  <text x="165" y="75" font-family="'Courier New', monospace" font-size="7" font-weight="bold" fill="#3a2504" text-anchor="middle">AM • kHz</text>
+  <text x="150" y="88" font-family="'Courier New', monospace" font-size="6" fill="#3a2504">600</text>
+  <text x="165" y="96" font-family="'Courier New', monospace" font-size="6" fill="#3a2504">950</text>
+  <text x="180" y="88" font-family="'Courier New', monospace" font-size="6" fill="#3a2504">1200</text>
+  <!-- Dial needle -->
+  <line x1="165" y1="85" x2="165" y2="58" stroke="#b30000" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="165" cy="85" r="4" fill="#3a2504"/>
+  <!-- Knobs -->
+  <circle cx="50" cy="135" r="10" fill="#2d1c0b" stroke="#70522a" stroke-width="2"/>
+  <circle cx="90" cy="135" r="10" fill="#2d1c0b" stroke="#70522a" stroke-width="2"/>
+</svg>

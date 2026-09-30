@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <radialGradient id="mateWood" cx="40%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#8b5a2b"/>
+      <stop offset="60%" stop-color="#5c3818"/>
+      <stop offset="100%" stop-color="#3d210b"/>
+    </radialGradient>
+    <linearGradient id="bombilla" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e0e0e0"/>
+      <stop offset="50%" stop-color="#b0b0b0"/>
+      <stop offset="100%" stop-color="#707070"/>
+    </linearGradient>
+  </defs>
+  <!-- Mate gourd body -->
+  <ellipse cx="100" cy="140" rx="60" ry="45" fill="url(#mateWood)" stroke="#2b1405" stroke-width="3"/>
+  <ellipse cx="100" cy="105" rx="42" ry="18" fill="#4a2c11" stroke="#2b1405" stroke-width="2"/>
+  <!-- Virola metal ring -->
+  <ellipse cx="100" cy="103" rx="40" ry="14" fill="#a89f91" stroke="#635d54" stroke-width="2"/>
+  <ellipse cx="100" cy="102" rx="34" ry="10" fill="#2d1d0c"/>
+  <!-- Yerba inside -->
+  <ellipse cx="98" cy="102" rx="30" ry="8" fill="#384a22"/>
+  <!-- Carved wood ornament patterns -->
+  <path d="M 60 135 Q 100 160 140 135" fill="none" stroke="#381d08" stroke-width="2" stroke-dasharray="4,4"/>
+  <path d="M 70 148 Q 100 168 130 148" fill="none" stroke="#381d08" stroke-width="2" stroke-dasharray="3,3"/>
+  <!-- Bombilla / straw -->
+  <path d="M 95 102 L 140 30" stroke="url(#bombilla)" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="140" cy="30" r="5" fill="#d4af37" stroke="#997d26" stroke-width="1.5"/>
+</svg>

@@ -1,0 +1,282 @@
+/* ==========================================================================
+   LO QUE QUEDÓ EN LA TIERRA — ARCHIVO / MAKING OF / MUSEO VIRTUAL & CRÉDITOS
+   ========================================================================== */
+
+.archive-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--bg-dark);
+  z-index: 600;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 80px 60px 100px 60px;
+}
+
+.archive-header {
+  text-align: center;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.archive-tagline {
+  font-family: var(--font-ui);
+  font-size: 11px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--accent-gold);
+  margin-bottom: 8px;
+}
+
+.archive-title {
+  font-family: var(--font-title);
+  font-size: 36px;
+  letter-spacing: 6px;
+  color: var(--paper-cream);
+  font-weight: 500;
+}
+
+.archive-nav-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding-bottom: 16px;
+}
+
+.archive-tab {
+  font-family: var(--font-ui);
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  background: transparent;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  position: relative;
+}
+
+.archive-tab:hover {
+  color: var(--paper-cream);
+}
+
+.archive-tab.active {
+  color: var(--accent-gold);
+}
+
+.archive-tab.active::after {
+  content: '';
+  position: absolute;
+  bottom: -17px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--accent-gold);
+}
+
+.archive-section {
+  display: none;
+  animation: fadeIn 0.4s ease forwards;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.archive-section.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Grillas de galería de personajes */
+.character-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.character-card {
+  background: rgba(25, 22, 20, 0.7);
+  border: 1px solid rgba(200, 158, 116, 0.25);
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.character-card-img-wrapper {
+  width: 100%;
+  height: 380px;
+  background: #0f0d0c;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.character-card-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.character-card:hover .character-card-img-wrapper img {
+  transform: scale(1.03);
+}
+
+.character-card-body {
+  padding: 20px;
+}
+
+.character-card-name {
+  font-family: var(--font-title);
+  font-size: 18px;
+  letter-spacing: 2px;
+  color: var(--paper-cream);
+  margin-bottom: 6px;
+}
+
+.character-card-role {
+  font-family: var(--font-ui);
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  color: var(--accent-gold);
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.character-card-desc {
+  font-family: var(--font-narrative);
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--text-muted);
+}
+
+/* Visor de Arte Conceptual y Storyboard */
+.art-showcase {
+  background: rgba(18, 16, 14, 0.8);
+  border: 1px solid rgba(200, 158, 116, 0.2);
+  border-radius: 4px;
+  padding: 30px;
+  margin-bottom: 40px;
+}
+
+.art-showcase img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+  margin-bottom: 20px;
+}
+
+.art-caption {
+  font-family: var(--font-narrative);
+  font-style: italic;
+  font-size: 16px;
+  color: var(--text-main);
+  text-align: center;
+}
+
+/* Texto documental */
+.document-box {
+  background: rgba(22, 19, 17, 0.85);
+  border-left: 3px solid var(--accent-gold);
+  padding: 25px 30px;
+  margin-bottom: 30px;
+  border-radius: 0 4px 4px 0;
+}
+
+.document-box h3 {
+  font-family: var(--font-title);
+  font-size: 20px;
+  letter-spacing: 2px;
+  color: var(--paper-cream);
+  margin-bottom: 12px;
+}
+
+.document-box p {
+  font-family: var(--font-narrative);
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--text-main);
+  margin-bottom: 14px;
+}
+
+.document-box p:last-child {
+  margin-bottom: 0;
+}
+
+.code-box {
+  background: #0d0c0e;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 16px;
+  border-radius: 4px;
+  font-family: 'Courier New', monospace;
+  font-size: 13px;
+  color: #c9d1d9;
+  line-height: 1.5;
+  margin: 15px 0;
+  overflow-x: auto;
+}
+
+/* --------------------------------------------------------------------------
+   CRÉDITOS CINEMATOGRÁFICOS
+   -------------------------------------------------------------------------- */
+.credits-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  z-index: 700;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 60px 40px;
+}
+
+.credits-scroll {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 680px;
+}
+
+.credit-role {
+  font-family: var(--font-ui);
+  font-size: 11px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--accent-gold);
+  margin-bottom: 6px;
+}
+
+.credit-name {
+  font-family: var(--font-title);
+  font-size: 22px;
+  letter-spacing: 3px;
+  color: var(--paper-cream);
+}
+
+.credit-note {
+  font-family: var(--font-narrative);
+  font-style: italic;
+  font-size: 16px;
+  color: var(--text-muted);
+  line-height: 1.5;
+}

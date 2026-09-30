@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 180" width="240" height="180">
+  <defs>
+    <filter id="paperRoughness">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="3" result="noise"/>
+      <feDiffuseLighting in="noise" lighting-color="#f5e8c8" surfaceScale="2">
+        <feDistantLight azimuth="45" elevation="60"/>
+      </feDiffuseLighting>
+      <feBlend mode="multiply" in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <!-- Aged folded map background -->
+  <rect x="15" y="15" width="210" height="150" fill="#eedbb2" stroke="#9e855c" stroke-width="2" rx="3"/>
+  <!-- Fold creases -->
+  <line x1="85" y1="15" x2="85" y2="165" stroke="#ba9f70" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <line x1="155" y1="15" x2="155" y2="165" stroke="#ba9f70" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <line x1="15" y1="90" x2="225" y2="90" stroke="#ba9f70" stroke-width="1.5" stroke-dasharray="4,2"/>
+  
+  <!-- Coastline & Geography contour -->
+  <path d="M 35 15 Q 45 40 40 70 Q 30 110 50 140 Q 60 165 70 165" fill="none" stroke="#756449" stroke-width="1.5"/>
+  <text x="35" y="45" font-family="'Georgia', serif" font-size="8" fill="#8f7a59" transform="rotate(-70 35 45)">CORDILLERA</text>
+
+  <!-- Route drawn with red/brown ink -->
+  <path d="M 60 135 L 75 120 L 95 110 L 120 115 L 140 95 L 165 70 L 180 55" fill="none" stroke="#a63d2b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="60" cy="135" r="4" fill="#a63d2b"/>
+  <text x="50" y="150" font-family="'Courier New', monospace" font-size="7" fill="#4d3725" font-weight="bold">Inicio</text>
+
+  <!-- Destination Cross (El lugar donde estuvo a los 23 años) -->
+  <g transform="translate(180, 55)">
+    <line x1="-8" y1="-8" x2="8" y2="8" stroke="#8b0000" stroke-width="3" stroke-linecap="round"/>
+    <line x1="8" y1="-8" x2="-8" y2="8" stroke="#8b0000" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="0" cy="0" r="14" fill="none" stroke="#8b0000" stroke-width="1.5" stroke-dasharray="3,3"/>
+    <text x="18" y="4" font-family="'Georgia', serif" font-style="italic" font-size="7" fill="#5c1313" font-weight="bold">Km 142</text>
+  </g>
+</svg>

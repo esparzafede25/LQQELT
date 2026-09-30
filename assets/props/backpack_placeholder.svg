@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 240" width="200" height="240">
+  <defs>
+    <linearGradient id="canvasGreen" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#556045"/>
+      <stop offset="50%" stop-color="#3e4832"/>
+      <stop offset="100%" stop-color="#2a3321"/>
+    </linearGradient>
+    <linearGradient id="leatherBrown" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#804a26"/>
+      <stop offset="100%" stop-color="#4d2c14"/>
+    </linearGradient>
+  </defs>
+  <!-- Main Backpack Body -->
+  <rect x="35" y="45" width="130" height="165" rx="25" fill="url(#canvasGreen)" stroke="#1d2417" stroke-width="2.5"/>
+  <!-- Top Flap -->
+  <path d="M 40 55 C 40 30 160 30 160 55 L 155 110 C 155 115 45 115 45 110 Z" fill="url(#canvasGreen)" stroke="#1d2417" stroke-width="2"/>
+  <!-- Front Pocket -->
+  <rect x="50" y="125" width="100" height="70" rx="8" fill="#323c28" stroke="#1d2417" stroke-width="2"/>
+  <line x1="50" y1="135" x2="150" y2="135" stroke="#1d2417" stroke-width="2"/>
+  
+  <!-- Leather Straps & Buckles -->
+  <rect x="65" y="40" width="12" height="90" fill="url(#leatherBrown)" rx="2"/>
+  <rect x="123" y="40" width="12" height="90" fill="url(#leatherBrown)" rx="2"/>
+  <rect x="63" y="115" width="16" height="12" rx="2" fill="none" stroke="#d4af37" stroke-width="2"/>
+  <rect x="121" y="115" width="16" height="12" rx="2" fill="none" stroke="#d4af37" stroke-width="2"/>
+
+  <!-- Top Handle -->
+  <path d="M 80 45 C 80 20 120 20 120 45" fill="none" stroke="url(#leatherBrown)" stroke-width="6" stroke-linecap="round"/>
+
+  <!-- Protruding Envelope Corner (Matching Short Film Scene 4) -->
+  <g transform="translate(100, 32) rotate(12)">
+    <polygon points="0,0 45,-15 55,20 10,35" fill="#f5ede0" stroke="#8a7356" stroke-width="1.5"/>
+    <text x="18" y="16" font-family="'Brush Script MT', cursive, Georgia" font-size="8" fill="#332418" transform="rotate(-15 18 16)">Valentino</text>
+  </g>
+</svg>

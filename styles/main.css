@@ -1,0 +1,251 @@
+/* ==========================================================================
+   LO QUE QUEDÓ EN LA TIERRA — ESTILOS GENERALES
+   Estética stop-motion artesanal, madera tallada, tono sobrio y cinematográfico
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Inter:wght@300;400;500;600&family=Caveat:wght@500;700&display=swap');
+
+:root {
+  /* Paleta cromática: materiales físicos, madera tallada, pátina de óxido, atardecer patagónico */
+  --bg-deep: #0a0a0c;
+  --bg-dark: #121113;
+  --bg-workshop: #191614;
+  --bg-memory-warm: #2c2117;
+  
+  --wood-light: #c89e74;
+  --wood-medium: #8f673e;
+  --wood-dark: #4b301a;
+  --wood-shadow: #241409;
+  
+  --denim-blue: #3a4b5d;
+  --denim-dark: #222e3a;
+  --leather-brown: #664124;
+  --metal-steel: #8a929a;
+  --metal-rust: #9c4b2b;
+  --paper-cream: #eedfc5;
+  --paper-envelope: #f6eedf;
+  
+  --sun-gold: #e2a853;
+  --sun-sunset: #d76a44;
+  --dusk-violet: #4a3852;
+  --sky-cold: #6a7c8e;
+  
+  --text-main: #e2ded7;
+  --text-muted: #9c9488;
+  --text-subtle: #686157;
+  --accent-gold: #c99e58;
+  
+  /* Fuentes */
+  --font-title: 'Cinzel', serif;
+  --font-narrative: 'Cormorant Garamond', Georgia, serif;
+  --font-ui: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-handwritten: 'Caveat', cursive, serif;
+
+  /* Cinema framing */
+  --aspect-ratio: 16 / 9;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  background-color: var(--bg-deep);
+  color: var(--text-main);
+  font-family: var(--font-narrative);
+  overflow: hidden;
+  position: relative;
+  cursor: default;
+}
+
+/* Contenedor Widescreen Cinematográfico (2.39:1 o 16:9 con bandas) */
+#app-viewport {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100vw;
+  height: 100vh;
+  max-width: 1920px;
+  max-height: 1080px;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+#screen-stage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 16 / 9;
+  background-color: #000;
+  overflow: hidden;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.9);
+}
+
+/* Cursor interactivo personalizado sutil */
+#custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 10000;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  opacity: 0;
+  transition: opacity 0.2s ease, transform 0.05s ease-out;
+}
+
+#custom-cursor .cursor-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--paper-cream);
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 8px rgba(226, 168, 83, 0.5);
+  transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+#custom-cursor.active .cursor-dot {
+  transform: scale(1.6);
+  background: var(--accent-gold);
+}
+
+#custom-cursor .cursor-label {
+  font-family: var(--font-ui);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--paper-cream);
+  background: rgba(18, 17, 19, 0.85);
+  padding: 3px 8px;
+  border-radius: 3px;
+  border-left: 2px solid var(--accent-gold);
+  white-space: nowrap;
+  backdrop-filter: blur(4px);
+  display: none;
+}
+
+#custom-cursor.has-label .cursor-label {
+  display: block;
+}
+
+/* Controles de sonido y menú superior discreto */
+#top-bar {
+  position: absolute;
+  top: 18px;
+  left: 30px;
+  right: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 900;
+  pointer-events: auto;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+#top-bar:hover {
+  opacity: 1;
+}
+
+.top-bar-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.top-bar-title {
+  font-family: var(--font-title);
+  font-size: 13px;
+  letter-spacing: 3px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.top-bar-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.top-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  font-family: var(--font-ui);
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border-radius: 4px;
+  transition: all 0.25s ease;
+}
+
+.top-btn:hover {
+  color: var(--paper-cream);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.top-btn svg {
+  width: 14px;
+  height: 14px;
+  fill: currentColor;
+}
+
+/* Botones universales cinematográficos */
+.btn-cinema {
+  font-family: var(--font-ui);
+  font-size: 13px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--paper-cream);
+  background: rgba(25, 22, 20, 0.7);
+  border: 1px solid rgba(200, 158, 116, 0.3);
+  padding: 12px 28px;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(6px);
+}
+
+.btn-cinema:hover {
+  background: rgba(200, 158, 116, 0.2);
+  border-color: var(--accent-gold);
+  color: #fff;
+  box-shadow: 0 0 20px rgba(201, 158, 88, 0.2);
+  transform: translateY(-1px);
+}
+
+.btn-cinema:active {
+  transform: translateY(0);
+}
+
+.btn-cinema.secondary {
+  border-color: rgba(255, 255, 255, 0.15);
+  background: transparent;
+  color: var(--text-muted);
+}
+
+.btn-cinema.secondary:hover {
+  border-color: var(--text-main);
+  color: var(--text-main);
+}
