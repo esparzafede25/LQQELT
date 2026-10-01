@@ -2,7 +2,10 @@
  * LO QUE QUEDÓ EN LA TIERRA
  * Preparación del Viaje — Conexión directa con la Escena 4 del Cortometraje
  * Guardar mate, herramienta, mapa y sobre (que asoma de la mochila)
+ * Inspiración Grim Fandango: Puesta en escena teatral, expresividad corporal y solemnidad
  */
+
+import { CharacterAnimator } from '../scripts/CharacterAnimator.js';
 
 export class DepartureScene {
   constructor() {
@@ -21,6 +24,13 @@ export class DepartureScene {
     layer.style.backgroundImage = "url('assets/backgrounds/workshop_present.jpg')";
 
     layer.innerHTML = `
+      <!-- ============================================================== -->
+      <!-- CAPA DE PERSONAJE: VALENTINO ADULTO PREPARANDO EL VIAJE        -->
+      <!-- ============================================================== -->
+      <div id="character-valentino-departure" class="character-layer character-valentino-present stop-motion-idle" style="left: 18%; bottom: 10%;">
+        <img src="assets/characters/valentino/valentino_present_placeholder.svg" alt="Valentino Adulto">
+      </div>
+
       <!-- Bandeja de objetos para guardar en la mochila -->
       <div id="packing-tray" class="packing-tray">
         <div class="packing-item" data-item="mate" data-cursor="GUARDAR">
@@ -51,6 +61,9 @@ export class DepartureScene {
 
     this.audio.playAtmosphere('workshop');
 
+    const valentinoEl = layer.querySelector('#character-valentino-departure');
+    CharacterAnimator.performAction(valentinoEl, 'pose-thoughtful', 2800);
+
     await this.subtitles.playSequence([
       { speaker: 'VALENTINO', text: 'Tengo que juntar lo necesario antes de que caiga la tarde.', thought: true, delay: 400, duration: 3200 }
     ]);
@@ -62,12 +75,16 @@ export class DepartureScene {
     const items = layer.querySelectorAll('.packing-item');
     const backpackTable = layer.querySelector('#backpack-table');
     const tray = layer.querySelector('#packing-tray');
+    const valentinoEl = layer.querySelector('#character-valentino-departure');
 
     items.forEach(el => {
       el.addEventListener('click', async () => {
         el.classList.add('packed');
         this.audio.playToolClink();
         this.packedCount++;
+
+        // Actuación: Valentino se aproxima y guarda el objeto con movimiento físico stop-motion
+        CharacterAnimator.performAction(valentinoEl, 'pose-pack-item', 1600);
 
         const itemName = el.getAttribute('data-item');
         if (itemName === 'envelope') {
@@ -80,6 +97,8 @@ export class DepartureScene {
           tray.style.display = 'none';
           backpackTable.style.display = 'flex';
 
+          CharacterAnimator.playPose(valentinoEl, 'pose-reach-desk', 2500);
+
           await this.subtitles.playSequence([
             { speaker: 'VALENTINO', text: 'La mochila está lista. Es hora de cargar el auto.', thought: true, delay: 300, duration: 3200 }
           ]);
@@ -91,12 +110,17 @@ export class DepartureScene {
       backpackTable.style.display = 'none';
       this.audio.playToolClink();
 
+      CharacterAnimator.performAction(valentinoEl, 'pose-reach-mate', 1500);
+
       // Salir al auto: Mostrar Insert Shot en el asiento del acompañante
       await this.showCarPassengerSeat(layer);
     });
   }
 
   async showCarPassengerSeat(layer) {
+    const valentinoEl = layer.querySelector('#character-valentino-departure');
+    if (valentinoEl) valentinoEl.style.display = 'none';
+
     // Transición visual al plano detalle del cortometraje
     layer.style.backgroundImage = "url('assets/backgrounds/departure_backpack_seat.jpg')";
 

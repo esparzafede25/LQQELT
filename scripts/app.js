@@ -64,8 +64,10 @@ class App {
     this.setupTopBar();
     this.setupParallax();
 
-    // Comenzar en el Menú Principal
-    this.sceneManager.changeScene('MENU', 'black');
+    // Comenzar en la escena solicitada o en el Menú Principal
+    const urlParams = new URLSearchParams(window.location.search);
+    const initialScene = urlParams.get('scene') || 'MENU';
+    this.sceneManager.changeScene(initialScene, 'black');
   }
 
   // --------------------------------------------------------------------------
@@ -78,7 +80,7 @@ class App {
 
       // Detectar elementos con etiqueta de interacción
       const target = document.elementFromPoint(e.clientX, e.clientY);
-      const interactiveEl = target ? target.closest('[data-cursor], button, .hotspot, .action-object-card, .packing-item') : null;
+      const interactiveEl = target ? target.closest('[data-cursor], button, .hotspot, .action-object-card, .mate-diegetic-hotspot, .packing-item') : null;
 
       if (interactiveEl) {
         this.cursor.classList.add('active');
@@ -211,6 +213,14 @@ class App {
     btnArchive.addEventListener('click', () => {
       this.audio.playToolClink();
       this.sceneManager.changeScene('ARCHIVE', 'black');
+    });
+
+    // Tecla Escape para invocar o alternar el menú superior en modo inmersivo
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        const topBar = document.getElementById('top-bar');
+        if (topBar) topBar.classList.toggle('force-reveal');
+      }
     });
 
     // Activar audio context al primer clic del usuario en la pantalla

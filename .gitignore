@@ -13,3 +13,9 @@ yarn-error.log*
 
 # Servidor de prueba local (opcional)
 server.js
+
+.vercel
+
+# Variables de entorno
+.env
+.env.*

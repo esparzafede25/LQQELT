@@ -82,6 +82,8 @@ export class SceneManager {
     return new Promise(resolve => {
       const card = document.createElement('div');
       card.className = 'mission-intro-card';
+      card.style.cursor = 'pointer';
+      card.title = 'Clic para omitir título';
       card.innerHTML = `
         <div class="mission-intro-number">${number}</div>
         <div class="mission-intro-title">${title}</div>
@@ -93,13 +95,19 @@ export class SceneManager {
         card.classList.add('show');
       });
 
-      setTimeout(() => {
+      let finished = false;
+      const finish = () => {
+        if (finished) return;
+        finished = true;
         card.classList.remove('show');
         setTimeout(() => {
           if (card.parentNode) card.parentNode.removeChild(card);
           resolve();
-        }, 1200);
-      }, duration);
+        }, 500);
+      };
+
+      card.addEventListener('click', finish);
+      setTimeout(finish, duration);
     });
   }
 }

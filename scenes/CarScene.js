@@ -2,7 +2,10 @@
  * LO QUE QUEDÓ EN LA TIERRA
  * Misión 2 — El Auto ("Pasame la diez")
  * Función emocional: HERENCIA
+ * Inspiración Grim Fandango: Puesta en escena teatral, expresividad corporal, padre trabajando activamente
  */
+
+import { CharacterAnimator } from '../scripts/CharacterAnimator.js';
 
 export class CarScene {
   constructor() {
@@ -21,6 +24,20 @@ export class CarScene {
     layer.style.backgroundImage = "url('assets/backgrounds/memory_car.jpg')";
 
     layer.innerHTML = `
+      <!-- ============================================================== -->
+      <!-- CAPA DE PERSONAJE: VALENTINO A LOS 18 AÑOS (RECUERDO: EL AUTO) -->
+      <!-- ============================================================== -->
+      <div id="character-valentino-car" class="character-layer character-valentino-car-18 stop-motion-idle" title="Valentino (18 años)">
+        <img src="assets/characters/valentino/valentino_18_placeholder.svg" alt="Valentino 18 años">
+      </div>
+
+      <!-- ============================================================== -->
+      <!-- CAPA DE PERSONAJE: EL PADRE (RECUERDO: EL AUTO)                -->
+      <!-- ============================================================== -->
+      <div id="character-father-car" class="character-layer character-father-car pose-father-working-engine" title="El Padre (Trabajando en el motor)">
+        <img src="assets/characters/father/father_placeholder.svg" alt="El Padre">
+      </div>
+
       <!-- Zona del motor interactiva -->
       <div id="hotspot-engine" class="hotspot" style="top: 45%; left: 35%; width: 260px; height: 180px;" data-cursor="MIRAR" data-label="Motor del auto"></div>
 
@@ -87,10 +104,26 @@ export class CarScene {
     const ratchetAction = layer.querySelector('#ratchet-action');
     const toolSlots = layer.querySelectorAll('.tool-slot');
 
-    // Abrir caja de herramientas
+    const valentinoEl = layer.querySelector('#character-valentino-car');
+    const fatherEl = layer.querySelector('#character-father-car');
+
+    // Clic en el motor: Valentino se asoma al motor
+    spotEngine.addEventListener('click', () => {
+      this.audio.playToolClink();
+      CharacterAnimator.performAction(valentinoEl, 'pose-teen-pass-key', 2200);
+      this.subtitles.show({
+        speaker: 'VALENTINO',
+        text: 'La abrazadera de la manguera superior está floja.',
+        thought: true,
+        duration: 2600
+      });
+    });
+
+    // Abrir caja de herramientas: Valentino se gira y se inclina buscando
     spotToolbox.addEventListener('click', () => {
       this.audio.playToolClink();
       modalToolbox.style.display = 'flex';
+      CharacterAnimator.performAction(valentinoEl, 'pose-teen-search-tool', 3000);
     });
 
     // Seleccionar herramienta
@@ -104,6 +137,9 @@ export class CarScene {
           slot.classList.add('selected');
           modalToolbox.style.display = 'none';
 
+          // Actuación: Valentino se endereza con la llave 10 y se acerca al padre
+          CharacterAnimator.playPose(valentinoEl, 'pose-teen-pass-key', 0);
+
           await this.subtitles.playSequence([
             { speaker: 'VALENTINO', text: 'Tomá, acá tenés la diez.', delay: 300, duration: 2200 },
             { speaker: 'PADRE', text: 'No fuerces. Sentí cómo agarra la rosca.', delay: 400, duration: 3200 },
@@ -115,6 +151,8 @@ export class CarScene {
 
           ratchetAction.style.display = 'flex';
         } else {
+          // Herramienta equivocada: Valentino duda
+          CharacterAnimator.performAction(valentinoEl, 'pose-teen-search-tool', 2000);
           await this.subtitles.playSequence([
             { speaker: 'PADRE', text: 'Esa no entra. Buscá la diez, fijate bien.', delay: 200, duration: 2800 }
           ]);
@@ -125,8 +163,11 @@ export class CarScene {
     // Ajustar abrazadera del motor
     ratchetAction.addEventListener('click', async () => {
       ratchetAction.style.display = 'none';
-      this.audio.playWrenchTurn();
 
+      // Actuación: Valentino se inclina profundamente sobre el motor y ajusta con fuerza
+      CharacterAnimator.playPose(valentinoEl, 'pose-teen-wrenching', 3600);
+
+      this.audio.playWrenchTurn();
       await new Promise(r => setTimeout(r, 600));
       this.audio.playWrenchTurn();
 
@@ -138,6 +179,9 @@ export class CarScene {
       await new Promise(r => setTimeout(r, 400));
       this.audio.playCarStart();
 
+      // Padre se incorpora satisfecho
+      CharacterAnimator.performAction(fatherEl, 'pose-father-proud', 4000);
+
       await this.subtitles.playSequence([
         { speaker: 'PADRE', text: 'Ahí está. ¿Sentís cómo ronronea ahora parejito?', delay: 1800, duration: 3800 }
       ]);
@@ -145,6 +189,9 @@ export class CarScene {
       // Cerrar capó con golpe sólido
       await new Promise(r => setTimeout(r, 1200));
       this.audio.playHoodThud();
+
+      // Valentino retrocede satisfecho
+      CharacterAnimator.playPose(valentinoEl, 'pose-teen-proud', 0);
 
       await this.subtitles.playSequence([
         { speaker: 'VALENTINO', text: 'Si la aguja de temperatura vuelve a subir en la ruta, sé exactamente qué hacer.', thought: true, delay: 800, duration: 4500 }

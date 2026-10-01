@@ -2,7 +2,10 @@
  * LO QUE QUEDÓ EN LA TIERRA
  * Misión 3 — La Radio ("Quedate, que falta poco")
  * Función emocional: DISTORSIÓN
+ * Inspiración Grim Fandango: Puesta en escena teatral, expresividad corporal, diálogo poético
  */
+
+import { CharacterAnimator } from '../scripts/CharacterAnimator.js';
 
 export class RadioScene {
   constructor() {
@@ -26,9 +29,23 @@ export class RadioScene {
     layer.style.backgroundImage = "url('assets/backgrounds/memory_radio.jpg')";
 
     layer.innerHTML = `
+      <!-- ============================================================== -->
+      <!-- CAPA DE PERSONAJE: VALENTINO A LOS 11 AÑOS (RECUERDO: LA RADIO) -->
+      <!-- ============================================================== -->
+      <div id="character-valentino-radio" class="character-layer character-valentino-radio-11 stop-motion-idle-kid" title="Valentino (11 años)">
+        <img src="assets/characters/valentino/valentino_11_placeholder.svg" alt="Valentino 11 años">
+      </div>
+
+      <!-- ============================================================== -->
+      <!-- CAPA DE PERSONAJE: EL PADRE (RECUERDO: LA RADIO)               -->
+      <!-- ============================================================== -->
+      <div id="character-father-radio" class="character-layer character-father-radio stop-motion-idle-father" title="El Padre">
+        <img src="assets/characters/father/father_placeholder.svg" alt="El Padre">
+      </div>
+
       <!-- Silueta espectral de Valentino adulto (oculta inicialmente) -->
       <div id="adult-valentino-shadow" style="position:absolute; bottom:12%; left:8%; width:160px; height:450px; opacity:0; pointer-events:none; transition:opacity 2.5s ease; filter:brightness(0.2) blur(1.5px); z-index:580;">
-        <img src="assets/characters/valentino/valentino_profile.jpg" style="width:100%; height:100%; object-fit:contain; transform:scaleX(-1);">
+        <img src="assets/characters/valentino/valentino_present_placeholder.svg" style="width:100%; height:100%; object-fit:contain; transform:scaleX(-1);">
       </div>
 
       <!-- Interfaz de la radio analógica -->
@@ -78,7 +95,9 @@ export class RadioScene {
     const needle = layer.querySelector('#radio-needle');
     const led = layer.querySelector('#signal-led');
     const signalText = layer.querySelector('#signal-text');
-    const shadowValentino = layer.querySelector('#adult-valentino-shadow');
+
+    const valentinoEl = layer.querySelector('#character-valentino-radio');
+    const fatherEl = layer.querySelector('#character-father-radio');
 
     // Encendido
     powerBtn.addEventListener('click', async () => {
@@ -88,6 +107,9 @@ export class RadioScene {
         powerBtn.classList.add('on');
         powerBtn.textContent = 'APAGAR';
         slider.disabled = false;
+
+        // Actuación: Valentino 11 se acerca a la radio para manipularla
+        CharacterAnimator.playPose(valentinoEl, 'pose-kid-tune', 0);
 
         this.audio.startRadioStatic();
         this.updateTuning(20, layer);
@@ -101,6 +123,9 @@ export class RadioScene {
         powerBtn.textContent = 'ENCENDER';
         slider.disabled = true;
         this.audio.stopRadioStatic();
+
+        // Valentino regresa al reposo
+        CharacterAnimator.playPose(valentinoEl, 'stop-motion-idle-kid', 0);
       }
     });
 
@@ -109,6 +134,10 @@ export class RadioScene {
       if (!this.isRadioOn) return;
       const val = parseInt(e.target.value, 10);
       needle.style.left = `${val}%`;
+
+      // Valentino mantiene la mano en la perilla
+      CharacterAnimator.playPose(valentinoEl, 'pose-kid-tune', 0);
+
       this.updateTuning(val, layer);
     });
   }
@@ -120,12 +149,20 @@ export class RadioScene {
 
     const led = layer.querySelector('#signal-led');
     const signalText = layer.querySelector('#signal-text');
+    const valentinoEl = layer.querySelector('#character-valentino-radio');
+    const fatherEl = layer.querySelector('#character-father-radio');
 
     this.audio.tuneRadioDial(val / 100, signalQuality);
 
     if (signalQuality > 0.75) {
       led.classList.add('active');
       signalText.textContent = 'EN SINTONÍA (AM 950)';
+
+      // Actuación: Valentino pasa a pose de escucha atenta con micro-rebote
+      CharacterAnimator.playPose(valentinoEl, 'pose-kid-listen', 0);
+
+      // Padre asiente con aprobación cálida
+      CharacterAnimator.performAction(fatherEl, 'pose-father-nod', 3500);
 
       if (this.distortionStage === 0) {
         this.triggerMatchBroadcast(layer);
@@ -158,6 +195,15 @@ export class RadioScene {
 
   async startDistortionProcess(layer) {
     this.distortionStage = 2;
+
+    const valentinoEl = layer.querySelector('#character-valentino-radio');
+    const fatherEl = layer.querySelector('#character-father-radio');
+
+    // Actuación: Valentino reacciona con duda / sobresalto ante la estática
+    CharacterAnimator.playPose(valentinoEl, 'pose-kid-startled', 0);
+
+    // Padre adquiere postura distante y enigmática
+    CharacterAnimator.playPose(fatherEl, 'pose-father-distant', 0);
 
     // Transición visual sutil: la luz se enfría, desvanecimiento del fondo
     layer.classList.remove('grade-memory-warm');

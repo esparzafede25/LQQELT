@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 540" width="300" height="540">
+  <!-- VALENTINO ADOLESCENTE (RECUERDO: EL MATE) -->
+  <!-- Estilo: Madera tallada artesanal, contextura delgada y espigada, aprendiendo con su padre -->
+  <defs>
+    <filter id="woodGrainTeen">
+      <feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="3" result="grain"/>
+      <feColorMatrix type="matrix" values="0.33 0.33 0.33 0 0  0.33 0.33 0.33 0 0  0.33 0.33 0.33 0 0  0 0 0 0.2 0"/>
+      <feBlend mode="multiply" in="SourceGraphic"/>
+    </filter>
+  </defs>
+
+  <g id="valentino-teen" filter="url(#woodGrainTeen)">
+    <!-- Piernas / Pantalón de corderoy marrón claro -->
+    <rect x="123" y="300" width="23" height="190" rx="5" fill="#4d3d2e" stroke="#251c14" stroke-width="2"/>
+    <rect x="154" y="300" width="23" height="190" rx="5" fill="#433426" stroke="#251c14" stroke-width="2"/>
+    
+    <!-- Zapatillas de lona oscura -->
+    <rect x="112" y="485" width="38" height="20" rx="5" fill="#222" stroke="#111" stroke-width="2"/>
+    <rect x="150" y="485" width="38" height="20" rx="5" fill="#1e1e1e" stroke="#111" stroke-width="2"/>
+    <ellipse cx="144" cy="497" rx="6" ry="3" fill="#eee"/>
+    <ellipse cx="182" cy="497" rx="6" ry="3" fill="#eee"/>
+
+    <!-- Suéter tejido gris/azulado con mangas estiradas (adolescencia) -->
+    <path d="M 104 170 C 102 170 80 190 74 290 L 105 300 L 125 305 L 175 305 L 195 300 L 226 290 C 220 190 198 170 196 170 Z" fill="#455360" stroke="#1e262e" stroke-width="2.5"/>
+    <path d="M 128 170 L 150 198 L 172 170 Z" fill="#605c56" stroke="#2c2a27" stroke-width="1.5"/>
+
+    <!-- Cuello largo de madera tallada en crecimiento -->
+    <rect x="140" y="140" width="20" height="34" rx="3" fill="#b88f68" stroke="#48321e" stroke-width="2"/>
+    
+    <!-- Cabeza alargándose hacia el rostro definitivo -->
+    <polygon points="124,68 176,68 171,142 150,158 129,142" fill="#c79d75" stroke="#48321e" stroke-width="2.5"/>
+    
+    <!-- Ojos grandes de mirada atenta y afectuosa -->
+    <ellipse cx="137" cy="98" rx="6.5" ry="8.5" fill="#fff" stroke="#48321e" stroke-width="1.5"/>
+    <ellipse cx="163" cy="98" rx="6.5" ry="8.5" fill="#fff" stroke="#48321e" stroke-width="1.5"/>
+    <circle cx="138" cy="99" r="4" fill="#3a2510"/>
+    <circle cx="162" cy="99" r="4" fill="#3a2510"/>
+    <circle cx="139" cy="97" r="1.2" fill="#fff"/>
+    <circle cx="163" cy="97" r="1.2" fill="#fff"/>
+    
+    <!-- Cejas gruesas características -->
+    <path d="M 128 86 Q 139 82 145 88" stroke="#1a140f" stroke-width="3.8" stroke-linecap="round"/>
+    <path d="M 155 88 Q 161 82 172 86" stroke="#1a140f" stroke-width="3.8" stroke-linecap="round"/>
+    
+    <!-- Nariz angulosa de madera -->
+    <polygon points="150,92 146,116 152,118" fill="#a87f58"/>
+    <!-- Sonrisa mínima, calma -->
+    <path d="M 144 130 Q 150 134 156 130" stroke="#48321e" stroke-width="1.8" fill="none"/>
+
+    <!-- Cabello negro desordenado con rulos que caen sobre la frente -->
+    <path d="M 114 72 Q 118 38 150 40 Q 182 38 186 72 Q 196 52 176 32 Q 145 28 118 36 Q 104 58 114 72" fill="#1c1612" stroke="#000" stroke-width="2"/>
+    <circle cx="122" cy="58" r="9" fill="#1c1612"/>
+    <circle cx="178" cy="58" r="9" fill="#1c1612"/>
+
+    <!-- Manos de madera tallada preparadas para sostener el mate -->
+    <rect x="68" y="285" width="16" height="32" rx="3" fill="#c79d75" stroke="#48321e" stroke-width="1.5"/>
+    <rect x="216" y="285" width="16" height="32" rx="3" fill="#c79d75" stroke="#48321e" stroke-width="1.5"/>
+  </g>
+</svg>

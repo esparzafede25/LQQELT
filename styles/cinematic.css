@@ -93,57 +93,144 @@
   opacity: 0.75;
 }
 
-/* Sistema de Subtítulos y Diálogos Cinematográficos */
+/* ==========================================================================
+   SISTEMA DE SUBTÍTULOS, DIÁLOGOS Y OPCIONES CINEMATOGRÁFICAS
+   Inspiración: Aventura gráfica de autor, elegancia sobria, contraste óptimo
+   ========================================================================== */
 #subtitles-container {
   position: absolute;
-  bottom: 68px;
+  bottom: 60px;
   left: 50%;
   transform: translateX(-50%);
-  width: 82%;
-  max-width: 900px;
-  text-align: center;
-  z-index: 850;
+  width: 90%;
+  max-width: 820px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 860;
   pointer-events: none;
 }
 
 .subtitle-block {
+  pointer-events: auto;
   opacity: 0;
-  transform: translateY(8px);
-  transition: opacity 0.5s ease, transform 0.5s ease;
-  display: inline-block;
+  transform: translateY(10px) scale(0.985);
+  transition: opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1), transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 18px 34px 20px 34px;
+  background: rgba(14, 11, 9, 0.94);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-top: 1px solid rgba(200, 158, 116, 0.45);
+  border-bottom: 1px solid rgba(200, 158, 116, 0.25);
+  border-left: 3px solid var(--accent-gold);
+  border-right: 1px solid rgba(200, 158, 116, 0.2);
+  border-radius: 3px;
+  box-shadow: 0 16px 50px rgba(0, 0, 0, 0.95), 0 0 25px rgba(200, 158, 116, 0.12);
+  max-width: 820px;
+  position: relative;
 }
 
 .subtitle-block.visible {
   opacity: 1;
-  transform: translateY(0);
+  transform: translateY(0) scale(1);
 }
 
-.subtitle-speaker {
+/* Variante para pensamientos íntimos */
+.subtitle-block-thought {
+  background: rgba(16, 12, 11, 0.96);
+  border-left-color: var(--accent-gold);
+  border-top-color: rgba(226, 168, 83, 0.35);
+}
+
+/* Etiqueta distintiva del personaje hablante */
+.subtitle-speaker-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   font-family: var(--font-title);
-  font-size: 13px;
+  font-size: 11px;
+  font-weight: 600;
   letter-spacing: 4px;
   color: var(--accent-gold);
   text-transform: uppercase;
-  margin-bottom: 6px;
-  display: block;
-  opacity: 0.9;
+  margin-bottom: 10px;
+  padding: 3px 12px;
+  background: rgba(200, 158, 116, 0.09);
+  border: 1px solid rgba(200, 158, 116, 0.22);
+  border-radius: 2px;
+}
+
+.subtitle-speaker-badge .speaker-deco {
+  font-size: 7px;
+  opacity: 0.7;
+  color: var(--accent-gold);
 }
 
 .subtitle-text {
   font-family: var(--font-narrative);
   font-size: 24px;
-  line-height: 1.45;
-  color: #fff;
-  font-weight: 400;
-  letter-spacing: 0.5px;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9), 0 0 20px rgba(0, 0, 0, 0.7);
-  display: inline;
+  line-height: 1.5;
+  color: #ffffff;
+  font-weight: 500;
+  letter-spacing: 0.4px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.95);
 }
 
 .subtitle-thought {
   font-style: italic;
-  color: #d1c8bd;
-  font-size: 22px;
+  color: #fff8ee !important;
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.95);
+}
+
+/* Columna de opciones interactivas inspirada en Grim Fandango */
+.cinematic-choices-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  margin-top: 14px;
+}
+
+.cinematic-choice-item {
+  font-family: var(--font-narrative);
+  font-size: 20px;
+  letter-spacing: 0.5px;
+  color: var(--paper-cream);
+  background: rgba(26, 22, 19, 0.85);
+  border: 1px solid rgba(200, 158, 116, 0.25);
+  border-left: 2px solid transparent;
+  padding: 10px 18px;
+  border-radius: 2px;
+  cursor: pointer;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: all 0.25s ease;
+  backdrop-filter: blur(6px);
+}
+
+.cinematic-choice-item:hover {
+  background: rgba(48, 38, 30, 0.95);
+  border-color: var(--accent-gold);
+  border-left: 3px solid var(--accent-gold);
+  color: #fff;
+  transform: translateX(6px);
+  box-shadow: 0 4px 20px rgba(200, 158, 116, 0.25);
+}
+
+.choice-marker {
+  font-family: var(--font-title);
+  font-size: 13px;
+  color: var(--accent-gold);
+  letter-spacing: 2px;
 }
 
 /* Transiciones entre Escenas: Fundido cruzado de memoria */

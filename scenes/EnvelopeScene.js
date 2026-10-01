@@ -3,7 +3,10 @@
  * Secuencia Final — El Sobre + El Mapa
  * Función emocional: NEGACIÓN (Construcción del viaje)
  * IMPORTANTE: NUNCA REVELAR QUE LA CARTA ESTÁ VACÍA
+ * Inspiración Grim Fandango: Puesta en escena teatral, expresividad corporal y misterio sutil
  */
+
+import { CharacterAnimator } from '../scripts/CharacterAnimator.js';
 
 export class EnvelopeScene {
   constructor() {
@@ -22,6 +25,11 @@ export class EnvelopeScene {
     layer.style.backgroundImage = "url('assets/backgrounds/sequence_envelope_map.jpg')";
 
     layer.innerHTML = `
+      <!-- Presencia de Valentino junto al cajón -->
+      <div id="character-valentino-desk" class="character-layer character-valentino-present stop-motion-idle" style="left: 12%; bottom: 6%; opacity: 0.85;">
+        <img src="assets/characters/valentino/valentino_present_placeholder.svg" alt="Valentino Adulto">
+      </div>
+
       <div class="drawer-modal">
         <div class="drawer-content">
           <!-- Tarjeta 1: El Mapa viejo -->
@@ -58,11 +66,13 @@ export class EnvelopeScene {
   setupCards(layer) {
     const cardMap = layer.querySelector('#card-map');
     const cardEnvelope = layer.querySelector('#card-envelope');
+    const valentinoEl = layer.querySelector('#character-valentino-desk');
 
     // 1. Mirar el Mapa
     cardMap.addEventListener('click', async () => {
       this.hasInspectedMap = true;
       this.audio.playToolClink();
+      CharacterAnimator.performAction(valentinoEl, 'pose-reach-desk', 2500);
 
       const modal = document.createElement('div');
       modal.className = 'inspect-modal';
@@ -85,6 +95,7 @@ export class EnvelopeScene {
     // 2. Abrir el Sobre (Regla estricta: NO mostrar que está vacía)
     cardEnvelope.addEventListener('click', async () => {
       this.audio.playToolClink();
+      CharacterAnimator.performAction(valentinoEl, 'pose-thoughtful', 3500);
 
       const modal = document.createElement('div');
       modal.className = 'inspect-modal';

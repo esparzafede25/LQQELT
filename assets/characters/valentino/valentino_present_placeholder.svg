@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 600" width="300" height="600">
+  <!-- VALENTINO ADULTO (PRESENTE: EL TALLER / VIAJE) -->
+  <!-- Estilo: Madera tallada artesanal, campera de jean azul gastada, suéter tejido, mochila y mirada melancólica -->
+  <defs>
+    <filter id="woodGrainPresent">
+      <feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="4" result="grain"/>
+      <feColorMatrix type="matrix" values="0.33 0.33 0.33 0 0  0.33 0.33 0.33 0 0  0.33 0.33 0.33 0 0  0 0 0 0.25 0"/>
+      <feBlend mode="multiply" in="SourceGraphic"/>
+    </filter>
+  </defs>
+
+  <g id="valentino-adult" filter="url(#woodGrainPresent)">
+    <!-- Piernas / Pantalón marrón oscuro gastado -->
+    <rect x="122" y="320" width="24" height="230" rx="6" fill="#3a3028" stroke="#1c1611" stroke-width="2"/>
+    <rect x="154" y="320" width="24" height="230" rx="6" fill="#322822" stroke="#1c1611" stroke-width="2"/>
+    
+    <!-- Zapatillas oscuras gastadas con cordones claros -->
+    <rect x="110" y="545" width="40" height="20" rx="5" fill="#222" stroke="#111" stroke-width="2"/>
+    <rect x="150" y="545" width="40" height="20" rx="5" fill="#1e1e1e" stroke="#111" stroke-width="2"/>
+    <ellipse cx="145" cy="558" rx="8" ry="4" fill="#eee"/>
+    <ellipse cx="185" cy="558" rx="8" ry="4" fill="#eee"/>
+
+    <!-- Campera azul oscura gastada (Denim) y suéter gris -->
+    <path d="M 105 180 C 105 180 80 200 75 310 L 105 320 L 125 325 L 175 325 L 195 320 L 225 310 C 220 200 195 180 195 180 Z" fill="#2d3b4a" stroke="#151d24" stroke-width="2.5"/>
+    <path d="M 130 180 L 150 205 L 170 180 Z" fill="#6d6a65" stroke="#333" stroke-width="1.5"/>
+
+    <!-- Cuello largo de madera tallada -->
+    <rect x="140" y="150" width="20" height="35" rx="3" fill="#b08a65" stroke="#48321e" stroke-width="2"/>
+    
+    <!-- Cabeza alargada y angulosa -->
+    <polygon points="125,70 175,70 170,150 150,165 130,150" fill="#c49d74" stroke="#48321e" stroke-width="2.5"/>
+    
+    <!-- Ojos grandes marrones con mirada de duelo y memoria -->
+    <ellipse cx="138" cy="100" rx="6" ry="8" fill="#fff" stroke="#48321e" stroke-width="1.5"/>
+    <ellipse cx="162" cy="100" rx="6" ry="8" fill="#fff" stroke="#48321e" stroke-width="1.5"/>
+    <circle cx="138" cy="101" r="3.5" fill="#3a2510"/>
+    <circle cx="162" cy="101" r="3.5" fill="#3a2510"/>
+    <circle cx="140" cy="99" r="1" fill="#fff"/>
+    <circle cx="164" cy="99" r="1" fill="#fff"/>
+    
+    <!-- Cejas gruesas y pesadas -->
+    <path d="M 130 88 Q 140 85 146 90" stroke="#1a140f" stroke-width="4" stroke-linecap="round"/>
+    <path d="M 154 90 Q 160 85 170 88" stroke="#1a140f" stroke-width="4" stroke-linecap="round"/>
+    
+    <!-- Nariz angulosa -->
+    <polygon points="150,95 146,120 152,122" fill="#a47d57"/>
+    <path d="M 142 138 L 158 138" stroke="#48321e" stroke-width="2"/>
+
+    <!-- Cabello negro desordenado característico -->
+    <path d="M 115 75 Q 120 40 150 42 Q 180 40 185 75 Q 195 55 175 35 Q 145 30 120 40 Q 105 60 115 75" fill="#1c1612" stroke="#000" stroke-width="2"/>
+    
+    <!-- Correas de la mochila de lona verde oliva -->
+    <path d="M 110 185 L 115 310" stroke="#414c35" stroke-width="7" stroke-linecap="round"/>
+    <path d="M 190 185 L 185 310" stroke="#414c35" stroke-width="7" stroke-linecap="round"/>
+
+    <!-- Manos de madera tallada -->
+    <rect x="70" y="305" width="16" height="35" rx="3" fill="#c49d74" stroke="#48321e" stroke-width="1.5"/>
+    <rect x="214" y="305" width="16" height="35" rx="3" fill="#c49d74" stroke="#48321e" stroke-width="1.5"/>
+  </g>
+</svg>

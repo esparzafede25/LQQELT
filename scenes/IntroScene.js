@@ -2,7 +2,10 @@
  * LO QUE QUEDÓ EN LA TIERRA
  * IntroScene — Taller familiar recientemente vaciado (Sensación de ausencia)
  * Punto de partida e hilo conductor entre el presente y los recuerdos
+ * Inspiración Grim Fandango: Puesta en escena teatral, expresividad corporal y misterio sutil
  */
+
+import { CharacterAnimator } from '../scripts/CharacterAnimator.js';
 
 export class IntroScene {
   constructor() {
@@ -22,6 +25,15 @@ export class IntroScene {
     layer.style.backgroundImage = "url('assets/backgrounds/workshop_present.jpg')";
 
     layer.innerHTML = `
+      <!-- ============================================================== -->
+      <!-- CAPA DE PERSONAJE: VALENTINO ADULTO (PRESENTE)                 -->
+      <!-- Asset editable: assets/characters/valentino/valentino_present_placeholder.svg (o .png) -->
+      <!-- Escena: Presente (Taller)                                      -->
+      <!-- ============================================================== -->
+      <div id="character-valentino-present" class="character-layer character-valentino-present stop-motion-idle" data-cursor="MIRAR" style="pointer-events: auto; cursor: pointer;">
+        <img src="assets/characters/valentino/valentino_present_placeholder.svg" alt="Valentino Adulto">
+      </div>
+
       <!-- Hotspot 1: El Mate de madera en la mesa -->
       <div id="hotspot-mate" class="hotspot" style="top: 62%; right: 22%; width: 140px; height: 160px;" data-cursor="TOMAR" data-label="El mate de papá"></div>
 
@@ -37,12 +49,29 @@ export class IntroScene {
 
     container.appendChild(layer);
 
+    const valentinoEl = layer.querySelector('#character-valentino-present');
+
+    // Click en Valentino adulto presente (reacción corporal reflexiva)
+    if (valentinoEl) {
+      valentinoEl.addEventListener('click', () => {
+        this.audio.playToolClink();
+        CharacterAnimator.performAction(valentinoEl, 'pose-thoughtful', 2800);
+        this.subtitles.show({
+          speaker: 'VALENTINO',
+          text: 'Tengo que apurarme... El viaje hacia el sur es largo.',
+          thought: true,
+          duration: 3200
+        });
+      });
+    }
+
     this.audio.playAtmosphere('workshop');
 
     // Primera vez en el taller: reflexión introductoria de Valentino
     if (!this.storage.get('INTRO_COMPLETED')) {
       this.storage.set('INTRO_COMPLETED', true);
       setTimeout(() => {
+        CharacterAnimator.performAction(valentinoEl, 'pose-thoughtful', 3000);
         this.subtitles.show({
           speaker: 'VALENTINO',
           text: 'El taller está en silencio... Todavía huele a aserrín y grasa de motor.',
@@ -52,6 +81,7 @@ export class IntroScene {
       }, 1000);
     } else if (radioDone) {
       setTimeout(() => {
+        CharacterAnimator.performAction(valentinoEl, 'pose-reach-desk', 2500);
         this.subtitles.show({
           speaker: 'VALENTINO',
           text: 'El cajón del escritorio... Hay algo adentro que nunca me animé a tocar.',
@@ -61,6 +91,7 @@ export class IntroScene {
       }, 800);
     } else if (carDone) {
       setTimeout(() => {
+        CharacterAnimator.performAction(valentinoEl, 'pose-look-radio', 2500);
         this.subtitles.show({
           speaker: 'VALENTINO',
           text: 'La radio de la repisa... Todavía me parece escuchar su voz diciéndome que no cambie el dial.',
@@ -70,6 +101,7 @@ export class IntroScene {
       }, 800);
     } else if (mateDone) {
       setTimeout(() => {
+        CharacterAnimator.performAction(valentinoEl, 'pose-reach-tools', 2500);
         this.subtitles.show({
           speaker: 'VALENTINO',
           text: 'Las llaves fijas en el banco... "Antes de tocar cualquier cosa, escuchalo".',
@@ -80,10 +112,10 @@ export class IntroScene {
     }
 
     // Configurar interacciones
-    this.setupInteractions(layer, mateDone, carDone, radioDone);
+    this.setupInteractions(layer, valentinoEl, mateDone, carDone, radioDone);
   }
 
-  setupInteractions(layer, mateDone, carDone, radioDone) {
+  setupInteractions(layer, valentinoEl, mateDone, carDone, radioDone) {
     const spotMate = layer.querySelector('#hotspot-mate');
     const spotTools = layer.querySelector('#hotspot-tools');
     const spotRadio = layer.querySelector('#hotspot-radio');
@@ -92,6 +124,9 @@ export class IntroScene {
     // 1. MATE
     spotMate.addEventListener('click', () => {
       this.audio.playToolClink();
+      // Reacción física: Valentino se gira y se desplaza hacia la mesa extendiendo la mano
+      CharacterAnimator.performAction(valentinoEl, 'pose-reach-mate', 3200);
+
       if (!mateDone) {
         this.subtitles.show({
           speaker: 'VALENTINO',
@@ -116,6 +151,9 @@ export class IntroScene {
     // 2. HERRAMIENTAS / AUTO
     spotTools.addEventListener('click', () => {
       this.audio.playToolClink();
+      // Reacción física: Valentino gira hacia el banco de trabajo y se inclina a inspeccionar
+      CharacterAnimator.performAction(valentinoEl, 'pose-reach-tools', 3000);
+
       if (mateDone && !carDone) {
         this.subtitles.show({
           speaker: 'VALENTINO',
@@ -146,6 +184,9 @@ export class IntroScene {
     // 3. RADIO
     spotRadio.addEventListener('click', () => {
       this.audio.playToolClink();
+      // Reacción física: Valentino da un paso al centro y alza la cabeza hacia el estante alto
+      CharacterAnimator.performAction(valentinoEl, 'pose-look-radio', 3000);
+
       if (carDone && !radioDone) {
         this.subtitles.show({
           speaker: 'VALENTINO',
@@ -176,6 +217,9 @@ export class IntroScene {
     // 4. ESCRITORIO
     spotDesk.addEventListener('click', () => {
       this.audio.playToolClink();
+      // Reacción física: Valentino se aproxima al escritorio con ademán reverente hacia el cajón
+      CharacterAnimator.performAction(valentinoEl, 'pose-reach-desk', 3000);
+
       if (radioDone) {
         this.sceneManager.changeScene('ENVELOPE', 'black');
       } else {

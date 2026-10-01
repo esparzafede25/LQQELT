@@ -1,6 +1,7 @@
 /**
  * LO QUE QUEDÓ EN LA TIERRA
- * SubtitleManager — Subtítulos cinematográficos, cadencia de diálogos y monólogos
+ * SubtitleManager — Subtítulos cinematográficos, cadencia de diálogos y opciones interactivas
+ * Inspiración: Elegancia visual de aventura gráfica autoral (estilo cinematográfico sobrio)
  */
 
 export class SubtitleManager {
@@ -15,23 +16,23 @@ export class SubtitleManager {
     this.clear();
 
     const block = document.createElement('div');
-    block.className = 'subtitle-block';
+    block.className = thought ? 'subtitle-block subtitle-block-thought' : 'subtitle-block';
 
     if (speaker) {
-      const speakerEl = document.createElement('span');
-      speakerEl.className = 'subtitle-speaker';
-      speakerEl.textContent = speaker;
+      const speakerEl = document.createElement('div');
+      speakerEl.className = 'subtitle-speaker-badge';
+      speakerEl.innerHTML = `<span class="speaker-deco">◆</span><span class="speaker-name">${speaker}</span><span class="speaker-deco">◆</span>`;
       block.appendChild(speakerEl);
     }
 
-    const textEl = document.createElement('span');
+    const textEl = document.createElement('div');
     textEl.className = thought ? 'subtitle-text subtitle-thought' : 'subtitle-text';
     textEl.textContent = text;
     block.appendChild(textEl);
 
     this.container.appendChild(block);
 
-    // Fade in
+    // Fade in suave y cinematográfico
     requestAnimationFrame(() => {
       block.classList.add('visible');
     });
@@ -45,6 +46,63 @@ export class SubtitleManager {
     }
   }
 
+  /**
+   * Muestra un diálogo con opciones interactivas integradas a la atmósfera
+   * @param {Object} config
+   * @param {string} [config.speaker]
+   * @param {string} config.text
+   * @param {Array<{label: string, value: any}>} config.choices
+   * @param {Function} config.onSelect
+   */
+  showChoices({ speaker = '', text = '', choices = [], onSelect = null }) {
+    this.clear();
+
+    const block = document.createElement('div');
+    block.className = 'subtitle-block subtitle-block-choices';
+
+    if (speaker) {
+      const speakerEl = document.createElement('div');
+      speakerEl.className = 'subtitle-speaker-badge';
+      speakerEl.innerHTML = `<span class="speaker-deco">◆</span><span class="speaker-name">${speaker}</span><span class="speaker-deco">◆</span>`;
+      block.appendChild(speakerEl);
+    }
+
+    if (text) {
+      const textEl = document.createElement('div');
+      textEl.className = 'subtitle-text';
+      textEl.textContent = text;
+      block.appendChild(textEl);
+    }
+
+    // Columna de opciones interactivas
+    const choicesList = document.createElement('div');
+    choicesList.className = 'cinematic-choices-list';
+
+    choices.forEach((choice, index) => {
+      const btn = document.createElement('button');
+      btn.className = 'cinematic-choice-item';
+      btn.innerHTML = `<span class="choice-marker">${index + 1}.</span> <span class="choice-label">${choice.label}</span>`;
+      
+      btn.addEventListener('click', () => {
+        if (this.audio) this.audio.playToolClink();
+        this.fadeOutBlock(block, () => {
+          if (onSelect) onSelect(choice.value, choice);
+        });
+      });
+
+      choicesList.appendChild(btn);
+    });
+
+    block.appendChild(choicesList);
+    this.container.appendChild(block);
+
+    requestAnimationFrame(() => {
+      block.classList.add('visible');
+    });
+
+    this.isDisplaying = true;
+  }
+
   fadeOutBlock(block, onComplete) {
     if (!block || !block.parentNode) return;
     block.classList.remove('visible');
@@ -54,7 +112,7 @@ export class SubtitleManager {
       }
       this.isDisplaying = false;
       if (onComplete) onComplete();
-    }, 550);
+    }, 450);
   }
 
   clear() {

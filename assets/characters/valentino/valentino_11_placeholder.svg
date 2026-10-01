@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 480" width="300" height="480">
+  <!-- VALENTINO A LOS 11 AÑOS (RECUERDO: LA RADIO) -->
+  <!-- Estilo: Madera tallada artesanal, proporciones infantiles, ojos grandes y curiosos -->
+  <defs>
+    <filter id="woodGrain11">
+      <feTurbulence type="fractalNoise" baseFrequency="0.06" numOctaves="3" result="grain"/>
+      <feColorMatrix type="matrix" values="0.33 0.33 0.33 0 0  0.33 0.33 0.33 0 0  0.33 0.33 0.33 0 0  0 0 0 0.2 0"/>
+      <feBlend mode="multiply" in="SourceGraphic"/>
+    </filter>
+  </defs>
+
+  <g id="valentino-11yo" filter="url(#woodGrain11)">
+    <!-- Piernas / Pantalón corto o arremangado de lana marrón -->
+    <rect x="122" y="270" width="22" height="150" rx="4" fill="#4a3e35" stroke="#251f1a" stroke-width="2"/>
+    <rect x="156" y="270" width="22" height="150" rx="4" fill="#3f342c" stroke="#251f1a" stroke-width="2"/>
+    
+    <!-- Medias de lana y zapatillas clásicas pequeñas -->
+    <rect x="120" y="380" width="26" height="30" fill="#c2baa8" stroke="#333" stroke-width="1.5"/>
+    <rect x="154" y="380" width="26" height="30" fill="#b5ac9a" stroke="#333" stroke-width="1.5"/>
+    <rect x="112" y="420" width="38" height="20" rx="5" fill="#222" stroke="#111" stroke-width="2"/>
+    <rect x="150" y="420" width="38" height="20" rx="5" fill="#1e1e1e" stroke="#111" stroke-width="2"/>
+    <circle cx="140" cy="432" r="3" fill="#eee"/>
+    <circle cx="178" cy="432" r="3" fill="#eee"/>
+
+    <!-- Suéter tejido holgado (infantil, un poco grande) -->
+    <path d="M 100 160 C 95 160 80 185 75 250 L 105 260 L 125 265 L 175 265 L 195 260 L 225 250 C 220 185 205 160 200 160 Z" fill="#6d543e" stroke="#38291c" stroke-width="2.5"/>
+    <!-- Detalle de guarda tejida en el pecho -->
+    <path d="M 95 200 L 205 200" stroke="#b08a5d" stroke-width="6" stroke-dasharray="6,4"/>
+    <path d="M 125 160 L 150 185 L 175 160 Z" fill="#443224" stroke="#221810" stroke-width="1.5"/>
+
+    <!-- Cuello de madera tallada más infantil -->
+    <rect x="141" y="132" width="18" height="30" rx="3" fill="#ba9067" stroke="#48321e" stroke-width="2"/>
+    
+    <!-- Cabeza tallada: mejillas más redondeadas de niño -->
+    <polygon points="122,65 178,65 172,130 150,145 128,130" fill="#cba279" stroke="#48321e" stroke-width="2.5"/>
+    
+    <!-- Ojos grandes y curiosos escuchando la radio -->
+    <ellipse cx="136" cy="95" rx="7.5" ry="9.5" fill="#fff" stroke="#48321e" stroke-width="1.5"/>
+    <ellipse cx="164" cy="95" rx="7.5" ry="9.5" fill="#fff" stroke="#48321e" stroke-width="1.5"/>
+    <circle cx="137" cy="96" r="4.5" fill="#3a2510"/>
+    <circle cx="163" cy="96" r="4.5" fill="#3a2510"/>
+    <circle cx="139" cy="94" r="1.5" fill="#fff"/>
+    <circle cx="165" cy="94" r="1.5" fill="#fff"/>
+    
+    <!-- Cejas expresivas de atención -->
+    <path d="M 126 84 Q 138 80 144 85" stroke="#1a140f" stroke-width="3.5" stroke-linecap="round"/>
+    <path d="M 156 85 Q 162 80 174 84" stroke="#1a140f" stroke-width="3.5" stroke-linecap="round"/>
+    
+    <!-- Nariz pequeña en madera -->
+    <polygon points="150,90 146,110 152,111" fill="#af865d"/>
+    <!-- Pequeña boca atenta -->
+    <ellipse cx="150" cy="122" rx="4" ry="2" fill="#5c3818"/>
+
+    <!-- Cabello negro en rulos desordenados característicos -->
+    <path d="M 112 70 Q 115 35 150 38 Q 185 35 188 70 Q 198 50 178 30 Q 145 25 118 35 Q 102 55 112 70" fill="#1c1612" stroke="#000" stroke-width="2"/>
+    <circle cx="120" cy="55" r="8" fill="#1c1612"/>
+    <circle cx="180" cy="55" r="8" fill="#1c1612"/>
+    <circle cx="150" cy="40" r="10" fill="#1c1612"/>
+
+    <!-- Brazos y manos pequeñas de madera sobre la mesa/rodillas -->
+    <rect x="70" y="245" width="15" height="28" rx="3" fill="#cba279" stroke="#48321e" stroke-width="1.5"/>
+    <rect x="215" y="245" width="15" height="28" rx="3" fill="#cba279" stroke="#48321e" stroke-width="1.5"/>
+  </g>
+</svg>

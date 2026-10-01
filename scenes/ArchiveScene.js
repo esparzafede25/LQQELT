@@ -31,31 +31,57 @@ export class ArchiveScene {
           <button class="archive-tab" data-target="tab-assets">GUÍA DE ASSETS</button>
         </div>
 
-        <!-- SECCIÓN 1: PERSONAJES -->
+        <!-- SECCIÓN 1: PERSONAJES Y EDADES -->
         <div id="tab-characters" class="archive-section active">
           <div class="character-grid">
             <div class="character-card">
               <div class="character-card-img-wrapper">
-                <img src="assets/characters/valentino/valentino_front.jpg" alt="Valentino Frontal">
+                <img src="assets/characters/valentino/valentino_11_placeholder.svg" alt="Valentino 11 años">
               </div>
               <div class="character-card-body">
-                <div class="character-card-name">VALENTINO</div>
-                <div class="character-card-role">VISTA FRONTAL • MADERA TALLADA</div>
+                <div class="character-card-name">VALENTINO (11 AÑOS)</div>
+                <div class="character-card-role">RECUERDO III: LA RADIO • INFANCIA</div>
                 <div class="character-card-desc">
-                  Rostro alargado y anguloso tallado en madera. Cejas gruesas, ojos marrones grandes de mirada melancólica. Campera de jean gastada, suéter gris tejido y zapatillas oscuras.
+                  Proporciones infantiles, mirada curiosa y atenta. Suéter tejido holgado. Escucha el fútbol junto a su padre mientras las primeras ondas de radio distorsionan la realidad.
                 </div>
               </div>
             </div>
 
             <div class="character-card">
               <div class="character-card-img-wrapper">
-                <img src="assets/characters/valentino/valentino_profile.jpg" alt="Valentino Perfil">
+                <img src="assets/characters/valentino/valentino_teen_placeholder.svg" alt="Valentino Adolescente">
               </div>
               <div class="character-card-body">
-                <div class="character-card-name">VALENTINO</div>
-                <div class="character-card-role">PERFIL • SILUETA CON MOCHILA</div>
+                <div class="character-card-name">VALENTINO (ADOLESCENTE)</div>
+                <div class="character-card-role">RECUERDO I: EL MATE • ADOLESCENCIA</div>
                 <div class="character-card-desc">
-                  Cuerpo delgado, postura contenida por el peso del duelo. Cabello negro desordenado modelado artesanalmente. Manos articuladas de madera.
+                  Contextura espigada en crecimiento, brazos largos y postura tranquila. Aprende de su padre el ritual silencioso y cálido de cebar y compartir el mate de madera.
+                </div>
+              </div>
+            </div>
+
+            <div class="character-card">
+              <div class="character-card-img-wrapper">
+                <img src="assets/characters/valentino/valentino_18_placeholder.svg" alt="Valentino 18 años">
+              </div>
+              <div class="character-card-body">
+                <div class="character-card-name">VALENTINO (18 AÑOS)</div>
+                <div class="character-card-role">RECUERDO II: EL AUTO / TALLER • JUVENTUD</div>
+                <div class="character-card-desc">
+                  Joven adulto con mangas arremangadas y marcas de grasa en las manos. Aprende a escuchar el motor antes de intervenir y domina el uso de la llave 10 mm.
+                </div>
+              </div>
+            </div>
+
+            <div class="character-card">
+              <div class="character-card-img-wrapper">
+                <img src="assets/characters/valentino/valentino_present_placeholder.svg" alt="Valentino Adulto">
+              </div>
+              <div class="character-card-body">
+                <div class="character-card-name">VALENTINO (ADULTO)</div>
+                <div class="character-card-role">PRESENTE • EL TALLER / VIAJE</div>
+                <div class="character-card-desc">
+                  Rostro alargado y anguloso tallado en madera. Campera de jean gastada, mochila al hombro y mirada melancólica. El protagonista del cortometraje ante la pérdida definitiva.
                 </div>
               </div>
             </div>
@@ -107,21 +133,24 @@ export class ArchiveScene {
         <!-- SECCIÓN 4: GUÍA DE ASSETS -->
         <div id="tab-assets" class="archive-section">
           <div class="document-box">
-            <h3>ARQUITECTURA MODULAR DE ASSETS</h3>
+            <h3>ARQUITECTURA MODULAR DE PERSONAJES Y FONDOS</h3>
             <p>
-              Todos los gráficos, sonidos y elementos visuales están desacoplados de la lógica de código. Para personalizar o actualizar los recursos en el futuro, basta con reemplazar los archivos correspondientes manteniendo los nombres:
+              Los personajes y los fondos funcionan como capas visuales independientes. Cada edad de Valentino y el padre disponen de sus propios placeholders dedicados para facilitar la futura sustitución por renders o fotos de maquetas finales:
             </p>
             <div class="code-box">
-assets/backgrounds/workshop_present.jpg        -> Taller en el presente
-assets/backgrounds/memory_mate.jpg             -> Recuerdo 1 (Cocina cálida y mate)
-assets/backgrounds/memory_car.jpg              -> Recuerdo 2 (Garaje y motor)
-assets/backgrounds/memory_radio.jpg            -> Recuerdo 3 (Radio analógica)
-assets/backgrounds/sequence_envelope_map.jpg   -> Cajón con sobre y mapa
-assets/backgrounds/departure_backpack_seat.jpg -> Inserto de la mochila en el asiento
-assets/backgrounds/departure_highway_sunset.jpg-> Auto en la ruta al atardecer
-assets/characters/valentino/                   -> Modelos y fotos de Valentino
-assets/characters/father/                      -> Modelos y fotos del Padre
-assets/props/                                  -> Objetos individuales (mate, llave 10, etc.)
+assets/characters/valentino/valentino_11_placeholder.svg      -> Valentino 11 años (Radio)
+assets/characters/valentino/valentino_teen_placeholder.svg    -> Valentino Adolescente (Mate)
+assets/characters/valentino/valentino_18_placeholder.svg      -> Valentino 18 años (Auto)
+assets/characters/valentino/valentino_present_placeholder.svg -> Valentino Adulto (Presente)
+assets/characters/father/father_placeholder.svg               -> El Padre (Capa separada)
+
+assets/backgrounds/workshop_present.jpg        -> Escenario: Taller en el presente
+assets/backgrounds/memory_mate.jpg             -> Escenario: Cocina cálida
+assets/backgrounds/memory_car.jpg              -> Escenario: Garaje y automóvil
+assets/backgrounds/memory_radio.jpg            -> Escenario: Rincón de la radio
+assets/backgrounds/sequence_envelope_map.jpg   -> Escenario: Cajón con sobre y mapa
+assets/backgrounds/departure_backpack_seat.jpg -> Inserto: Mochila en el asiento
+assets/backgrounds/departure_highway_sunset.jpg-> Escenario: Ruta al atardecer
             </div>
             <p>
               El proyecto utiliza rutas relativas, lo que permite su publicación inmediata en GitHub Pages o Vercel sin necesidad de configuración adicional ni compiladores externos.
