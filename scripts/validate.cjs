@@ -88,6 +88,7 @@ const walkFiles = new Set([...walkSource.matchAll(/'([^']+\.(?:png|mp4))'/g)].ma
 for (const file of ['01-bow.mp4','01-bow-end.png','02-return.mp4','02-return-end.png']) walkFiles.add(`assets/present-chair-v1/${file}`);
 for (const match of openingSource.matchAll(/src="([^"]+\.(?:png|mp4))"/g)) walkFiles.add(match[1]);
 for (const file of walkFiles) {
+  assert.ok(file.startsWith('assets/'), `Production media outside assets (may be excluded from deploy): ${file}`);
   const bytes = fs.readFileSync(path.join(root, file));
   const video = file.endsWith('.mp4');
   assert.ok(bytes.length > 1000, `Empty walk candidate: ${file}`);

@@ -131,3 +131,7 @@ Aplicadas revisiones M/L/R/E del usuario. R13 trasladada al regreso visible a co
 ## 22/10/2026 — Introducción sin voz
 
 Por pedido del usuario se retiró la voz grabada de la introducción. DreamSoundtrack usa assets/intro-music-only-v1/sueno-musica.mp3, preparado directamente desde la música original, sin voz ni ducking de narración. Conserva duración, imágenes y textos. Originales de voz intactos como respaldo. Pista verificada: sólo audio, 104,30 s. Pruebas dream-audio y validador aprobadas.
+
+## 22/10/2026 — Bloqueo tras introducción en GitHub
+
+Confirmados seis medios del recorrido ausentes en HEAD 6b5586f por exclusión de qa. Recursos de despertar/dormitorio/pasillo copiados idénticos a assets/present-home-v1 y rutas activas corregidas. Validación exige assets para medios del recorrido. Cuatro verificaciones aprobadas. Ver CORRECCION_PUBLICACION.md y qa/present/production-paths-v1/media.json. Falta que usuario publique esta corrección desde Antigravity; no se hizo push.

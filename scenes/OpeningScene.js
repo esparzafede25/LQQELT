@@ -22,7 +22,7 @@ export class OpeningScene {
     this.layer.className = 'opening-scene';
     this.layer.setAttribute('aria-label','Introducción: la pesadilla y el despertar de Valentino');
     this.layer.innerHTML = `<img src="assets/present-third-person/bedroom-sleep-v1.png" alt="Valentino duerme en su pieza, bajo la luz fría de la mañana.">
-      <video muted playsinline preload="auto" src="qa/present/bedroom-wake-adult-v2.mp4"></video>
+      <video muted playsinline preload="auto" src="assets/present-home-v1/bedroom-wake-adult-v2.mp4"></video>
       <div class="opening-dream" aria-label="La pesadilla">
         ${DREAM_SHOTS.map(([src,alt])=>`<img src="${src}" alt="${alt}">`).join('')}
         <div class="dream-shadow" aria-hidden="true"></div>
