@@ -1,0 +1,30 @@
+{
+  "props": [
+    {
+      "key": "map",
+      "prompt": "Production game prop insert for Lo que queda en la Tierra. Reference image is STYLE and continuity reference only: same handmade stop-motion set, tactile worn paper and dark scarred kitchen wood, cold muted blue window light. Create a high-detail 3:2 horizontal close-up of ONE old folded Argentine road map opened on the dark wooden table. Yellowed paper fibers, softened frayed edges, six creased panels, faded muted ochre/green/blue cartography similar to small map on reference table. Clear hand-drawn red route and a single circled red cross at destination with tiny sketch of a solitary tree. Only readable labels: 'RUTA 40' and handwritten 'Km 142'. Make both labels clearly legible, no dates, no extra invented sentences or coordinates. This is a fictional narrative prop, not a navigational map. Map occupies 85% of image with visible dark wood around edges. Camera nearly overhead, slight real paper thickness and folds, sharp restrained film texture. No hands, no people, no envelope, no bright white background, no decorative graphic UI, no cartoon, no watermark."
+    },
+    {
+      "key": "envelope",
+      "prompt": "Production game prop insert for Lo que queda en la Tierra. Reference image is STYLE and continuity reference only: tactile handmade stop-motion materials, worn dark kitchen wood, cold subdued blue window light. High-detail 3:2 horizontal close-up of ONE CLOSED SEALED old cream kraft paper envelope on the scarred wooden table. Softened corners, subtle stains, folded paper fibers and visible thickness, quiet restrained mood. Envelope is front address side up, slightly oblique overhead view, fills 75% of composition. In the center one clearly legible handwritten name in dark black ink, exact text: 'Valentino'. Small faded circular postmark near upper right, no readable date or extra text. Remain sealed: no letter visible, no exposed paper interior, no opening or torn flap, no hands or people. Cold dim house atmosphere, make paper readable against dark background. No wax seal, no red stamp, no bright white background, no UI, no watermark."
+    }
+  ],
+  "portraits": [
+    {
+      "key": "child",
+      "refs": [
+        "assets/radio-cinematic/00-radio.png",
+        "Bocetos/Imagen de ChatGPT 30 sept 2026, 01_13_11 p.m.png"
+      ],
+      "prompt": "Identity-preserving production character portrait. Image1 is the final game reference: extract and faithfully portray ONLY the small 11-year-old wooden boy seated beside his father. Image2 is his canonical age/design reference. Single full-body standing portrait, 2:3 vertical, all hair and shoes within frame, neutral dark warm gray studio backdrop. EXACT same boy: large carved wooden ears, small child body proportions, rounded young carved wooden jaw and thin nose, same dark tangled fiber hair and thick eyebrows, brown eyes, navy worn denim jacket over gray striped knit sweater/blue hood, brown shorts, gray socks, worn high-top shoes. Hands relaxed beside body, restrained attentive expression, no smile into camera, no backpack. Handmade stop-motion model photography, visible tactile wood grain and cloth, realistic miniature materials and beautiful soft warm key light. Preserve the specific game's identity, not generic cartoon child. No father, no radio, no other figures, no text, no labels, no border."
+    },
+    {
+      "key": "young",
+      "refs": [
+        "assets/car-cinematic/00-workshop.png",
+        "Bocetos/adolescente.png"
+      ],
+      "prompt": "Identity-preserving production character portrait. Reference1 contains father (left) and young Valentino18 (RIGHT beside workbench). Portray ONLY Valentino on the RIGHT, faithfully same young wooden face and actual clothing. Reference2 provides material/identity continuity of same character. Single standing three-quarter portrait from head to mid thighs, 2:3 vertical, neutral dark warm gray studio backdrop matching character archive. Young18 adult proportions, long narrow wooden face with softer young cheeks, dark tangled fiber hair and thick eyebrows, tired but attentive small brown eyes. Navy worn denim jacket and blue hood over gray knit sweater with subdued rust stripes, dark brown trousers. Hands relaxed down or in pockets. NO backpack, no rolled sleeves unless matching reference, no tools, no father. Handmade stop-motion model photography, tactile carved wood grain, seams and knitted textiles. Preserve reference identity; do not enlarge eyes, do not make childlike, do not add beard or age. Soft restrained warm studio light. No text, border, labels or other figures."
+    }
+  ]
+}

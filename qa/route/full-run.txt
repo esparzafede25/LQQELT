@@ -1,0 +1,44 @@
+PASS El diálogo espera al lector
+PASS Cámara llega a mate
+PASS Acción mate bloquea nuevos clics
+PASS Clic repetido no duplica mate
+PASS Video mate se reproduce
+PASS Video mate llega a su final
+PASS No guarda antes del cierre de mate
+PASS Cámara llega a yerba
+PASS Acción yerba bloquea nuevos clics
+PASS Clic repetido no duplica yerba
+PASS Video yerba se reproduce
+PASS Video yerba llega a su final
+PASS No guarda antes del cierre de yerba
+PASS Cámara llega a pava
+PASS Acción pava bloquea nuevos clics
+PASS Clic repetido no duplica pava
+PASS Video pava se reproduce
+PASS Video pava llega a su final
+PASS No guarda antes del cierre de pava
+PASS Cámara llega a prepare
+PASS Acción prepare bloquea nuevos clics
+PASS Clic repetido no duplica prepare
+PASS Video prepare se reproduce
+PASS Video prepare llega a su final
+PASS No guarda antes del cierre de prepare
+PASS Cámara llega a pour
+PASS Acción pour bloquea nuevos clics
+PASS Clic repetido no duplica pour
+PASS Video pour se reproduce
+PASS Video pour llega a su final
+PASS No guarda antes del cierre de pour
+PASS Cámara llega a pass
+PASS Acción pass bloquea nuevos clics
+PASS Clic repetido no duplica pass
+PASS Video pass se reproduce
+PASS Video pass llega a su final
+PASS No guarda antes del cierre de pass
+PASS Cámara llega a return
+PASS Acción return bloquea nuevos clics
+PASS Clic repetido no duplica return
+PASS Video return se reproduce
+PASS Video return llega a su final
+PASS Guarda al completar
+PASS Cancela al salir

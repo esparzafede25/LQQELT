@@ -127,25 +127,18 @@ export class IntroScene {
       // Reacción física: Valentino se gira y se desplaza hacia la mesa extendiendo la mano
       CharacterAnimator.performAction(valentinoEl, 'pose-reach-mate', 3200);
 
-      if (!mateDone) {
         this.subtitles.show({
           speaker: 'VALENTINO',
           text: 'El mate viejo de madera... Todavía tiene la marca de sus dedos en la virola.',
           thought: true,
           duration: 2500,
           onComplete: () => {
-            // Transición sensorial al Recuerdo 1
+            // Replaying a memory must return to the entry that triggered it.
+            this.storage.set('PRESENT_RETURN_SCENE', 'INTRO');
+            this.storage.set('PRESENT_MEMORY_RETURN', true);
             this.sceneManager.changeScene('MISSION_MATE', 'warm-fade');
           }
         });
-      } else {
-        this.subtitles.show({
-          speaker: 'VALENTINO',
-          text: 'Ya preparé el mate. Me lo voy a llevar conmigo.',
-          thought: true,
-          duration: 2800
-        });
-      }
     });
 
     // 2. HERRAMIENTAS / AUTO

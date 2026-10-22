@@ -1,0 +1,29 @@
+{
+  "images": [
+    {
+      "loaded": true,
+      "src": "assets/ui/favicon.svg"
+    },
+    {
+      "loaded": true,
+      "src": "assets/portal-v1/la-ruta.webp"
+    },
+    {
+      "loaded": true,
+      "src": "assets/portal-v1/el-juego.webp"
+    },
+    {
+      "loaded": true,
+      "src": "assets/portal-v1/el-corto.webp"
+    }
+  ],
+  "filmComingSoon": true,
+  "legacyURL": "http://127.0.0.49:3019/juego.html?scene=CAR_DEPARTURE",
+  "continueEnabled": true,
+  "resumedCarScene": true,
+  "mobile": {
+    "width": 375,
+    "scrollWidth": 375
+  },
+  "logs": []
+}

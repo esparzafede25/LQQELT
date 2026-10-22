@@ -18,30 +18,27 @@ export class EnvelopeScene {
   }
 
   async enter(container) {
+    const visit = this.visit = (this.visit || 0) + 1;
     this.hasInspectedMap = false;
 
     const layer = document.createElement('div');
-    layer.className = 'scene-layer grade-present';
-    layer.style.backgroundImage = "url('assets/backgrounds/sequence_envelope_map.jpg')";
+    layer.className = 'scene-layer grade-present envelope-present';
+    layer.style.backgroundImage = "url('assets/present-third-person/kitchen-base-v1.png')";
 
     layer.innerHTML = `
       <!-- Presencia de Valentino junto al cajón -->
-      <div id="character-valentino-desk" class="character-layer character-valentino-present stop-motion-idle" style="left: 12%; bottom: 6%; opacity: 0.85;">
-        <img src="assets/characters/valentino/valentino_present_placeholder.svg" alt="Valentino Adulto">
-      </div>
-
       <div class="drawer-modal">
         <div class="drawer-content">
           <!-- Tarjeta 1: El Mapa viejo -->
           <div id="card-map" class="drawer-item-card" data-cursor="MIRAR">
-            <img src="assets/props/map_placeholder.svg" alt="Mapa viejo">
+            <img src="assets/archive-v1/mapa.png" alt="Mapa plegado de la Ruta 40, con el kilómetro 142 marcado">
             <div class="drawer-item-title">MAPA DE RUTA PLEGADO</div>
             <div class="drawer-item-desc">Anotaciones a mano de papá. Una cruz marcada en el kilómetro 142.</div>
           </div>
 
           <!-- Tarjeta 2: El Sobre -->
           <div id="card-envelope" class="drawer-item-card" data-cursor="ABRIR">
-            <img src="assets/props/envelope_placeholder.svg" alt="Sobre">
+            <img src="assets/archive-v1/sobre.png" alt="Sobre cerrado con el nombre de Valentino escrito a mano">
             <div class="drawer-item-title">SOBRE SELLADO</div>
             <div class="drawer-item-desc">Con su caligrafía firme en tinta negra: "Valentino".</div>
           </div>
@@ -51,6 +48,12 @@ export class EnvelopeScene {
 
     container.appendChild(layer);
 
+    this.layer = layer;
+  }
+
+  async onVisible() {
+    const visit = this.visit;
+    const layer = this.layer;
     this.audio.playAtmosphere('workshop');
 
     // Título de secuencia
@@ -60,16 +63,20 @@ export class EnvelopeScene {
       subtitle: 'Negación'
     });
 
-    this.setupCards(layer);
+    if (this.visit === visit) this.setupCards(layer);
   }
 
   setupCards(layer) {
+    const visit = this.visit;
+    let inspecting = false;
     const cardMap = layer.querySelector('#card-map');
     const cardEnvelope = layer.querySelector('#card-envelope');
     const valentinoEl = layer.querySelector('#character-valentino-desk');
 
     // 1. Mirar el Mapa
     cardMap.addEventListener('click', async () => {
+      if (this.visit !== visit || inspecting) return;
+      inspecting = true;
       this.hasInspectedMap = true;
       this.audio.playToolClink();
       CharacterAnimator.performAction(valentinoEl, 'pose-reach-desk', 2500);
@@ -78,7 +85,7 @@ export class EnvelopeScene {
       modal.className = 'inspect-modal';
       modal.innerHTML = `
         <div class="inspect-media-wrapper">
-          <img src="assets/props/map_placeholder.svg" style="max-height: 55vh; object-fit: contain;">
+          <img src="assets/archive-v1/mapa.png" alt="Mapa de la Ruta 40 con una cruz junto al árbol del kilómetro 142">
           <div class="inspect-caption">"Ruta 40... El árbol solitario del kilómetro 142. Allí donde él estuvo cuando tenía 23 años."</div>
           <button class="btn-cinema" style="margin-top: 24px;">VOLVER AL CAJÓN</button>
         </div>
@@ -87,13 +94,17 @@ export class EnvelopeScene {
 
       const closeBtn = modal.querySelector('button');
       closeBtn.addEventListener('click', () => {
+        if (this.visit !== visit) return;
         this.audio.playToolClink();
         layer.removeChild(modal);
+        inspecting = false;
       });
     });
 
     // 2. Abrir el Sobre (Regla estricta: NO mostrar que está vacía)
     cardEnvelope.addEventListener('click', async () => {
+      if (this.visit !== visit || inspecting) return;
+      inspecting = true;
       this.audio.playToolClink();
       CharacterAnimator.performAction(valentinoEl, 'pose-thoughtful', 3500);
 
@@ -102,7 +113,7 @@ export class EnvelopeScene {
       modal.innerHTML = `
         <div class="inspect-media-wrapper">
           <!-- Enfocamos el sobre y las manos, NUNCA el papel interior desplegado -->
-          <img src="assets/props/envelope_placeholder.svg" style="max-width: 420px; object-fit: contain;">
+          <img src="assets/archive-v1/sobre.png" alt="Sobre de papel envejecido dirigido a Valentino, sin mostrar su contenido">
           <div class="inspect-caption" style="font-size: 22px; color: var(--accent-gold);">
             Valentino desliza los dedos y abre el sobre...
           </div>
@@ -110,32 +121,30 @@ export class EnvelopeScene {
       `;
       layer.appendChild(modal);
 
-      // Reproducción de la voz evocada del padre (V.O.)
+      // Leyendas en pantalla: estos fragmentos no llevan voz ni etiqueta V.O.
       await this.subtitles.playSequence([
         { 
-          speaker: 'PADRE (V.O.)', 
+          speaker: '', 
           text: 'Valentino...', 
-          voice: 'father',
           delay: 800, 
           duration: 3000 
         },
         { 
-          speaker: 'PADRE (V.O.)', 
+          speaker: '', 
           text: '17 de octubre...', 
-          voice: 'father',
           delay: 500, 
           duration: 2800 
         },
         { 
-          speaker: 'PADRE (V.O.)', 
+          speaker: '', 
           text: '06:42...', 
-          voice: 'father',
           delay: 600, 
           duration: 3200 
         }
       ]);
 
       // Construcción del autoengaño en la mente de Valentino
+      if (this.visit !== visit) return;
       await this.subtitles.playSequence([
         { 
           speaker: 'VALENTINO', 
@@ -154,13 +163,17 @@ export class EnvelopeScene {
       ]);
 
       // Pasar a la preparación del viaje
-      setTimeout(() => {
+      if (this.visit !== visit) return;
+      this.transitionTimer = setTimeout(() => {
+        if (this.visit !== visit) return;
         this.sceneManager.changeScene('DEPARTURE', 'black');
       }, 1500);
     });
   }
 
   exit() {
+    this.visit = (this.visit || 0) + 1;
+    clearTimeout(this.transitionTimer);
     this.audio.stopAtmosphere();
   }
 }

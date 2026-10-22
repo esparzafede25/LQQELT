@@ -1,0 +1,11 @@
+{
+  "audioPlayingObserved": true,
+  "lateShotsObserved": [
+    5,
+    8
+  ],
+  "savedAfterIntro": true,
+  "resumedBedroom": true,
+  "mixSeconds": 104.3,
+  "logs": []
+}

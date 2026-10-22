@@ -1,0 +1,12 @@
+import assert from 'node:assert/strict';
+import {AudioManager} from '../../scripts/AudioManager.js';
+import {CarDepartureScene} from '../../scenes/CarDepartureScene.js';
+const audio=new AudioManager({get:()=>true}),nodes=[];
+const node=()=>{const n={gain:{setValueAtTime(v){this.value=v;}},connect(to){this.to=to;},disconnect(){this.disconnected=true;}};nodes.push(n);return n;};
+audio.ctx={currentTime:0,createMediaElementSource:()=>node(),createGain:node};audio.masterGain={gain:{value:0}};audio.ensureContext=()=>{};
+const video={muted:true},binding=audio.bindCarVideo(video);
+assert.ok(binding);assert.equal(nodes[0].to,nodes[1]);assert.equal(nodes[1].to,audio.masterGain,'recording must use shared mute/volume');assert.equal(nodes[1].gain.value,.55);
+let synthetic=0,wind=0;const scene=new CarDepartureScene();Object.assign(scene,{alive:true,phase:'playing',index:3,playId:1,videoAudio:binding,audio:{playCarStart(){synthetic++;},startEngineIdle(){synthetic++;},playAtmosphere(){wind++;}}});
+scene.startPlaybackAudio();scene.startPlaybackAudio();assert.equal(synthetic,0,'do not layer generated engine over the real recording');scene.index=4;scene.playId++;scene.startPlaybackAudio();assert.equal(synthetic,0);assert.equal(wind,1);
+binding.dispose();assert.ok(video.muted&&nodes.every(n=>n.disconnected));
+console.log('PASS: native video audio through mute bus, no duplicate synthetic engine, cleanup.');

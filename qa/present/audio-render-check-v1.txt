@@ -1,0 +1,13 @@
+Papel y carta · pico 0.0131 · RMS 0.0012 · sin saturación
+
+Cuero de la mochila · pico 0.0298 · RMS 0.0024 · sin saturación
+
+Ropa · pico 0.0174 · RMS 0.0016 · sin saturación
+
+Mate · pico 0.0143 · RMS 0.0014 · sin saturación
+
+Llave · pico 0.0143 · RMS 0.0015 · sin saturación
+
+Puerta del auto · pico 0.0560 · RMS 0.0075 · sin saturación
+
+Arranque · pico 0.0756 · RMS 0.0132 · sin saturación

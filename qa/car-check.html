@@ -1,0 +1,33 @@
+<!doctype html><html lang="es"><meta charset="utf-8"><base href="/"><title>Prueba del Taller</title>
+<link rel="stylesheet" href="/styles/mate-film.css"><style>body{margin:0;background:#151515;color:#eee;font:15px system-ui}header{padding:12px}button{padding:8px}#stage{position:relative;width:100%;height:680px}pre{white-space:pre-wrap;padding:12px}.mate-caption p{margin:0}</style>
+<header><button id="run">Probar Taller completo</button><button id="cancel">Probar salida durante acción</button><button id="failure">Probar error y reintento</button><span id="status">Listo</span></header><div id="stage"></div><pre id="report"></pre>
+<script type="module">
+import { CarFilmScene, CAR_ACTIONS } from '/scenes/CarFilmScene.js';
+const report=document.querySelector('#report'), status=document.querySelector('#status'), stage=document.querySelector('#stage');
+let scene,results=[];
+const delay=ms=>new Promise(r=>setTimeout(r,ms));
+function check(value,text){if(!value)throw new Error(text);results.push('PASS '+text);report.textContent=results.join('\n');}
+async function until(fn,ms=45000){const t=performance.now();while(!fn()){if(performance.now()-t>ms)throw new Error('Tiempo agotado');await delay(100);}}
+async function setup(){scene?.exit();stage.replaceChildren();results=[];report.textContent='';scene=new CarFilmScene();scene.audio={playAtmosphere(){},stopAtmosphere(){},stopEngine(){},ensureContext(){}};scene.storage={set(k,v){scene.saved={key:k,value:v};}};scene.sceneManager={changeScene(name){scene.destination=name;scene.exit();}};await scene.enter(stage);scene.onVisible();await until(()=>scene.advanceDialogue);await delay(400);}
+async function speak(text){await until(()=>document.querySelector('.mate-caption.visible p')?.textContent===text);await delay(400);document.querySelector('.mate-speech').click();}
+async function ready(){await until(()=>scene.state==='ready');}
+async function choose(){await ready();document.querySelector('#car-fetch').click();document.querySelector('[data-tool="10"]').click();}
+function wrap(fn){return async()=>{document.querySelectorAll('header button').forEach(b=>b.disabled=true);status.textContent='En curso';try{await fn();status.textContent='PASS';}catch(e){status.textContent='FAIL';report.textContent+='\nFAIL '+e.message;}finally{document.querySelectorAll('header button').forEach(b=>b.disabled=false);}};}
+document.querySelector('#run').onclick=wrap(async()=>{
+ await setup();check(!!scene.advanceDialogue,'Diálogo espera al lector');await speak('Pasame la diez.');await ready();
+ document.querySelector('#car-fetch').click();check(!scene.choices.hidden,'Caja abre selección');document.querySelector('[data-back]').click();check(scene.state==='ready'&&scene.choices.hidden,'Volver recupera escena');
+ document.querySelector('#car-fetch').click();document.querySelector('[data-tool="8"]').click();await speak('Esa no.');await speak('Buscá la diez, fijate bien.');await until(()=>scene.state==='choosing');check(scene.step===0&&!scene.saved,'Herramienta incorrecta no avanza');document.querySelector('[data-tool="10"]').click();
+ const limit=Math.min(3,Number(new URLSearchParams(location.search).get('steps'))||3);
+ for(let i=0;i<limit;i++){
+  const action=CAR_ACTIONS[i];if(i){await ready();document.querySelector('#car-'+action.id).click();}
+  check(scene.state==='busy','Bloquea clics en '+action.id);scene.perform(action.id);check(scene.step===i,'Clic repetido no duplica '+action.id);
+  await until(()=>scene.frame.dataset.playback==='held'||scene.state==='media-error');check(scene.state!=='media-error'&&scene.videos[action.id].ended,'Video completo '+action.id);check(!scene.saved,'No guarda antes del cierre '+action.id);
+  if(i===0){await speak('Acá está la diez.');await speak('Probá vos.');await speak('No fuerces.');await speak('Sentí cómo agarra la rosca.');}
+  if(i===1){await speak('Ajustó perfecto.');await speak('Ahí está.');await speak('Siempre de a poco.');}
+  if(i===2){await speak('Si la aguja de temperatura vuelve a subir en la ruta,');await speak('sé exactamente qué hacer.');}
+ }
+ if(limit===3){await until(()=>scene.destination==='INTRO');check(scene.saved?.key==='CAR_COMPLETED'&&scene.saved.value,'Guarda sólo al terminar');check(!scene.alive&&scene.pending.size===0,'Salida limpia esperas');}else{await ready();check(scene.step===limit,'Recorrido parcial devuelve control');}
+});
+document.querySelector('#cancel').onclick=wrap(async()=>{await setup();await speak('Pasame la diez.');await choose();await delay(1800);scene.exit();stage.replaceChildren();await delay(10500);check(!scene.saved,'Salida temprana no guarda');check(scene.pending.size===0,'Salida cancela esperas');check(Object.values(scene.videos).every(v=>v.paused),'Salida pausa videos');});
+document.querySelector('#failure').onclick=wrap(async()=>{await setup();await speak('Pasame la diez.');scene.videos.fetch.src='/qa/missing-video.mp4';await choose();await until(()=>scene.state==='media-error');check(!scene.saved&&scene.step===0,'Error no guarda ni avanza');check(!scene.mediaError.hidden,'Ofrece reintento');scene.videos.fetch.src='/assets/car-cinematic/01-fetch.mp4';scene.mediaError.querySelector('button').click();await until(()=>scene.advanceDialogue);check(scene.videos.fetch.ended,'Reintento llega al diálogo tras reproducir');scene.exit();});
+</script></html>

@@ -1,0 +1,122 @@
+[
+  {
+    "file": "scenes/OpeningScene.js",
+    "before": "e2b561e72e33a45ebc7fc6cb4197c193be57a2d3b39445227aeef8664d9d09d6",
+    "after": "d92892e94bf618f8669a844d25a0eb7e5e719eabdd6ff8a0f922d46aadd5558a"
+  },
+  {
+    "file": "scripts/DreamSoundtrack.js",
+    "before": "61a111bbb19e63e4aa59884afef330e1ceb8c92116c1bbc70f99fe02aff25f00",
+    "after": "970643690a9773450c82dd2ac91644bf39b3aab11198252154fcce1c9bcb5c1f"
+  },
+  {
+    "file": "qa/present/dream-audio.test.mjs",
+    "before": "27635ff74da91f355a1e6b1151537f8321d6786c14c0f5ee45e35ae30b003dd1",
+    "after": "d370bba68582a290560f93e165a8edc12dbe40762c6f5675eddeb2967a250b91"
+  },
+  {
+    "file": "PASADA_19_INTRO_ECO.md",
+    "before": "76107e8dab513757609199ef6b29fab588a94caa26549de407022ec38ae1aa09",
+    "after": "cbbbd8ca669fff15cda63a099bb9f573907e23ad17ff5e613881a411ba0f9dd0"
+  },
+  {
+    "file": "assets/intro-sound-v2/montaje.json",
+    "before": null,
+    "after": "8958f3cd8a578cd9c6599760e396a3322868ee7bcf1d19d8294fa17ea551a32e"
+  },
+  {
+    "file": "assets/intro-sound-v2/muestra-voz.mp3",
+    "before": null,
+    "after": "e8304bef22676d9a5cace9ccdd891ab1f3ce8ead736db6cfe6998ea20654735e"
+  },
+  {
+    "file": "assets/intro-sound-v2/PRODUCCION.md",
+    "before": null,
+    "after": "c1262da753f39807999717114538285c8ffc85de85f50d5075a695bfffb320fa"
+  },
+  {
+    "file": "assets/intro-sound-v2/sueno-mezcla.mp3",
+    "before": null,
+    "after": "e515163d71175a0265a22aa7e28ec6379c5863600887e145d40b8ea87aea447a"
+  },
+  {
+    "file": "assets/intro-sound-v2/voz-con-eco.mp3",
+    "before": null,
+    "after": "0c39b5a3f070f110de75f93d56d3f50b44ebe263068c8514bf1bfef895076834"
+  },
+  {
+    "file": "scenes/PresentWalkScene.js",
+    "before": "80dc0f6506b91600da66b5dfec69af447c25a244f98a3bbad6dc4a8db36ce0ef",
+    "after": "f0ec21c37242ae66880651518ed7722113839db83c466aacca63699120704977"
+  },
+  {
+    "file": "scripts/TapSound.js",
+    "before": null,
+    "after": "ba51b3d61c9a76f97592e24ca61cff5a3a8a57171ac5e9100b3c9b670b3ef985"
+  },
+  {
+    "file": "qa/present/tap-sound.test.mjs",
+    "before": null,
+    "after": "0fc709862fb29d5e9c22299d628645e8c790ca965b06009ccd8ac77b390421cd"
+  },
+  {
+    "file": "PASADA_20_GRIFO.md",
+    "before": "7886eb9c3d16b0506852ad34fc80562b47ded3500e7f7e4c69c37128a9433dba",
+    "after": "8d01760e94a2b6eb775d30911663427ee00c94bfeb367ff6d9b25bdbe73ffaa8"
+  },
+  {
+    "file": "assets/tap-sound-v1/agua-continua.mp3",
+    "before": null,
+    "after": "aa74698f1058d78433db9439e67576353f72a896ad23143da666085834ab06e1"
+  },
+  {
+    "file": "assets/tap-sound-v1/edicion.json",
+    "before": null,
+    "after": "1dd5487ecfc506fe9d863d749bc19266bbd52eda58c8409c8de1598931657f76"
+  },
+  {
+    "file": "assets/tap-sound-v1/grifo-original.mp3",
+    "before": null,
+    "after": "3bc2ccacb46021c5e5111de288a70b18f3c8aedab6e00a982819f5b39e37f724"
+  },
+  {
+    "file": "assets/tap-sound-v1/PRODUCCION.md",
+    "before": null,
+    "after": "5587684acfc5cd53d8c213f1a583180f0a074e7d9c19c78c404e4cca2812d769"
+  },
+  {
+    "file": "CIERRE_PROYECTO.md",
+    "before": "c41d93cf79bfc30f98591ea324498ba28e1658785557e8b1e768e763dccf1aa8",
+    "after": "12f9b0a4511427de442419117f8c21d0f90b452da9cdf7b54c99e17af92a9e1c"
+  },
+  {
+    "file": "qa/present/intro-sound-v2/browser-H.json",
+    "before": null,
+    "after": "8c5918665b0dc9fc8435088522b26a1d46b9e11daa34435188f67476c382c978"
+  },
+  {
+    "file": "qa/present/intro-sound-v2/intro-H-proof.png",
+    "before": null,
+    "after": "cb0ae1b4a5f9ef7409ee670a0408e8a17fa6a3b6bda35934f6b1fe6cefdcd837"
+  },
+  {
+    "file": "qa/present/intro-sound-v2/wake-H-proof.png",
+    "before": null,
+    "after": "1d05506a894837894123136a1ba65bbca8dbc2b6efb7fd6471fc9e0379bceab4"
+  },
+  {
+    "file": "qa/present/tap-sound-v1/browser-H.json",
+    "before": null,
+    "after": "90a483186a6ea2911f895cc3cd90cb0eb3a13645793ce785a7c54f3feb513a92"
+  },
+  {
+    "file": "qa/present/tap-sound-v1/tap-H-proof.png",
+    "before": null,
+    "after": "92a1220bf61b70dc3b0760bd43fc2ede5a920307b1b11b0a7bcb79e4814e539b"
+  },
+  {
+    "file": "qa/present/tap-sound-v1/loop-levels.txt",
+    "before": null,
+    "after": "2e3e6b0fde54e1285bd37637bbe2e11fafb28e71c0d1365b94bc991e3350e7b8"
+  }
+]

@@ -1,0 +1,12 @@
+[
+  {
+    "file": "scripts/AudioManager.js",
+    "before": "46ac894df12fc2d4be165fbe7ed30a6e4c18f82ddfc21854649d1ed85ee1ed3d",
+    "after": "57bbfae7e11dd6c61a238246c9d469d5df288d65b55be71fcd23aa5ddca5758b"
+  },
+  {
+    "file": "CIERRE_PROYECTO.md",
+    "before": "411b4eb7153dafbaece3b7dde972d460b4070110a31b4fca8a695ad518196be9",
+    "after": "4dd460edae81d69b73b88279b551d8f5bba9b5ff2db129feb9d0dcc4d2c93342"
+  }
+]

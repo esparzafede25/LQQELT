@@ -1,0 +1,35 @@
+.present-scene {position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;background:#060809;color:#b5bcc0;}
+.present-frame {position:relative;isolation:isolate;background:#080a0b;transition:opacity .45s ease;}
+.present-frame.room-changing {opacity:0;}
+.present-shot,.present-video,.present-hotspots {position:absolute;inset:0;width:100%;height:100%;}
+.present-shot,.present-video {object-fit:fill;pointer-events:none;}
+.present-frame[data-room=kitchen] .present-shot,.present-frame[data-room=kitchen] .present-video{filter:brightness(.94) saturate(.74) contrast(1.025)}
+.present-video {opacity:0;}
+.present-video.visible {opacity:1;}
+.present-hotspots {z-index:3;pointer-events:none;}
+.present-object {position:absolute;pointer-events:auto;border:0;background:transparent;color:#d0d8dd;cursor:pointer;min-width:36px;min-height:36px;}
+.present-object::after {content:'';position:absolute;left:50%;top:50%;width:6px;height:6px;border:1px solid #becad1;border-radius:50%;opacity:0;box-shadow:0 1px 5px #000;}
+.present-object span {position:absolute;bottom:35%;left:50%;transform:translateX(-50%);white-space:nowrap;font:13px Georgia,serif;text-shadow:0 1px 4px #000,0 0 10px #000;opacity:0;background:#080d119c;padding:7px 9px;}
+.present-object:hover span,.present-object:focus-visible span,.show-hints .present-object span,.present-look-away span {opacity:1;}
+.present-object:hover::after,.present-object:focus-visible::after,.show-hints .present-object::after {opacity:1;}
+.present-object:focus-visible {outline:1px solid #a5bac5;outline-offset:2px;}
+.present-object[id$='leave'] span {left:auto;right:20%;transform:none;}
+.present-object[id$='hall'] span {left:20%;transform:none;}
+.present-footer {width:min(90%,1100px);height:36px;display:flex;justify-content:space-between;align-items:center;font:10px var(--font-ui);letter-spacing:.14em;color:#78858d;transition:opacity .5s;}
+.present-help {background:none;border:none;color:#9ba6ae;font:11px var(--font-ui);min-height:36px;padding:0 10px;cursor:pointer;}
+.present-help:disabled {opacity:0;pointer-events:none;}
+.present-thought {position:absolute;left:10%;right:10%;bottom:5%;z-index:4;text-align:center;pointer-events:none;font:clamp(13px,1.5vw,21px) Georgia,serif;color:#d3d9db;text-shadow:0 2px 7px #000;}
+.present-error {position:absolute;z-index:5;inset:25% 15%;background:#11181af2;text-align:center;padding:25px;}
+.present-error[hidden] {display:none;}
+.present-error button {margin-top:15px;padding:12px 20px;cursor:pointer;color:#d9e1e5;background:#253137;border:1px solid #687b87;}
+.contemplating .present-footer {opacity:0;}
+body.present-mode .cinema-bar,body.present-mode #dust-canvas,body.present-mode #custom-cursor {display:none;}
+body.present-mode #grain-overlay {opacity:.035;animation:none;}
+body.present-mode #vignette-overlay {opacity:.12;}
+body.present-mode #top-bar {opacity:.18;pointer-events:auto;transform:none;}
+body.present-mode #top-bar:hover,body.present-mode #top-bar:focus-within,body.present-mode #top-bar.force-reveal {opacity:1;}
+body.present-mode .top-bar-title {display:none;}
+@media(pointer:coarse){.present-object::after{opacity:.65}.present-object span{font-size:11px}}
+@media(prefers-reduced-motion:reduce){.present-frame,.present-footer{transition:none}}
+.envelope-present .drawer-modal{background:#060a10d9;backdrop-filter:blur(2px)}
+.envelope-present .drawer-item-card{background:linear-gradient(160deg,#151b22f2,#090d13fa);border-color:#63718077}

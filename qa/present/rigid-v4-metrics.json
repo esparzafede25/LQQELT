@@ -1,0 +1,46 @@
+{
+  "frames": [
+    {
+      "action": "mate",
+      "frames": 49,
+      "changed_background_pixels_outside_motion_roi": 0,
+      "changed_pixels_in_face_sample_after_rigid_translation": 0,
+      "production_approved": false
+    },
+    {
+      "action": "wrench",
+      "frames": 33,
+      "changed_background_pixels_outside_motion_roi": 0,
+      "changed_pixels_in_face_sample_after_rigid_translation": 0,
+      "production_approved": false
+    },
+    {
+      "action": "map",
+      "frames": 33,
+      "changed_background_pixels_outside_motion_roi": 0,
+      "changed_pixels_in_face_sample_after_rigid_translation": 0,
+      "production_approved": false
+    },
+    {
+      "action": "envelope",
+      "frames": 33,
+      "changed_background_pixels_outside_motion_roi": 0,
+      "changed_pixels_in_face_sample_after_rigid_translation": 0,
+      "production_approved": false
+    }
+  ],
+  "continuity": [
+    {
+      "transition": "mate -> wrench",
+      "changed_pixels_in_paper_region": 0
+    },
+    {
+      "transition": "wrench -> map",
+      "changed_pixels_in_paper_region": 0
+    },
+    {
+      "transition": "map -> envelope",
+      "changed_pixels_in_paper_region": 0
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "take-bag-canonical": {
+    "frames": 49,
+    "fixed_region": [
+      710,
+      0,
+      1024,
+      576
+    ],
+    "max_changed_pixels": 0
+  },
+  "car-place": {
+    "frames": 49,
+    "fixed_region": [
+      430,
+      325,
+      600,
+      440
+    ],
+    "max_changed_pixels": 0
+  },
+  "car-sit": {
+    "frames": 21,
+    "fixed_region": [
+      430,
+      325,
+      600,
+      440
+    ],
+    "max_changed_pixels": 0
+  },
+  "pack-envelope-rigid-render-v4/frame_00033.png -> pack-take-bag-canonical-rigid-render-v4/frame_00001.png": {
+    "changed_pixels": 0
+  },
+  "pack-car-close-rigid-render-v4/frame_00012.png -> pack-car-sigh-rigid-render-v4/frame_00001.png": {
+    "changed_pixels": 0
+  }
+}

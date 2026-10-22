@@ -1,0 +1,3 @@
+PASS Salida temprana no guarda
+PASS Salida cancela esperas
+PASS Salida pausa videos

@@ -1,0 +1,6 @@
+# Sonido real del auto — 21 de octubre
+
+Arranque y alejamiento solicitados unidos a los planos finales de interior/salida. Dos segmentos consecutivos del original, cola silenciosa descartada y fundido en distancia. Se reemplaza motor sintetizado en esta secuencia, conservando viento y canción. Imagen1080 y duraciones exactas preservadas por copia del flujo de video, hashes idénticos.
+
+Conexión del audio del video al master del juego: silencio y volumen siguen funcionando; pausa, error, fin y cambio de escena no dejan motor suelto. Stage recorrió entrada/Arrancar/partida/epílogo, consola limpia; arranque mostrado con video muted=false y reproducción activa. H comprobado: arranque1920×1080 activo con audio desmutado a bus maestro, secuencia termina en epílogo sin video/motor residual, consola limpia. Pruebas car-recording/car-departure/radio3/3PASS y validador37scripts/49medios/20walkPASS. Evidencia browser-H.json, car-H-proof.png, streams.json y video-integrity.json en qa/present/car-sound-v1. Integrado con respaldo/SHA256. Original del usuario, videos previos, guardados, sources y GitHub intactos. Guardas h-car-sound-v1-result.json; respaldo car-sound-v1/backup-main. No reejecutar integrador aplicado.
+

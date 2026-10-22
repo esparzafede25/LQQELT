@@ -1,0 +1,9 @@
+# Suspiro en auto — candidato
+
+Imagen integrada imagegen, exec-fb10efc1-dde7-4f91-89a2-98f3719e29fd. Copiada assets/present-third-person/departure-driver-sigh-start-v1.png. Referencias master adulto y auto del recuerdo03-close-end, sin copiar padre/joven. Revisada rostro adulto/madera/luz fria y manos sobre volante. No integra aun final.
+
+Video Comfy local FLF65frames1024x576, mismo inicio/fin para preservar identidad; respirar/suspirar y volver a reposo. Revisar si el gesto es legible y rostro estable antes aprobar. No hay suspiro de audio grabado.
+
+Prompt imagen exacto:
+
+Create one cinematic 16:9 game still in the exact handmade carved-wood miniature stop-motion style. Image 1 defines ADULT Valentino's identity exactly: long narrow angular face, long straight nose, small tired brown eyes, thick straight brows, thin mouth, rough dark wooden hair, clear wood grain. Image 2 defines the old weathered pale green vintage sedan, not the younger character or father. Present day: adult Valentino sits alone in the left driver's seat of that same old car, parked outside his dark rural house at cold blue early morning. THIRD PERSON camera inside car from passenger side, close-up face and upper chest, steering wheel at bottom left and his hands resting naturally on it. Adult Valentino wears worn navy jacket over gray knitted sweater, no backpack on body. His packed brown leather backpack is on the passenger seat off-camera. His head faces forward toward windshield, shoulders slightly tense, exhausted sad expression and lips closed before a sigh. Cold dim blue daylight, shadowed interior, no orange light, no smile, no plastic skin, no exaggerated cartoon eyes, no text. Face must match image1, with carved wood texture and tired adult proportions preserved sharply. The shot leaves room for a tiny inhale/exhale motion without head turn. Quiet emotional final scene, no father or other people.

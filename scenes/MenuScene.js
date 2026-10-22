@@ -1,5 +1,5 @@
 /**
- * LO QUE QUEDÓ EN LA TIERRA
+ * LO QUE QUEDA EN LA TIERRA
  * MenuScene — Pantalla inicial sobria y cinematográfica
  */
 
@@ -22,7 +22,7 @@ export class MenuScene {
     layer.innerHTML = `
       <div class="menu-container">
         <div class="menu-header">
-          <h1 class="menu-title">LO QUE QUEDÓ EN LA TIERRA</h1>
+          <h1 class="menu-title">LO QUE QUEDA EN LA TIERRA</h1>
           <div class="menu-tagline">EXPERIENCIA INTERACTIVA • PRECUELA EMOCIONAL</div>
         </div>
 
@@ -56,7 +56,7 @@ export class MenuScene {
       this.audio.ensureContext();
       this.audio.playToolClink();
       this.storage.resetProgress();
-      this.sceneManager.changeScene('INTRO', 'black');
+      this.sceneManager.changeScene('OPENING', 'black');
     });
 
     if (hasSave) {
@@ -90,3 +90,4 @@ export class MenuScene {
     // Menu cleanup
   }
 }
+

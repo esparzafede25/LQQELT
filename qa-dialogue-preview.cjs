@@ -1,0 +1,21 @@
+const { chromium } = require('C:/Users/Usuario/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
+(async () => {
+  const browser = await chromium.launch({ channel: 'msedge', headless: true });
+  const page = await browser.newPage({ viewport: { width: 1440, height: 900 } });
+  await page.goto('http://localhost:3017/?scene=MISSION_MATE', { waitUntil: 'domcontentloaded' });
+  await page.waitForFunction(() => document.querySelector('.mate-caption.visible p')?.textContent === 'Serví vos hoy.');
+  await page.waitForTimeout(600);
+  await page.screenshot({ path: 'qa/dialogue-father.png' });
+  await page.locator('.mate-speech').click();
+  await page.locator('#mate-pour').waitFor();
+  await page.evaluate(() => { const s = window.__APP__.sceneManager.currentScene; s.shot('drink'); s.say('VALENTINO', '¿Está bien?'); });
+  await page.waitForTimeout(600);
+  await page.screenshot({ path: 'qa/dialogue-close-valentino.png' });
+  await page.locator('.mate-speech').click();
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.evaluate(() => { const s = window.__APP__.sceneManager.currentScene; s.shot('master'); s.say('PAPÁ', 'Serví vos hoy.'); });
+  await page.waitForTimeout(600);
+  await page.screenshot({ path: 'qa/dialogue-mobile.png' });
+  console.log('Speech positions captured after fades, desktop and narrow view.');
+  await browser.close();
+})().catch(e => { console.error(e); process.exit(1); });

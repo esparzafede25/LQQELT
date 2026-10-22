@@ -1,0 +1,47 @@
+[
+  {
+    "file": "scripts/AudioManager.js",
+    "before": "57bbfae7e11dd6c61a238246c9d469d5df288d65b55be71fcd23aa5ddca5758b",
+    "after": "d1f949dc33e5253e165072a0d5b3bc7eb20bebd21b7660d8a9849d786f80c08d"
+  },
+  {
+    "file": "qa/present/radio-match.test.mjs",
+    "before": null,
+    "after": "95bca611319ce3ac9cf4e26cf0fe4a1e2ccf3ce0802dcbfbfffb9eaf3859a3d7"
+  },
+  {
+    "file": "PASADA_17_PARTIDO_RADIO.md",
+    "before": null,
+    "after": "af273cd7274f2e4edd58493f6d2b72ee9e79c99c04c70a4f60190fc6f0dbb2df"
+  },
+  {
+    "file": "assets/radio-match-v1/partido-original.mp3",
+    "before": null,
+    "after": "e8dd1709103171a8de034e7c5158f028f6537fc900f2eb82f950072d0193de47"
+  },
+  {
+    "file": "assets/radio-match-v1/partido-radio.mp3",
+    "before": null,
+    "after": "d1fc526dbdbd6074e0615c35083959ddf6553f1bdb2f1bc4e0fca11a6ec45cf8"
+  },
+  {
+    "file": "assets/radio-match-v1/PRODUCCION.md",
+    "before": null,
+    "after": "33a4862b849e03fbb4ad4055e93e869a4b0d8ef5ae806058b64e82d10bfe8f18"
+  },
+  {
+    "file": "CIERRE_PROYECTO.md",
+    "before": "4dd460edae81d69b73b88279b551d8f5bba9b5ff2db129feb9d0dcc4d2c93342",
+    "after": "57ec3c8597c46de795a9ca5c4c9c4010c608774507c8ebfe680e15c845e557c3"
+  },
+  {
+    "file": "qa/present/radio-match-v1/browser-H.json",
+    "before": null,
+    "after": "dcb931079853cdadfd3361143641bcdc00f2d1395da2a9081412ae9cc2445ce2"
+  },
+  {
+    "file": "qa/present/radio-match-v1/radio-H-proof.png",
+    "before": null,
+    "after": "5d13b6dd6140c3ac2ac51eec9fe05c5210e44c2c1f664fbdbbc070c8dc7809df"
+  }
+]

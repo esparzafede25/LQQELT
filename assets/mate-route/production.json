@@ -1,0 +1,53 @@
+{
+  "created": "2026-10-02",
+  "initialImage": "00-kitchen.png",
+  "steps": [
+    {
+      "step": 1,
+      "taskId": "dc248ecf-971a-4956-a313-ef43579858e0",
+      "prompt": "One continuous locked-off wide shot, tactile handcrafted stop-motion puppet film. Starting EXACTLY in this image: the boy stands empty-handed beside the left end of the table. He turns left and WALKS naturally on his feet across the floor to the low cabinet beneath the left window. He reaches with his right hand, closes fingers around the single small brown mate cup with metal straw on that cabinet, lifts it, turns back, WALKS right back to the left end of the dining table, carefully places that cup upright on the near-left corner of the table, releases it, and settles standing beside the table with both hands empty. Complete the entire round trip in this shot, with a calm brief still finish. The cup leaves the cabinet and remains on the table. Father stays seated watching, hands on the table. The green tin and metal kettle stay on the far-right cabinet untouched. Preserve exact puppet faces, clothes, architecture, table and all prop positions. Full body footfalls and hand contact readable, natural weight. Camera absolutely fixed; no cuts, no zoom, no transitions. No dialogue, no lip-sync. Only one cup, no object duplications. Do not move the table.",
+      "file": "01-mate.mp4"
+    },
+    {
+      "step": 2,
+      "taskId": "01604c37-84f5-41e6-8a0d-69e69a14fc64",
+      "prompt": "One uninterrupted wide shot continuing EXACTLY from this frame, handmade wooden puppet stop-motion. The small brown mate cup stays upright where it is on the LEFT end of the dining table. The boy starts empty-handed beside it. He walks RIGHT around the FRONT edge of the table, across the visible floor, to the green rectangular yerba tin on the FAR RIGHT cabinet. He reaches out, grasps and lifts ONLY that green tin; leaves the metal kettle untouched. He walks back LEFT along the same clear floor path to his original place beside the mate. He puts the green tin on the table just LEFT of the mate, releases it, and rests with empty hands. Show his full walking journey, grasp, carrying and placement in continuous natural movement. The tin is now absent from the cabinet. Finish calmly with both objects on table. Father remains seated behind the table. Preserve all furniture positions, identity, clothing and light. Absolutely fixed camera, no cuts, no zoom, no teleporting or duplication. No dialogue. Do not pour anything yet.",
+      "file": "02-yerba.mp4"
+    },
+    {
+      "step": 3,
+      "taskId": "28e6b821-ac28-418a-bd2a-1f078016d6da",
+      "prompt": "Continue this exact handmade puppet kitchen scene in a SINGLE CONTINUOUS TAKE. The boy starts at the left end of the table with hands empty. The green yerba tin and small brown mate cup remain on the table untouched. The boy walks right around the FRONT of the table to the metal kettle resting on the far-right sideboard. Show full natural walking with feet on the floor. He grips the kettle's top handle firmly, lifts this ONE kettle from the cabinet, walks back left carrying it steadily by the handle, and sets it down on the dining table to the LEFT of the small mate cup and green tin. He releases the handle and stands still with both hands empty. The kettle is absent from the sideboard afterward. The father remains seated and follows the boy with his eyes. Complete the entire round trip. Preserve exact identity, clothes, architecture, lighting and furniture; no cuts, no jumps, no transformations, no duplicate kettle. Keep the camera on the same side, follow gently only if necessary then return to the EXACT original composition by the end. Do not pour water or touch the green tin yet. No dialogue.",
+      "file": "03-pava.mp4"
+    },
+    {
+      "step": "prepare",
+      "taskId": "ee7be3c2-5bf0-40e5-8003-f8da77348404",
+      "file": "03b-prepare.mp4",
+      "prompt": "Continuous handcrafted puppet animation from this EXACT frame, locked camera, no cuts. The boy looks at the green rectangular yerba tin on the table. With visible hand movement from his empty-handed resting pose, he grasps the tin, lifts its lid, tips a SMALL amount of dry green yerba leaves into the small brown mate cup immediately to the LEFT of the tin. The mate cup remains resting upright on the table the whole time. He rights and closes the tin, then places it a little farther RIGHT on the table so the mate cup and kettle are clearly visible and no longer hidden behind it. He gently adjusts the thin silver metal bombilla in the mate cup, releases everything and returns both empty hands to rest. The kettle stays on the table untouched, no water poured yet. Father watches quietly from his chair with mouth closed. Preserve exact faces, age, clothes, furniture positions, light and textures. Objects stay solid with realistic hand contact. One tin, one mate cup, one kettle. No substitutions, no transformation, no new objects, no zoom or camera movement. End with the prepared mate and its silver bombilla clearly visible on the left of the kettle and tin, boy hands empty."
+    },
+    {
+      "step": "pass",
+      "taskId": "2149e096-7966-49ad-bb36-6dcfe2cd5f9a",
+      "file": "05-pass.mp4",
+      "prompt": "One continuous handmade puppet animation starting EXACTLY from this frame. The boy's empty hands rest on the table. He reaches visibly toward the small brown mate cup immediately LEFT of the green tin, grasps the CUP BODY with his right hand, lifts it carefully keeping its metal straw upright, and extends it across the table toward his seated father. Father reaches forward and closes his right hand around the cup BEFORE the boy releases it. Show the full handoff without cuts or disappearing objects. Father brings the cup toward his face, takes one quiet sip through the metal straw, and lowers it to rest near his chest, still holding it. Boy withdraws his empty hand and rests it on the table. Father keeps holding the SAME cup at the end. The green tin and kettle remain motionless on the table. Preserve exact faces, clothing, furniture, light and handcrafted textures. Locked camera, no cuts, no zoom, no transitions, no duplicated objects, no dialogue or lip sync. Gentle physical motion with clear hand contact and a calm still ending.",
+      "status": "reviewed"
+    },
+    {
+      "step": "return",
+      "taskId": "fa642aee-75a0-45a9-bad6-2283daea8011",
+      "file": "06-return.mp4",
+      "prompt": "Continue EXACTLY from this frame in one unbroken handcrafted puppet shot. Father is seated on the right holding the brown mate cup with its metal straw near his chest in both hands. The boy stands on the left, BOTH hands resting empty on the table. Father looks warmly toward his son, slowly extends his RIGHT hand carrying the cup across the table to the boy. The boy lifts his right hand from the table, reaches, closes his fingers around the CUP BODY. Only after the boy has a firm grip does father release the cup and withdraw his empty hand to rest on the table. The boy draws the cup gently toward himself and holds it at chest height, with his other hand supporting it. He looks down at it then toward his father, sharing a quiet pause. Finish calmly with the SAME mate cup and straw in the boy's hands and father's hands resting empty. Keep the kettle and green tin completely still and unchanged. Preserve exact faces, ages, clothing, materials, kitchen, furniture and warm light. Camera locked, no cuts, no zoom, no dissolves, no teleporting, no duplicated cup, no drinking in this shot, no dialogue. Show complete reach, contact, transfer, release and settle with realistic hand contact.",
+      "status": "reviewed"
+    },
+    {
+      "step": "pour",
+      "taskId": "d308ecae-a7f4-49a3-a60c-3d11c486170d",
+      "file": "04-pour.mp4",
+      "prompt": "A complete continuous pouring action starting from this EXACT idle frame. Handmade puppet animation, camera absolutely fixed. The boy's hands begin EMPTY down at his sides. He looks at the kettle resting on the table behind the green tin, reaches visibly with his RIGHT hand to the kettle's brown TOP HANDLE, closes his fingers securely around that handle, lifts the whole kettle clear of the table, brings its spout over the SMALL BROWN MATE CUP immediately left of the green tin, slowly tilts the kettle and pours one thin stream of water INTO THAT CUP for about two seconds. His left hand steadies the cup on the table without lifting it. He then rights the kettle, lowers it onto the table to the LEFT of the mate cup, releases the handle and returns his hands to rest on the table. The mate cup and its thin metal bombilla stay intact in the same place throughout, and the green tin stays fixed. Father stays seated watching the hands, mouth closed. Show ALL phases: reaching, grip, lifting, tipping, pouring, righting, lowering, release and settle. No cuts, no camera changes, no skips, no dissolves, no new props or duplicated kettle, no liquid outside the cup. Exact same faces, clothing and kitchen. End still, kettle on LEFT, mate in middle, green tin on RIGHT.",
+      "status": "reviewed"
+    }
+  ],
+  "initialImageMethod": "image_gen built-in, compositing from 01-master.png and mate_scene_sheet_valentino11_father.png",
+  "initialImageDirection": "Cocina completa 16:9, misma identidad y materiales del proyecto. Ventana y mueble con mate a la izquierda; mesa vacía y padre sentado al centro-derecha; mesada derecha con yerbera verde y pava. Valentino de pie, manos vacías; piso libre para caminar."
+}

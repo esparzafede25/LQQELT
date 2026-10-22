@@ -1,0 +1,119 @@
+(node:20460) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///H:/TP%20FINAL%20I.C/Lo%20que%20queda%20en%20la%20Tierra%20-%20%20JUEGO/scripts/AudioManager.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\H:\TP FINAL I.C\Lo que queda en la Tierra -  JUEGO\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+PASS: zero volume, audible crank bus, cancellation, retries and single engine idle.
+✔ qa\present\audio-lifecycle.test.mjs (120.9115ms)
+(node:21024) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///H:/TP%20FINAL%20I.C/Lo%20que%20queda%20en%20la%20Tierra%20-%20%20JUEGO/scenes/CarDepartureScene.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\H:\TP FINAL I.C\Lo que queda en la Tierra -  JUEGO\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+PASS: entry/ignition/final order, ended-only saves, migration, retries, duplicate events and stale playback.
+✔ qa\present\car-departure.test.mjs (113.5505ms)
+(node:12340) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///H:/TP%20FINAL%20I.C/Lo%20que%20queda%20en%20la%20Tierra%20-%20%20JUEGO/scenes/PresentKitchenScene.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\H:\TP FINAL I.C\Lo que queda en la Tierra -  JUEGO\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+PASS: chair bow/hold/return, duplicate click, retry, missing poster and late completion across visits.
+✔ qa\present\chair-grief.test.mjs (108.1245ms)
+(node:21892) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///H:/TP%20FINAL%20I.C/Lo%20que%20queda%20en%20la%20Tierra%20-%20%20JUEGO/scenes/DepartureScene.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\H:\TP FINAL I.C\Lo que queda en la Tierra -  JUEGO\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+PASS: 4 casos de salida y reentrada durante el final.
+✔ qa\present\departure-cancel.test.mjs (164.509ms)
+(node:22336) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///H:/TP%20FINAL%20I.C/Lo%20que%20queda%20en%20la%20Tierra%20-%20%20JUEGO/scenes/DepartureScene.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\H:\TP FINAL I.C\Lo que queda en la Tierra -  JUEGO\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+PASS: reanudar viaje, objetos sin duplicados, mochila completa y cancelacion del sobre.
+✔ qa\present\departure-progress.test.mjs (120.1258ms)
+(node:17844) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///H:/TP%20FINAL%20I.C/Lo%20que%20queda%20en%20la%20Tierra%20-%20%20JUEGO/scripts/DreamSoundtrack.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\H:\TP FINAL I.C\Lo que queda en la Tierra -  JUEGO\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+PASS: mix timeline, mute routing, pause/resume synchronization, skip/exit/error cleanup, late decode/resume and audio-load retry.
+✔ qa\present\dream-audio.test.mjs (90.9297ms)
+(node:18560) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///H:/TP%20FINAL%20I.C/Lo%20que%20queda%20en%20la%20Tierra%20-%20%20JUEGO/scenes/EpilogueScene.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\H:\TP FINAL I.C\Lo que queda en la Tierra -  JUEGO\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+PASS: epilogo interrumpido no completa partida ni modifica otra escena.
+✔ qa\present\epilogue-cancel.test.mjs (113.1813ms)
+(node:18956) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///H:/TP%20FINAL%20I.C/Lo%20que%20queda%20en%20la%20Tierra%20-%20%20JUEGO/scenes/PresentKitchenScene.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\H:\TP FINAL I.C\Lo que queda en la Tierra -  JUEGO\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+PASS: el mate inicia y repite el recuerdo sin borrar progreso, con retorno a cocina.
+PASS: el mate también se repite desde la entrada anterior y regresa a ella.
+✔ qa\present\kitchen-triggers.test.mjs (97.4207ms)
+(node:17104) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///H:/TP%20FINAL%20I.C/Lo%20que%20queda%20en%20la%20Tierra%20-%20%20JUEGO/scenes/CarFilmScene.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\H:\TP FINAL I.C\Lo que queda en la Tierra -  JUEGO\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+PASS: 8 casos de finalizacion real y cancelacion de taller/radio. No sustituye QA visual.
+✔ qa\present\memory-completion.test.mjs (90.1801ms)
+(node:16228) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///H:/TP%20FINAL%20I.C/Lo%20que%20queda%20en%20la%20Tierra%20-%20%20JUEGO/scenes/OpeningScene.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\H:\TP FINAL I.C\Lo que queda en la Tierra -  JUEGO\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+PASS: eight dream shots with timed side monologue, fades before wake, skip cancels timers, late preload cannot resume, image failure recoverable.
+✔ qa\present\nightmare.test.mjs (66.9254ms)
+(node:19332) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///H:/TP%20FINAL%20I.C/Lo%20que%20queda%20en%20la%20Tierra%20-%20%20JUEGO/scenes/OpeningScene.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\H:\TP FINAL I.C\Lo que queda en la Tierra -  JUEGO\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+PASS: intro al dormitorio, omision unica, cancelacion y caminata pasillo-cocina sin imponer lavado.
+✔ qa\present\opening-route.test.mjs (59.9201ms)
+(node:26800) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///H:/TP%20FINAL%20I.C/Lo%20que%20queda%20en%20la%20Tierra%20-%20%20JUEGO/scenes/PackingFilmScene.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\H:\TP FINAL I.C\Lo que queda en la Tierra -  JUEGO\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+PASS: film packing resumes, commits only after animation, guards duplicate actions, retries and cancels late playback.
+✔ qa\present\packing-film.test.mjs (74.0911ms)
+(node:5020) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///H:/TP%20FINAL%20I.C/Lo%20que%20queda%20en%20la%20Tierra%20-%20%20JUEGO/scripts/PresentScore.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\H:\TP FINAL I.C\Lo que queda en la Tierra -  JUEGO\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+PASS: present continuity, memory fade/resume position, dialogue ducking, mute routing, cancelled fades, late loads and recoverable load errors.
+✔ qa\present\present-score.test.mjs (53.5913ms)
+(node:19712) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///H:/TP%20FINAL%20I.C/Lo%20que%20queda%20en%20la%20Tierra%20-%20%20JUEGO/scripts/PresentVisualTone.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\H:\TP FINAL I.C\Lo que queda en la Tierra -  JUEGO\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+PASS: tone continuity at every packing cut, restored footage retains constant cold tone, clamped playback progress.
+✔ qa\present\present-tone.test.mjs (53.5045ms)
+(node:12152) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///H:/TP%20FINAL%20I.C/Lo%20que%20queda%20en%20la%20Tierra%20-%20%20JUEGO/scripts/PresentProgress.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\H:\TP FINAL I.C\Lo que queda en la Tierra -  JUEGO\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+PASS: 13 casos de inicio, migración, reanudación y regreso de recuerdos.
+PASS: 12 conexiones desde el presente hacia recuerdos y regreso a cocina.
+PASS: 5 casos de continuar partida y conservar prioridad del final.
+✔ qa\present\progress.test.mjs (62.0531ms)
+(node:28292) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///H:/TP%20FINAL%20I.C/Lo%20que%20queda%20en%20la%20Tierra%20-%20%20JUEGO/scripts/SubtitleManager.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\H:\TP FINAL I.C\Lo que queda en la Tierra -  JUEGO\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+PASS: cancelacion antes de voz, durante dialogo, reemplazo de secuencia y callback de bloque retirado.
+✔ qa\present\subtitle-cancel.test.mjs (1156.4098ms)
+(node:576) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///H:/TP%20FINAL%20I.C/Lo%20que%20queda%20en%20la%20Tierra%20-%20%20JUEGO/scripts/VideoSoundCues.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\H:\TP FINAL I.C\Lo que queda en la Tierra -  JUEGO\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+PASS: media-time cues respect pause, seek, retry, stale contacts and scene disposal.
+✔ qa\present\video-sound-cues.test.mjs (53.5704ms)
+(node:19876) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///H:/TP%20FINAL%20I.C/Lo%20que%20queda%20en%20la%20Tierra%20-%20%20JUEGO/scenes/PresentWalkScene.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\H:\TP FINAL I.C\Lo que queda en la Tierra -  JUEGO\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+PASS: pasos, prioridades de guardado, final unico, error/reintento y salida durante reproduccion.
+✔ qa\present\walk-progress.test.mjs (61.0559ms)
+ℹ tests 18
+ℹ suites 0
+ℹ pass 18
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1259.0044

@@ -1,0 +1,52 @@
+[
+  {
+    "file": "scenes/MateRouteScene.js",
+    "before": "09689d727b67006cf7e570a6868983b19eea2e73b177ac601e1c6711f58a6f9a",
+    "after": "0f9acce9345602288bc027d98e3ea5b6a5ef3233aeaf0f24c3f94f0283bff21a"
+  },
+  {
+    "file": "scenes/CarFilmScene.js",
+    "before": "f1bcfb476218c0bc3d2b468e63236be8235b421eba13c650803c984db20bc869",
+    "after": "e95594c9de176df3e1b28c1f822bddbcedcfd09823f99cddf27f44d86e8a9a07"
+  },
+  {
+    "file": "scenes/RadioFilmScene.js",
+    "before": "b55e3b84edde62dce4cd7347d5a773ee458756f16b8aa958270f4f4bc1f25eb0",
+    "after": "8a080ed76ea005a2020ffc2b010a8c84a1c3eb030346e475423811eb0b6360c3"
+  },
+  {
+    "file": "scenes/PresentKitchenScene.js",
+    "before": "d52cfcf47594cfdd1112f35c2c44203efc0e22d6fc6099d95e1b2ef9a7ff1dbe",
+    "after": "e53be1383843448967e076746781a759c35672aa11e31727adec86cdfd225825"
+  },
+  {
+    "file": "scenes/EnvelopeScene.js",
+    "before": "b955ca7f91062a6841cfe9f8c19eaad6d78024c277d0aaacea5024d659825668",
+    "after": "339974013c86509b58fbcdc7ac08501c20a1660e58f8c1187d4e13b56c5aed4c"
+  },
+  {
+    "file": "scripts/StorageManager.js",
+    "before": "a0dc416daa113707b76e429868803e204d1e791b5f46ca1fd7f15e26930426a8",
+    "after": "9533852ad750e76c18c8fade05591b19ce878263398c863249beae894c7a32df"
+  },
+  {
+    "file": "CIERRE_PROYECTO.md",
+    "before": "12f9b0a4511427de442419117f8c21d0f90b452da9cdf7b54c99e17af92a9e1c",
+    "after": "c434bdd63feddce8134f155c194e46560d8c73fdbd483df794138bb1c1a9482e"
+  },
+  {
+    "file": "qa/present/memory-completion.test.mjs",
+    "before": "993c9ee31667736dbf264e790f67c567f1bd6bf275b56dbf5ea9566f98efa5c7",
+    "after": "baea56260c9e2c1e7388496650e009f1c2a5a69f8d5c9da16ecd4bff950a352a"
+  },
+  {
+    "file": "qa/present/dialogue-return.test.mjs",
+    "before": null,
+    "after": "93ebf44a77c311bd1c7b89cbfefe6c3997ea26196734740dd51eff888f95fd04"
+  },
+  {
+    "file": "PASADA_21_DIALOGOS.md",
+    "before": null,
+    "after": "a11a7f360931747694da5d4e865f073e6bc2416f4e9d95f0d0d502dcf7867f97"
+  }
+]

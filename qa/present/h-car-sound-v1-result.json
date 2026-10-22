@@ -1,0 +1,72 @@
+[
+  {
+    "file": "scripts/AudioManager.js",
+    "before": "d1f949dc33e5253e165072a0d5b3bc7eb20bebd21b7660d8a9849d786f80c08d",
+    "after": "e5583a365af72d9002b6d639170df0d480674e3fe8976c4555c5221b5ce9b5ff"
+  },
+  {
+    "file": "scenes/CarDepartureScene.js",
+    "before": "15b220c9e29f939a1b80478399baf19dd739188264c5675b91e1814521e3e8a3",
+    "after": "114fd10428de545284c53fb427ab82ea5ac52e24db53494a738ae4691ca484fe"
+  },
+  {
+    "file": "scripts/CarDepartureProgress.js",
+    "before": "a51fa36480e9309d5a105fae5d407606ace66b87c2bd9882ee06357fef14b252",
+    "after": "8a18f20cb662c8400029d974203cb43134741bfb8cd4dd76642bd2c8f7ba5614"
+  },
+  {
+    "file": "qa/present/car-recording.test.mjs",
+    "before": null,
+    "after": "6666d49410e3e200ffbc17ef7cac97652b341d2bcc51b64749b81dded5273a25"
+  },
+  {
+    "file": "PASADA_18_AUTO_SONIDO.md",
+    "before": null,
+    "after": "ddd44362b96afb1d1ce210d991e5de9c2a1d31ef5dab7be89b777519583b42d3"
+  },
+  {
+    "file": "assets/car-sound-v1/04-start.mp4",
+    "before": null,
+    "after": "4b6e420918c256b5bb5baf16e7cf165b3b35530fc891da1ed94703fde18b555b"
+  },
+  {
+    "file": "assets/car-sound-v1/05-away.mp4",
+    "before": null,
+    "after": "7090e14b4431a46b1307e71323ddf0880daf6ed82c2d05b8825643c9b3af71f1"
+  },
+  {
+    "file": "assets/car-sound-v1/auto-original.mp3",
+    "before": null,
+    "after": "52a05b4cb39ad8e5dcea73a10434394be57d34074fcfe4160aa21722e76ce58e"
+  },
+  {
+    "file": "assets/car-sound-v1/PRODUCCION.md",
+    "before": null,
+    "after": "71efe5587de44af446f4446bff83cda6de8ecb6d572d3596e41d634368a3b2ce"
+  },
+  {
+    "file": "CIERRE_PROYECTO.md",
+    "before": "57ec3c8597c46de795a9ca5c4c9c4010c608774507c8ebfe680e15c845e557c3",
+    "after": "d336b3c71527d61658ecf76a3d2540d4ea6fb311df5d84baaf6ba21e419fdeb0"
+  },
+  {
+    "file": "qa/present/car-sound-v1/browser-H.json",
+    "before": null,
+    "after": "132c7ef97cb71ecc972784a0c5e830bc2a384f689c8890f69fe42f8e2f06a021"
+  },
+  {
+    "file": "qa/present/car-sound-v1/car-H-proof.png",
+    "before": null,
+    "after": "c622ba70a960e766b1596f87644869c3857154feed373ee4b55d69cc60c5c542"
+  },
+  {
+    "file": "qa/present/car-sound-v1/streams.json",
+    "before": null,
+    "after": "aeb0ac661a4789995115af2b39ab18bd5fe752859087cee32b4975c0f64be986"
+  },
+  {
+    "file": "qa/present/car-sound-v1/video-integrity.json",
+    "before": null,
+    "after": "ab5e16bc26eff58d89f15833f23ef963d7750907b8232e96067ee76490eedee5"
+  }
+]

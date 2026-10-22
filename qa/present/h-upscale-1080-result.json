@@ -1,0 +1,192 @@
+[
+  {
+    "file": "assets/present-bath-adult-v4/01-open.mp4",
+    "before": "7fe54076e490e92983b93cecc466ec5b0344844d6568937ec7adc6496097ef00",
+    "after": "a1cceea1e56efe80898868acac5e5146f39fa08d56dd89a9e5c892497e02d806"
+  },
+  {
+    "file": "assets/car-cinematic/01-fetch.mp4",
+    "before": "2a18eb2bb5ae140c04272fcbb21c75be1e5e65bb6f6ba073b62dd86a8b704a9d",
+    "after": "2a18eb2bb5ae140c04272fcbb21c75be1e5e65bb6f6ba073b62dd86a8b704a9d"
+  },
+  {
+    "file": "assets/car-cinematic/02-repair.mp4",
+    "before": "8e18502caab14d6ae1fee66c7bd6882ca28d159f98d9dbfbf8e9a3433141518c",
+    "after": "8e18502caab14d6ae1fee66c7bd6882ca28d159f98d9dbfbf8e9a3433141518c"
+  },
+  {
+    "file": "assets/car-cinematic/03-close.mp4",
+    "before": "31c8ae4eec7c570bc6a056ac7ca6329e4b573db73e315c0592a1b891fb6596d1",
+    "after": "31c8ae4eec7c570bc6a056ac7ca6329e4b573db73e315c0592a1b891fb6596d1"
+  },
+  {
+    "file": "assets/departure-car-rigid-v4/03-close.mp4",
+    "before": "61def71124603b93fe2b9a28b508ddf549eaa96260bd2c1948fd53d7964e878f",
+    "after": "e524e9cc21ca62145f45dce14e68cf70d3577a9cd9e84dc0f1410e9cff83f851"
+  },
+  {
+    "file": "assets/departure-car-v5/04-sigh.mp4",
+    "before": "bbf902a3887f51a55a296ce67c531e5035ee018d70318e13e96374ec0b9cfbd4",
+    "after": "3e51f577fcf42f7b6b6ac8988997760fd529a0a97bec776a90367a6ce4f46682"
+  },
+  {
+    "file": "assets/departure-car-v5/05-away.mp4",
+    "before": "77fecbe941915d1b263bfae0dad05e508b879a50c144ca6e939c24ea5863c753",
+    "after": "f0e46801da2da82d2238d7aecf9790f73e02a8e282182a72ecac3620f086d6b4"
+  },
+  {
+    "file": "assets/departure-car-v9/02-sit.mp4",
+    "before": "039e9d828dfa69caf112620f09571cfb1bed546e7961e618fb04e3486b31f201",
+    "after": "98fe05fd89461c356ab9a963896d0139b2018e9306e918da050c4ccba204dd1d"
+  },
+  {
+    "file": "assets/departure-car-v9/01-place-bag.mp4",
+    "before": "0bcac5f5f0c47fa96f4d204ded52237999166786b6ec838dc6f1718c35954a60",
+    "after": "55c633fe6fd1b25d35769b54f7b54caee4c430f51868cf1b068f7334d7703edb"
+  },
+  {
+    "file": "assets/departure-motion-v5/02-wrench.mp4",
+    "before": "93fb166243816aade1ba805b79ca3298244623e1a9eb1de78d7fc66085f7192f",
+    "after": "e6c6105dc1d7e9852813878cde524edf41ad92881d9c649a90f52e884ff0d0bc"
+  },
+  {
+    "file": "assets/departure-motion-v5/01-mate.mp4",
+    "before": "0def6758b2dc1a1eab3a4d679bf32cff6a34a88c665e2a4036c09d341b113fd4",
+    "after": "ac43eb02f5c9d117aa20d4bc7afb8be0001abb31d70600c2297b00e0008b010a"
+  },
+  {
+    "file": "assets/departure-motion-v5/03-map.mp4",
+    "before": "9791dbf0b898039864bbb8517bdd26a687d48fbfa562ec1377e45d8602a03375",
+    "after": "0b97781593b8b4f8786b89ef0494d14ba8bf4dd3b396e6ec389647ca4d0c14e5"
+  },
+  {
+    "file": "assets/departure-motion-v5/04-envelope.mp4",
+    "before": "d4a16ab5408987c63822f222917851976c2aa2be1a5ae5c2faca267254c7c766",
+    "after": "0774302eff9e0e0de01d143931b6aa773cef5c1815a0ffcc89c526b4652b22ee"
+  },
+  {
+    "file": "assets/mate-route/01-mate.mp4",
+    "before": "3fab9144fe96a6efeecfbadfffec84bcf13d1804b75188d9ba15ac2f56c89571",
+    "after": "3fab9144fe96a6efeecfbadfffec84bcf13d1804b75188d9ba15ac2f56c89571"
+  },
+  {
+    "file": "assets/mate-route/02-yerba.mp4",
+    "before": "fea513c57395d210553752c894cda6935cda55f99f48a74b6aa6463d38c350f7",
+    "after": "fea513c57395d210553752c894cda6935cda55f99f48a74b6aa6463d38c350f7"
+  },
+  {
+    "file": "assets/mate-route/03-pava.mp4",
+    "before": "bc7aca459c3d47bb524b69790790fcc2c2207f854bdd2368f85b999e22e5dab2",
+    "after": "bc7aca459c3d47bb524b69790790fcc2c2207f854bdd2368f85b999e22e5dab2"
+  },
+  {
+    "file": "assets/mate-route/03b-prepare.mp4",
+    "before": "2b37ca170c8f2364e56b05f5572746f053d666ae26b69e47ce23e44ba27c2257",
+    "after": "2b37ca170c8f2364e56b05f5572746f053d666ae26b69e47ce23e44ba27c2257"
+  },
+  {
+    "file": "assets/mate-route/04-pour.mp4",
+    "before": "14d5a27538efa094ebba006ead10343066bdc9d48efaea7a1d62bdd7165bb2dd",
+    "after": "14d5a27538efa094ebba006ead10343066bdc9d48efaea7a1d62bdd7165bb2dd"
+  },
+  {
+    "file": "assets/mate-route/05-pass.mp4",
+    "before": "c512945a3f8b478b998c608c3103f452d2a0e455d5ea04f09a1dd1b8b5005a93",
+    "after": "c512945a3f8b478b998c608c3103f452d2a0e455d5ea04f09a1dd1b8b5005a93"
+  },
+  {
+    "file": "assets/mate-route/06-return.mp4",
+    "before": "235fd1f47186f12021cc6feefc9d2b174d69e5b87d301568cb9b2cc8a73be8b7",
+    "after": "235fd1f47186f12021cc6feefc9d2b174d69e5b87d301568cb9b2cc8a73be8b7"
+  },
+  {
+    "file": "assets/departure-motion-v5/05-take-bag.mp4",
+    "before": "e85ddc3483756753f1e63ba3f9641383f9b5733a6a58a12920cf5e6000c4f33a",
+    "after": "c7f2f99b1436bb8199b9817f30f6d4c9ce38f1421729206ed9f873f0eb79acad"
+  },
+  {
+    "file": "assets/present-bath-adult-v4/02-wash.mp4",
+    "before": "ec3d72a637d41aea91eb5dead4ef4137bc327ca3b7894a8c4a5e21df931e5f18",
+    "after": "3642f2d4c843e58bdc3f40dcd4ba02d0792e94450ea60b16c3d0fd4f0a2f6577"
+  },
+  {
+    "file": "assets/present-bath-adult-v4/03-close.mp4",
+    "before": "9d51c99158e6dbda0722683d2a68cb7c6a7f5bb62099073cc9c5347b5f5e9ae5",
+    "after": "67d7236a0b317c370c47f4f1bb55b3c8754993da21fbae5fd3decb012356552c"
+  },
+  {
+    "file": "assets/present-chair-v1/01-bow.mp4",
+    "before": "691344ab0bb9c55a31e2b16f286e2a53cbad2590a9df726e67f29b17eb618932",
+    "after": "bab5e6669c8699e2e337cf12ae2b0e55add39e443a48a05fd4a388a45eaa80ce"
+  },
+  {
+    "file": "assets/present-chair-v1/02-return.mp4",
+    "before": "b79861ac35a3e414bf922f274c94bf705e2575684127f0dd5250ca50a142b696",
+    "after": "d4d11b769dd1da2d95761e0917558ecf918b4b3a8c479c40c8bd06288d0a28a3"
+  },
+  {
+    "file": "assets/radio-cinematic/01-power.mp4",
+    "before": "db50f8b327eac9deea51eabe6e31bcdce917845204241450a49ce31b2bde3b64",
+    "after": "db50f8b327eac9deea51eabe6e31bcdce917845204241450a49ce31b2bde3b64"
+  },
+  {
+    "file": "assets/present-bath-adult-v4/04-exit.mp4",
+    "before": "90a3c4962a0239b5bd0fe33183f90f29074ff57832735c5920ff8d3eecfb3ffd",
+    "after": "8144fe15e4c715e60898055176785c8fdd07ee9afc7c8037d176643676d1eede"
+  },
+  {
+    "file": "qa/present/bedroom-exit-adult-v3.mp4",
+    "before": "93a668469aa002acd26aec15dd0c08757582224340c186324cf1babb28ed8bff",
+    "after": "efe9c0a3cfc8467307157df55c5870af6d71ee7b3680607181492b1d628fdc48"
+  },
+  {
+    "file": "qa/present/bedroom-wake-adult-v2.mp4",
+    "before": "44e3c5f4417a4ec063c0338e7ae16b6f728567ca8c4cb54730923026b42f2152",
+    "after": "2fe63913a63d5532594dc9a55832eaac589d710350a8188df7f1e95eae78fa32"
+  },
+  {
+    "file": "qa/present/hall-bathroom-v1.mp4",
+    "before": "cf6847af8c5987b0dbc21771458be83443c3a1a775f51da608fa751a7476a7a7",
+    "after": "8e3ba8f93000c3db3fa05f8b186df523f13af34b3fc56db0f9141b0da4928574"
+  },
+  {
+    "file": "qa/present/hall-kitchen-v2.mp4",
+    "before": "abc9a8b6b9eef3599c1837dfdc498611121595bde3d6d9a0c9c773eededd33e7",
+    "after": "e0b5a2050a3221ccea392e3808ca5fbce9a8f78d97d959da645b570fee36a10e"
+  },
+  {
+    "file": "PASADA_11_1080.md",
+    "before": null,
+    "after": "6e3bea668fc0db85af840857b9f0bb763fed67e2136431f6e48acb7a69858ca6"
+  },
+  {
+    "file": "CIERRE_PROYECTO.md",
+    "before": "9042892dc3bf46c4465ba3ccb5ac23cff1ec022dc852870bd71893692433594c",
+    "after": "d316d065f439862a5776be551339b289876f661e0479e55c744f4a5af65714c2"
+  },
+  {
+    "file": "qa/present/upscale-1080/inventory.json",
+    "before": null,
+    "after": "904e7fe144980f3a120767aaf6f0b9ed61b2e5ef4453d6e1428e68f2e064b20d"
+  },
+  {
+    "file": "qa/present/upscale-1080/results.json",
+    "before": "c71ce59fe6ec40e7404d20e2a2341e7e0a1056c085c58c6df9ff5f1c8c8eb431",
+    "after": "c71ce59fe6ec40e7404d20e2a2341e7e0a1056c085c58c6df9ff5f1c8c8eb431"
+  },
+  {
+    "file": "qa/present/upscale-1080/browser-check.html",
+    "before": "8d7e93d9f11b1708c2e345d057ce46a2f45ffbb1c28dc8e91fcdae0129f01028",
+    "after": "8d7e93d9f11b1708c2e345d057ce46a2f45ffbb1c28dc8e91fcdae0129f01028"
+  },
+  {
+    "file": "qa/present/upscale-1080/integration-main.json",
+    "before": "440145507d38ad8afbfb677703c181b38dc29104d3f6f1a33543a46a15796de8",
+    "after": "440145507d38ad8afbfb677703c181b38dc29104d3f6f1a33543a46a15796de8"
+  },
+  {
+    "file": "qa/present/upscale-1080/game-H-proof.png",
+    "before": null,
+    "after": "b1f6d6e9355e54e8c58b6e53557d60edd54bb5fa40e14aa2f21b111e0cf3d6f1"
+  }
+]

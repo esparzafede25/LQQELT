@@ -1,0 +1,26 @@
+{
+  "initial": "00-workshop.png",
+  "imageMethod": "built-in image_gen",
+  "imageDirection": "Workshop integrated with 18-year-old Valentino sheet, original garage and approved mate kitchen style.",
+  "steps": [
+    {
+      "id": "fetch",
+      "taskId": "7059737a-906a-4e24-a8df-389d64dba7a0",
+      "prompt": "One uninterrupted handcrafted wooden puppet animation from this EXACT workshop frame. The young adult in navy jacket starts with EMPTY hands in his pockets. He removes both hands visibly, turns RIGHT, takes two natural steps to the workbench on the right. He reaches with his RIGHT hand to the single silver spanner lying flat in FRONT of the open toolbox on the wooden bench, closes his fingers around its middle shaft and lifts it. He turns back LEFT and walks back to his original position beside his father and the car. He raises the spanner slightly toward his father as if offering it, but KEEPS HOLDING it at waist height in his right hand. Father remains at the fender and glances from the tool to his son with a subtle encouraging nod. End with young man holding the spanner, left hand relaxed, and father hands empty on the fender. Show complete walk, reach, grip, lifting and return, with a calm final pause. EXACT same young adult age18 and father, clothes, workshop and car. Camera absolutely fixed, no zoom, cuts or skipped motion. Hood remains OPEN and engine OFF. No new tools, no duplicate spanner, no changes to the car, no dialogue, no lip sync. Preserve handmade wooden faces, physical fabric and warm light.",
+      "file": "01-fetch.mp4"
+    },
+    {
+      "id": "repair",
+      "taskId": "ce8f0106-876c-44d5-a021-2609b4d93d1d",
+      "prompt": "Continue EXACTLY from this image, a single continuous handcrafted puppet animation. Young man on RIGHT starts holding the silver spanner upright in his RIGHT hand. Father is to his LEFT with empty hands on the fender. Father shifts a little left to give him room, keeping clear of the hood. Young man steps diagonally forward-left to the near-right corner of the car, lowers the SAME spanner, leans forward and carefully seats its open jaw onto the small hex screw of the metal hose clamp on the upper radiator hose at the FRONT-RIGHT of the exposed engine. His left hand rests on the fender for balance. He makes TWO small deliberate tightening turns, lifting and reseating the spanner between them; father watches attentively without taking over. Then he lifts the spanner clear, straightens fully and lowers his right hand holding the tool beside his thigh. Both pause beside the car. Show all approach, reach, contact, tightening, release and straightening continuously. The hood remains OPEN, ENGINE OFF throughout; no moving fan or belts. Fixed camera, no cuts, no zoom, no new tools, no duplicated spanner, no transformations of car or people. Exact identities, outfits, workshop layout and warm light, tactile wood and cloth, quiet gentle motions, no dialogue.",
+      "file": "02-repair.mp4"
+    },
+    {
+      "id": "close",
+      "taskId": "20a51660-9464-4a5e-8012-29ba4b342723",
+      "prompt": "One continuous handcrafted wooden puppet shot starting EXACTLY in this workshop frame. Young man on right holds a single silver spanner DOWN in his right hand beside his thigh. He keeps holding it there throughout, and takes one small step BACK to stay clear of the car. Father on left removes both EMPTY hands from the fender, reaches UP to the raised hood's upper edge, firmly grips it, supports its weight and smoothly lowers the SAME hood on its actual hinges down over the engine until it is fully CLOSED and aligned with the front fenders. His hands stay outside the engine bay. He gives the closed hood one gentle final push to latch it, then releases and rests one palm on the closed hood. No tools or cloth trapped under the hood: the visible rag stays on the OUTER left fender. Father turns his head toward his son with a small proud smile; son looks back and relaxes, still holding the spanner down in his right hand. Finish with a quiet shared pause and the hood fully closed. Show complete reach, grip, lowering, contact, latch, release continuously. Camera LOCKED, no cuts, no zoom, no new props, no disappearing spanner, no dialogue. Exact car geometry, workshop, clothing and character identities, warm miniature lighting. Engine remains off.",
+      "file": "03-close.mp4"
+    }
+  ],
+  "status": "Integrated; visual contact sheets reviewed; full browser route passed"
+}

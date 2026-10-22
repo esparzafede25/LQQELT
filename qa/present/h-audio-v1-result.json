@@ -1,0 +1,72 @@
+[
+  {
+    "file": "scripts/VideoSoundCues.js",
+    "before": null,
+    "after": "848a76d1ae12ee65960f018724b13f02a961d62570692cafa9414fce258d67fc"
+  },
+  {
+    "file": "scripts/AudioManager.js",
+    "before": "da6a5dcd1909386a6436db27944bbec3d8916127d9b05ca2790f59d7e1e9c7e6",
+    "after": "63fe8b579dbd98e1c434565a801d1d041df9b93db98e44f0291757c01e462148"
+  },
+  {
+    "file": "scenes/PresentWalkScene.js",
+    "before": "ff0f8d1ae48b012884aada31311eaea3c743cf3288a48513fe16cff7ddbc5cad",
+    "after": "80dc0f6506b91600da66b5dfec69af447c25a244f98a3bbad6dc4a8db36ce0ef"
+  },
+  {
+    "file": "scenes/PackingFilmScene.js",
+    "before": "ac0a15d856298516faeb9688222460018a8ddb78a9829328a1c499270ded7754",
+    "after": "7b5de9a548f9ea2a9ba92a4ee802543596e29765b12094e66e8a913696416840"
+  },
+  {
+    "file": "scenes/CarDepartureScene.js",
+    "before": "6732b6e33bec9860c9c76827654da91eae2611653d3e908037dac9a392f470aa",
+    "after": "15b220c9e29f939a1b80478399baf19dd739188264c5675b91e1814521e3e8a3"
+  },
+  {
+    "file": "qa/present/car-departure.test.mjs",
+    "before": "d433b3fab0826d0a5ac9a693983028ab766a584df0ae052fb65a2492b6404221",
+    "after": "4139d34ce4c4deb4b265971e8cdb657825e0cd308dd2aad079598833f1a5c652"
+  },
+  {
+    "file": "qa/present/audio-lifecycle.test.mjs",
+    "before": null,
+    "after": "54a44a52e4e1cc4120a821a7860a62f50884d48d8378dfde17ed6c75fe88b324"
+  },
+  {
+    "file": "qa/present/video-sound-cues.test.mjs",
+    "before": null,
+    "after": "0a33738ba2e02de5315e30be953ff842fed0ac7313cc83ee7c8982a48aa590f1"
+  },
+  {
+    "file": "qa/present/audio-preview-v1.html",
+    "before": null,
+    "after": "84205d851f0bbc5f13561f563d9713c816dbd47351ea7c8e0e176e31a0c8772f"
+  },
+  {
+    "file": "qa/present/audio-render-check-v1.txt",
+    "before": null,
+    "after": "2721e4b27986844c3f184fa11d3dbe6c77c00374360b50e55a81b900368f87f3"
+  },
+  {
+    "file": "GUION_VOZ_INTRO.md",
+    "before": null,
+    "after": "9c9b5b0630a0cd85ddb290da2e2041489a7776541df78839cf0a019afbaed03e"
+  },
+  {
+    "file": "PASADA_08_SONIDO.md",
+    "before": null,
+    "after": "285db76c77ae4fc9ece6496c2eebbe6727b716d870f33c330ae4623bc4d5095b"
+  },
+  {
+    "file": "CIERRE_PROYECTO.md",
+    "before": "74f9a711b25aa4ab3caaa4bc9dca09e9a4d7782b30fc58a47fba796a63abb498",
+    "after": "48fec9b3279f932cf307d45195fbf9287c32ac2d0948797f1b69ac5e1dedfd2a"
+  },
+  {
+    "file": "qa/present/audio-H-proof-v1.png",
+    "before": null,
+    "after": "e7ac98ba1606293c8c408a99061bac8463bb328a7d388fdac6103457894850c2"
+  }
+]

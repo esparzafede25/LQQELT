@@ -1,0 +1,47 @@
+[
+  {
+    "file": "scenes/OpeningScene.js",
+    "before": "e2b561e72e33a45ebc7fc6cb4197c193be57a2d3b39445227aeef8664d9d09d6",
+    "after": "d92892e94bf618f8669a844d25a0eb7e5e719eabdd6ff8a0f922d46aadd5558a"
+  },
+  {
+    "file": "scripts/DreamSoundtrack.js",
+    "before": "61a111bbb19e63e4aa59884afef330e1ceb8c92116c1bbc70f99fe02aff25f00",
+    "after": "970643690a9773450c82dd2ac91644bf39b3aab11198252154fcce1c9bcb5c1f"
+  },
+  {
+    "file": "qa/present/dream-audio.test.mjs",
+    "before": "27635ff74da91f355a1e6b1151537f8321d6786c14c0f5ee45e35ae30b003dd1",
+    "after": "d370bba68582a290560f93e165a8edc12dbe40762c6f5675eddeb2967a250b91"
+  },
+  {
+    "file": "PASADA_19_INTRO_ECO.md",
+    "before": null,
+    "after": "76107e8dab513757609199ef6b29fab588a94caa26549de407022ec38ae1aa09"
+  },
+  {
+    "file": "assets/intro-sound-v2/montaje.json",
+    "before": null,
+    "after": "8958f3cd8a578cd9c6599760e396a3322868ee7bcf1d19d8294fa17ea551a32e"
+  },
+  {
+    "file": "assets/intro-sound-v2/muestra-voz.mp3",
+    "before": null,
+    "after": "e8304bef22676d9a5cace9ccdd891ab1f3ce8ead736db6cfe6998ea20654735e"
+  },
+  {
+    "file": "assets/intro-sound-v2/PRODUCCION.md",
+    "before": null,
+    "after": "c1262da753f39807999717114538285c8ffc85de85f50d5075a695bfffb320fa"
+  },
+  {
+    "file": "assets/intro-sound-v2/sueno-mezcla.mp3",
+    "before": null,
+    "after": "e515163d71175a0265a22aa7e28ec6379c5863600887e145d40b8ea87aea447a"
+  },
+  {
+    "file": "assets/intro-sound-v2/voz-con-eco.mp3",
+    "before": null,
+    "after": "0c39b5a3f070f110de75f93d56d3f50b44ebe263068c8514bf1bfef895076834"
+  }
+]

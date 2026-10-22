@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Lo que queda en la Tierra — Experiencia Narrativa Interactiva</title>
+  <meta name="description" content="Pieza transmedia complementaria y precuela emocional del cortometraje 'Lo que queda en la Tierra'. Una experiencia interactiva contemplativa y poética sobre la memoria, la herencia y el duelo.">
+  <meta name="author" content="Lo que queda en la Tierra">
+  <meta name="theme-color" content="#0a0a0c">
+
+  <!-- Estilos del Proyecto -->
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/cinematic.css">
+  <link rel="stylesheet" href="styles/scenes.css">
+  <link rel="stylesheet" href="styles/archive.css">
+  <link rel="stylesheet" href="styles/mate-film.css">
+  <link rel="stylesheet" href="styles/present.css">
+  <link rel="stylesheet" href="styles/present-walk.css">
+
+  <link rel="icon" type="image/svg+xml" href="assets/ui/favicon.svg">
+</head>
+<body>
+  <!-- Contenedor Principal Widescreen -->
+  <main id="app-viewport">
+    
+    <!-- Barra Superior Discreta -->
+    <header id="top-bar">
+      <div class="top-bar-left">
+        <span class="top-bar-title">Lo que queda en la Tierra</span>
+      </div>
+      <div class="top-bar-right">
+        <a href="index.html" class="top-btn" style="text-decoration:none;display:inline-flex;align-items:center;cursor:pointer" title="Volver a la portada">Inicio</a>
+        <button id="btn-top-menu" class="top-btn" title="Menú Principal">
+          <span>Menú</span>
+        </button>
+        <button id="btn-top-archive" class="top-btn" title="Archivo y Museo Virtual">
+          <span>Archivo</span>
+        </button>
+        <button id="btn-top-audio" class="top-btn" title="Activar/Silenciar Sonido">
+          <svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z"/></svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- Escenario Principal donde se montan las escenas -->
+    <div id="screen-stage">
+      <!-- Las capas de escenas se inyectan dinámicamente aquí -->
+    </div>
+
+    <!-- Partículas de Polvo Artesanal Flotante -->
+    <canvas id="dust-canvas"></canvas>
+
+    <!-- Efectos Cinematográficos Superpuestos -->
+    <div id="vignette-overlay"></div>
+    <div id="grain-overlay"></div>
+
+    <!-- Bandas Negras Formato Ancho (Letterbox 2.39:1) -->
+    <div class="cinema-bar top"></div>
+    <div class="cinema-bar bottom"></div>
+
+    <!-- Contenedor de Subtítulos y Diálogos -->
+    <div id="subtitles-container"></div>
+
+    <!-- Cortina de Transición entre Escenas -->
+    <div id="transition-curtain"></div>
+
+  </main>
+
+  <!-- Cursor Personalizado Cinematográfico -->
+  <div id="custom-cursor">
+    <div class="cursor-dot"></div>
+    <div class="cursor-label">INTERACTUAR</div>
+  </div>
+
+  <!-- Entrada del Código Modular -->
+  <script type="module" src="scripts/app.js"></script>
+</body>
+</html>
+

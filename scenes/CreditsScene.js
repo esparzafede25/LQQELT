@@ -1,5 +1,5 @@
 /**
- * LO QUE QUEDÓ EN LA TIERRA
+ * LO QUE QUEDA EN LA TIERRA
  * CreditsScene — Pantalla de Créditos Cinematográficos
  */
 
@@ -20,7 +20,7 @@ export class CreditsScene {
         <div class="credits-scroll">
           <div>
             <div class="credit-role">HISTORIA ORIGINAL & CORTOMETRAJE</div>
-            <div class="credit-name">LO QUE QUEDÓ EN LA TIERRA</div>
+            <div class="credit-name">LO QUE QUEDA EN LA TIERRA</div>
             <div class="credit-note">Una exploración visual y poética sobre el duelo, la memoria y la partida.</div>
           </div>
 
@@ -39,7 +39,7 @@ export class CreditsScene {
           <div>
             <div class="credit-role">DISEÑO SONORO PROCEDURAL</div>
             <div class="credit-name">WEB AUDIO API & SÍNTESIS ANALÓGICA</div>
-            <div class="credit-note">Paisajes de viento patagónico, estática de radio transistor y motores clásicos.</div>
+            <div class="credit-note">Paisajes de viento patagónico, estática de radio transistor y motores clásicos. Música: Stifled Screams (pesadilla) y Ofelia’s Dream (presente) — Bensound. Adiós Nonino — Astor Piazzolla; interpretación de Agustín Luna (recuerdo de la llave diez).</div>
           </div>
 
           <div style="margin-top: 20px;">

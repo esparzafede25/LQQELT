@@ -1,0 +1,19 @@
+{
+  "sourceStart": 8,
+  "sourceEnd": 24,
+  "loopSeconds": 15.75,
+  "crossfadeSeconds": 0.25,
+  "filterHz": [
+    200,
+    6000
+  ],
+  "baseGain": 0.18,
+  "handGain": 0.21,
+  "handLowpassHz": 2500,
+  "openCueSeconds": 2.4,
+  "closeCueSeconds": 3.7,
+  "handSeconds": [
+    1,
+    2.25
+  ]
+}

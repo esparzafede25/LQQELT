@@ -1,0 +1,112 @@
+[
+  {
+    "file": "scenes/OpeningScene.js",
+    "before": "776811fb788bdf6e0dd624e416445f2eda1e77af4ab64529ee3d3d799a4c7c23",
+    "after": "bed1be5f3e897448b1798f9fa769c8164826a058cc2a8ec45d6c5feef34d3bf4"
+  },
+  {
+    "file": "scenes/CreditsScene.js",
+    "before": "91aa9a34332e232c8d87fff84ec4e38301a31981d7e2635db46f947440b9cd1f",
+    "after": "8823db3911e4bc983b3a4746ea69625a2e3dabe580a682c4b746aed3090fbbdf"
+  },
+  {
+    "file": "styles/present-walk.css",
+    "before": "f8b203169ce9603a450a623af1cd627cf4d3613db66c0472375ae249ad5d9a17",
+    "after": "b5d5074bb7d5ba34b4e72e82a3af17a79c238a2f23f8718769474380fba6188e"
+  },
+  {
+    "file": "scripts/DreamSoundtrack.js",
+    "before": null,
+    "after": "61a111bbb19e63e4aa59884afef330e1ceb8c92116c1bbc70f99fe02aff25f00"
+  },
+  {
+    "file": "qa/present/dream-audio.test.mjs",
+    "before": null,
+    "after": "27635ff74da91f355a1e6b1151537f8321d6786c14c0f5ee45e35ae30b003dd1"
+  },
+  {
+    "file": "assets/voice-intro-v1/edicion.json",
+    "before": null,
+    "after": "46b8ad54aa1739253f053cac5ca8cf769a93ad41e769daadf3f62baa1361f8c6"
+  },
+  {
+    "file": "assets/voice-intro-v1/INTRO_VALENTINO_EDITADA.mp3",
+    "before": null,
+    "after": "302c74b5d51f22595591a7b088cee0b818ddfe1fe4fe5b35d20fdecdadf2c08d"
+  },
+  {
+    "file": "assets/voice-intro-v1/INTRO_VALENTINO_EDITADA.wav",
+    "before": null,
+    "after": "783232fcab9756e472d98d67b8bf7f51ae761422027f940cd51d2f7b39295f55"
+  },
+  {
+    "file": "assets/voice-intro-v1/PRODUCCION.md",
+    "before": null,
+    "after": "6848872c508bda992d73e6289554748d062ddc20fe15c63f3d5a5eebdb4e6587"
+  },
+  {
+    "file": "assets/voice-intro-v1/VO_INTRO_01.wav",
+    "before": null,
+    "after": "d6e34f91b4fad79ac45f782e262b4ee9893847290ebc9808cd6e10a1ec079e9f"
+  },
+  {
+    "file": "assets/voice-intro-v1/VO_INTRO_02.wav",
+    "before": null,
+    "after": "a49d5b5423620a1f6c1904803b4ad0fdacb90b0b5f98ba37019d61604a9b4ca6"
+  },
+  {
+    "file": "assets/voice-intro-v1/VO_INTRO_03.wav",
+    "before": null,
+    "after": "ca17ad64ef7ff4985221ef78d994397ce8af58772d2274513bddddc226b4c81c"
+  },
+  {
+    "file": "assets/voice-intro-v1/VO_INTRO_04.wav",
+    "before": null,
+    "after": "a0953b7ca0eac655d4854cf25b26cb0d6ede9c6728260b4639a3a723c8cdb536"
+  },
+  {
+    "file": "assets/voice-intro-v1/VO_INTRO_05.wav",
+    "before": null,
+    "after": "42823c3962bc4024edea63b2aa4f2fed71f048fc0b98b743107923da498a207d"
+  },
+  {
+    "file": "assets/voice-intro-v1/VO_INTRO_06.wav",
+    "before": null,
+    "after": "cadb2122bb228e8f5e2f210b654e821f6f1bdd68d94c6c127afe5c4490fa1f08"
+  },
+  {
+    "file": "assets/voice-intro-v1/VO_INTRO_07.wav",
+    "before": null,
+    "after": "85fd907aff6b625b5fb4ef13ba3c07201e351fe9c3982e1dc3ab1226712b3eb6"
+  },
+  {
+    "file": "assets/voice-intro-v1/VO_INTRO_08.wav",
+    "before": null,
+    "after": "993d68bb49aabd4d81d84c1c339f463650ed66e59606c6611459e05f33a0f3d4"
+  },
+  {
+    "file": "assets/intro-sound-v1/montaje.json",
+    "before": null,
+    "after": "6c975415c3daf015d2401e3da6077c15c4897d53d1d596cb5c5bf12eb59947e6"
+  },
+  {
+    "file": "assets/intro-sound-v1/musica-original.mp3",
+    "before": null,
+    "after": "23a1c474d6c725d982ae592e815c3c499405e5a896e9a284e54f1e2fa0ac8125"
+  },
+  {
+    "file": "assets/intro-sound-v1/PRODUCCION.md",
+    "before": null,
+    "after": "2801a2e6c0b6179b8a37a8ed26234c996acd3486b882920fde9103279fc2a5e2"
+  },
+  {
+    "file": "assets/intro-sound-v1/sueno-mezcla.mp3",
+    "before": null,
+    "after": "b36c938e18c6b1c47e4494649bf270b18644ec34744b29494399540217c05a6e"
+  },
+  {
+    "file": "assets/intro-sound-v1/voz-con-eco.mp3",
+    "before": null,
+    "after": "f860f6109e94e6f0132e90b8eabec39aeff2ee1eafa88b395745a6dfdfea5f5a"
+  }
+]

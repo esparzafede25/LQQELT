@@ -1,0 +1,122 @@
+[
+  {
+    "file": "scenes/ArchiveScene.js",
+    "before": "74126023de7ff277991fc5d299194bd0883fbb4cbc3ee5571fa426d33648fd2d",
+    "after": "9dcb618e5b8a53413d0dfdec5f0ee7c1e57fc5798f0037578b04f2b331f2631e"
+  },
+  {
+    "file": "scenes/EnvelopeScene.js",
+    "before": "57fcdc091b7de3e6574f0c4010c0de9d49a77e9b17ea770f16ba58bec33c7aa2",
+    "after": "b955ca7f91062a6841cfe9f8c19eaad6d78024c277d0aaacea5024d659825668"
+  },
+  {
+    "file": "styles/archive.css",
+    "before": "226e74f467ddc39b1de9a18e10613f318e28947da6849f4d7620a13ceeb15610",
+    "after": "7390e709ab40de2001fcd73b8bf358dee8fd44f4f3683b4f9a05a9732c015206"
+  },
+  {
+    "file": "styles/scenes.css",
+    "before": "17f7cd77bbc8e650de214cb00f54988331a8926b6117f32553cc946be2f1cc88",
+    "after": "0460798a99a4d13058267d073eb316910529c7cb4afc4c155c6204e85ba7fb6b"
+  },
+  {
+    "file": "index.html",
+    "before": "8777efd361038514671d4b9947d173a07f97ae0ec0be75768dcf9bab926b7be4",
+    "after": "b4115ab277d235ac518ed55fd26d4b60dcb069f0efe46da345113628ae1be558"
+  },
+  {
+    "file": "assets/ui/favicon.svg",
+    "before": null,
+    "after": "015612b6af0473ac999b6cd5fa79306808ef7200039b59422cd6c2490b10cbdf"
+  },
+  {
+    "file": "assets/archive-v1/concepto-madera.jpg",
+    "before": null,
+    "after": "3d8d6cf7d9a6da53bd22f7016cc7e130d5979b33afc26cf63c768b7fe2f2adc9"
+  },
+  {
+    "file": "assets/archive-v1/dormitorio.png",
+    "before": null,
+    "after": "78d04173c0825ecd14990ce8b61193b2085871194866d8aa39fe4b701b5f88f5"
+  },
+  {
+    "file": "assets/archive-v1/edades-y-proporciones.png",
+    "before": null,
+    "after": "078335e65aee7a4a9cd00a25060ed4db587b755079c211838cd8e8836fe75a6a"
+  },
+  {
+    "file": "assets/archive-v1/gestos-y-materiales.png",
+    "before": null,
+    "after": "fcf5ca4f2ad0d3f7c5c2eece24c876f47102bf9ac75210c769b56b1489e921c0"
+  },
+  {
+    "file": "assets/archive-v1/mapa.png",
+    "before": null,
+    "after": "e3f9b54ae3d19e8b71946de0b233ef05b8a270a2fc7827727a8921cfffb62a4b"
+  },
+  {
+    "file": "assets/archive-v1/padre.png",
+    "before": null,
+    "after": "84ed4a2873155f9431992b611afa99805f5778ead85b25c8e4abdc7d3ddae4a0"
+  },
+  {
+    "file": "assets/archive-v1/PRODUCCION.md",
+    "before": null,
+    "after": "a525dba98a01bc33d60fb88f9667747960089c253fb5f730b36dcb8039bbb22d"
+  },
+  {
+    "file": "assets/archive-v1/prompts.json",
+    "before": null,
+    "after": "0fa952b1453c694a05f6e09a793833a8879e45fadff1ee279c2e54442faf5c88"
+  },
+  {
+    "file": "assets/archive-v1/sobre.png",
+    "before": null,
+    "after": "55776444830485dc1a0235a6dd0c255709eb4a097cb4f692057ecf15deef07d7"
+  },
+  {
+    "file": "assets/archive-v1/valentino-11.png",
+    "before": null,
+    "after": "2c9d3f463a45b92cb52afa1f01314d332b83aa6f099e0d3eb4985464500ce8cd"
+  },
+  {
+    "file": "assets/archive-v1/valentino-18.png",
+    "before": null,
+    "after": "7f12e18876bf4d1204f5fd23bcf7107afaed7dc38bea89d0826ad0a92f694625"
+  },
+  {
+    "file": "assets/archive-v1/valentino-adolescente.png",
+    "before": null,
+    "after": "cf2ebb73f1233e1572a823f322e7052663d2f742adbe3fcf1f11f37c0f0ef494"
+  },
+  {
+    "file": "assets/archive-v1/valentino-adulto.png",
+    "before": null,
+    "after": "f23e7d0d4197f3f3cf4ff7d3a10725c2a6a01b8627000131ac7fc7956832ed78"
+  },
+  {
+    "file": "CIERRE_PROYECTO.md",
+    "before": "d316d065f439862a5776be551339b289876f661e0479e55c744f4a5af65714c2",
+    "after": "44c38ebbbce710509d911e8b2a1b1ac952a70c7800bd03d1359935fe49adc8e8"
+  },
+  {
+    "file": "PASADA_12_ARCHIVO.md",
+    "before": null,
+    "after": "c9e0ea03eff34c294aeb293e85b4c453d07bec9f40d2d9dd62b3642b27642063"
+  },
+  {
+    "file": "qa/present/archive-v1-browser-H.json",
+    "before": null,
+    "after": "7bd8320c0b91e2e5b528b62faf2fa84c4ea5b32e6e94610b7bdea7c74ed8b0c0"
+  },
+  {
+    "file": "qa/present/archive-v1-characters-H-proof.png",
+    "before": null,
+    "after": "c78ba02fc11e8a880cb166917e8dc8e0ae1d5809b53d9edf78b3aabe6c8d6d16"
+  },
+  {
+    "file": "qa/present/archive-v1-envelope-H-proof.png",
+    "before": null,
+    "after": "8c1b6ff3e709f03d4eb3a6a5e26b3ba1fdf9ae8f5d3bc206c4c35a7d8bcf1607"
+  }
+]

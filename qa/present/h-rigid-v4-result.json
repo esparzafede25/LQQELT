@@ -1,0 +1,167 @@
+[
+  {
+    "file": "scripts/PackingFilmProgress.js",
+    "before": "9050116b1b301fde0c993f33a3d6e627ef8c395e4d98190f46aba26e4e86778c",
+    "after": "e675511a7da67cab0861d003e74968278a8384b8aa420e270e4518dea96e8f68"
+  },
+  {
+    "file": "scripts/CarDepartureProgress.js",
+    "before": "352c7bbc2283db09c6a137111484468ad669bc39c911e9958c2e68de119d73d3",
+    "after": "84249ea1a175ec6793e8af0c085b01c9b88091ca4108047d38fe92dcd78f2b43"
+  },
+  {
+    "file": "scenes/CarDepartureScene.js",
+    "before": "c1c405488b439d42dd93957b3b9f82a607ca535a73cfcabe80dd45a090635b87",
+    "after": "6732b6e33bec9860c9c76827654da91eae2611653d3e908037dac9a392f470aa"
+  },
+  {
+    "file": "PASADA_07_RIGIDEZ.md",
+    "before": "e60b2f515a0bd1d71ca92d53fd372f7ad568ad8894653a55e9ab4d402d8d56c0",
+    "after": "f858a6ea8b03f8c5c601392cef2343ca8729516cb4461ee44b705a2afcacaff6"
+  },
+  {
+    "file": "CIERRE_PROYECTO.md",
+    "before": "0604c615b7b08a4502e71e5229d7d6603363efc87ddd69f704a2fefa5b4f4954",
+    "after": "74f9a711b25aa4ab3caaa4bc9dca09e9a4d7782b30fc58a47fba796a63abb498"
+  },
+  {
+    "file": "qa/present/rigid-v4-metrics.json",
+    "before": null,
+    "after": "1fbecb268ce3a921d45af17543f1f4afa4f00516760484edd1e62992f51aef6b"
+  },
+  {
+    "file": "qa/present/rigid-final-continuity-v4.json",
+    "before": null,
+    "after": "8ee1c94f1338184a655a905ae6374660d5471e6c14aa6cee2f0a869e9e6edd34"
+  },
+  {
+    "file": "qa/present/rigid-final-image-prompts-v4.json",
+    "before": null,
+    "after": "0dd977877a269bdcbb4af4f960bde8df2a3b73a1109b5ef47d539b9ad01682bd"
+  },
+  {
+    "file": "qa/present/take-bag-canonical-end-v1-prompt.txt",
+    "before": null,
+    "after": "70b7f0997a1398337afcae16664f27c59590eab6b51f0a25060960247d203aed"
+  },
+  {
+    "file": "assets/departure-rigid-v4/00-start.png",
+    "before": null,
+    "after": "6d42d0e37e2dba8b4ad4a339f2ad34a764034bef799ce3c05b24750d3abfa070"
+  },
+  {
+    "file": "assets/departure-rigid-v4/01-mate-end.png",
+    "before": null,
+    "after": "b9f2533829524f3beed33aac2241ff18f58b167bc586bf10740deca28ed6dad7"
+  },
+  {
+    "file": "assets/departure-rigid-v4/01-mate.mp4",
+    "before": null,
+    "after": "d6d734ef09adbb6d5046974ff34607a19c326a223771886928277ed8fed6f5e7"
+  },
+  {
+    "file": "assets/departure-rigid-v4/02-wrench-end.png",
+    "before": null,
+    "after": "c82828131736a8e9666df12d9816f959ff0ba0303cf2e5ce52ffc192839b03e4"
+  },
+  {
+    "file": "assets/departure-rigid-v4/02-wrench.mp4",
+    "before": null,
+    "after": "eb62dcb9477920a34a3f9afa6b592f00b495a78aaee7e1fe4e5da5cd6b939e39"
+  },
+  {
+    "file": "assets/departure-rigid-v4/03-map-end.png",
+    "before": null,
+    "after": "6bdb80a2c04aa212d4b05d83fa78c21ed5a30b663ba499bb4895ef0761a2d605"
+  },
+  {
+    "file": "assets/departure-rigid-v4/03-map.mp4",
+    "before": null,
+    "after": "a099704475cb45fa7533f876194e84c20fa71f4e24bb363453c4a422da9e6ef3"
+  },
+  {
+    "file": "assets/departure-rigid-v4/04-envelope-end.png",
+    "before": null,
+    "after": "c0c0c974ac75175a9ea555516625ee3bbefeaae19a11d27c72233901c661b999"
+  },
+  {
+    "file": "assets/departure-rigid-v4/04-envelope.mp4",
+    "before": null,
+    "after": "d0217092364cf68b4e207e00be96bd7bbfe59184acc7819c763bf9405a159d9e"
+  },
+  {
+    "file": "assets/departure-rigid-v4/05-take-bag-end.png",
+    "before": null,
+    "after": "bbbfc81139ec208612a6740cc4a7ff1bd7b71433a799c7e74a9180b882d0ab0f"
+  },
+  {
+    "file": "assets/departure-rigid-v4/05-take-bag.mp4",
+    "before": null,
+    "after": "39654182d1123e5c54eb4c1aa55f8cb141bc463979f0958dc04f1a0306a4c654"
+  },
+  {
+    "file": "assets/departure-rigid-v4/PRODUCCION.md",
+    "before": null,
+    "after": "21c9d34880dc3f4110feac6461e9db8c3b32da32dc5479288dcbd3088e25415e"
+  },
+  {
+    "file": "assets/departure-car-rigid-v4/00-start.png",
+    "before": null,
+    "after": "0b9916524180d73dfc603f28184984c2f73e9ff022ccbd7f512cec17e7602340"
+  },
+  {
+    "file": "assets/departure-car-rigid-v4/01-place-bag-end.png",
+    "before": null,
+    "after": "8764fa5bbab30b1da6c06e5f3ee46a1eea0a546fbb923200fd103d8099952de8"
+  },
+  {
+    "file": "assets/departure-car-rigid-v4/01-place-bag.mp4",
+    "before": null,
+    "after": "9e83132e1e29dbcbbe82bd46ec1f04edeefca91c36025d63036b3452014bbbf4"
+  },
+  {
+    "file": "assets/departure-car-rigid-v4/02-sit-end.png",
+    "before": null,
+    "after": "0d84962e10c099173f44f5da2b147ae3c46694220f55b185419e537db0b405dd"
+  },
+  {
+    "file": "assets/departure-car-rigid-v4/02-sit.mp4",
+    "before": null,
+    "after": "7dfcc806c471026a5ffc2c2871b56f6717cc5eee9a90fcbffec63f0cda5318eb"
+  },
+  {
+    "file": "assets/departure-car-rigid-v4/03-close-end.png",
+    "before": null,
+    "after": "70da3efa8d038edb0716c4d984e3a42dfdb06f269a3eeb6ca862c005316a3037"
+  },
+  {
+    "file": "assets/departure-car-rigid-v4/03-close.mp4",
+    "before": null,
+    "after": "61def71124603b93fe2b9a28b508ddf549eaa96260bd2c1948fd53d7964e878f"
+  },
+  {
+    "file": "assets/departure-car-rigid-v4/04-sigh-end.png",
+    "before": null,
+    "after": "70da3efa8d038edb0716c4d984e3a42dfdb06f269a3eeb6ca862c005316a3037"
+  },
+  {
+    "file": "assets/departure-car-rigid-v4/04-sigh.mp4",
+    "before": null,
+    "after": "b056a2806c896ca60f105d0bda678a9ba7285aa28918c627e26065efd0dd7cff"
+  },
+  {
+    "file": "assets/departure-car-rigid-v4/05-away-end.png",
+    "before": null,
+    "after": "b1f54ab96884f0616f7768e9f0fdb6746b8978d1697338f7d82ac10e59475512"
+  },
+  {
+    "file": "assets/departure-car-rigid-v4/05-away.mp4",
+    "before": null,
+    "after": "11d512ca38449ba16d3ca6c3c4b40a46f49d091ac7006def711078bedd7937e2"
+  },
+  {
+    "file": "assets/departure-car-rigid-v4/PRODUCCION.md",
+    "before": null,
+    "after": "21c9d34880dc3f4110feac6461e9db8c3b32da32dc5479288dcbd3088e25415e"
+  }
+]

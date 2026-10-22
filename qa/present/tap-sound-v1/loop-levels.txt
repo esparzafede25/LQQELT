@@ -1,0 +1,29 @@
+Input #0, mp3, from 'assets/tap-sound-v1/agua-continua.mp3':
+  Metadata:
+    encoder         : Lavf63.1.101
+  Duration: 00:00:15.75, start: 0.023021, bitrate: 129 kb/s
+  Stream #0:0: Audio: mp3 (mp3float), 48000 Hz, mono, fltp, 129 kb/s, start 0.023021
+Stream mapping:
+  Stream #0:0 -> #0:0 (mp3 (mp3float) -> pcm_s16le (native))
+Press [q] to stop, [?] for help
+Output #0, null, to 'NUL':
+  Metadata:
+    encoder         : Lavf63.1.101
+  Stream #0:0: Audio: pcm_s16le, 192000 Hz, mono, s16, 3072 kb/s
+    Metadata:
+      encoder         : Lavc63.1.101 pcm_s16le
+[Parsed_loudnorm_0 @ 000001e014350b00] 
+{
+	"input_i" : "-24.52",
+	"input_tp" : "-4.07",
+	"input_lra" : "0.60",
+	"input_thresh" : "-34.52",
+	"output_i" : "-23.99",
+	"output_tp" : "-3.60",
+	"output_lra" : "0.60",
+	"output_thresh" : "-33.99",
+	"normalization_type" : "dynamic",
+	"target_offset" : "-0.01"
+}
+[out#0/null @ 000001e01436c280] video:0KiB audio:5906KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown
+size=N/A time=00:00:15.80 bitrate=N/A speed=87.5x elapsed=0:00:00.18    

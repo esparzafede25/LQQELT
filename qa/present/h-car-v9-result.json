@@ -1,0 +1,52 @@
+[
+  {
+    "before": "e8fb9ed72dd7a3d5106f36cccae61747b9f94e06414246cec797a2b48f656ee7",
+    "file": "scripts/CarDepartureProgress.js",
+    "after": "a51fa36480e9309d5a105fae5d407606ace66b87c2bd9882ee06357fef14b252"
+  },
+  {
+    "before": null,
+    "file": "PASADA_10_AUTO.md",
+    "after": "cde175d8bf461b02706a9ca9e68c33418f2a588772d5b7cc71318b67c93639db"
+  },
+  {
+    "before": "c07354d32a26450497abe147176201c4fc02ea85a943cdf167f65035fa3d4600",
+    "file": "CIERRE_PROYECTO.md",
+    "after": "9042892dc3bf46c4465ba3ccb5ac23cff1ec022dc852870bd71893692433594c"
+  },
+  {
+    "before": null,
+    "file": "assets/departure-car-v9/00-start.png",
+    "after": "ac9f9e7124539c1792d173c8f3e00b1c52b4746945e0a56a7be6105fad26ea22"
+  },
+  {
+    "before": null,
+    "file": "assets/departure-car-v9/01-place-bag-end.png",
+    "after": "160631c2c39ee7a5aa4b0252f6af5d90acaf180560ad0c989a7577a7fc839f2c"
+  },
+  {
+    "before": null,
+    "file": "assets/departure-car-v9/01-place-bag.mp4",
+    "after": "0bcac5f5f0c47fa96f4d204ded52237999166786b6ec838dc6f1718c35954a60"
+  },
+  {
+    "before": null,
+    "file": "assets/departure-car-v9/02-sit-end.png",
+    "after": "6175c5441ec9d1591cc6faa250df980e1d24190d8c7235bf81ad627aa8213f2c"
+  },
+  {
+    "before": null,
+    "file": "assets/departure-car-v9/02-sit.mp4",
+    "after": "039e9d828dfa69caf112620f09571cfb1bed546e7961e618fb04e3486b31f201"
+  },
+  {
+    "before": null,
+    "file": "assets/departure-car-v9/PRODUCCION.md",
+    "after": "30b76bdddac745f804afd7502b74863f705d37d447e3a9248bfb9d78115dd76c"
+  },
+  {
+    "file": "qa/present/car-v9-H-proof.png",
+    "before": null,
+    "after": "611083c9c127bf8eb1e0652c91142b6df0b6c76e5cdabbbcbf2c3f69fad270bc"
+  }
+]

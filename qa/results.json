@@ -1,0 +1,31 @@
+{
+  "fullSequence": "PASS",
+  "dialogueWait": "PASS",
+  "dialogueKeyboard": "PASS",
+  "mobileSpeech": {
+    "x": 179.390625,
+    "y": 258.796875,
+    "width": 179.390625,
+    "height": 72.1875
+  },
+  "saved": true,
+  "pour": {
+    "playback": "held",
+    "ended": true
+  },
+  "passEnded": true,
+  "returnTime": 2.921579,
+  "cancellation": {
+    "scene": "MENU",
+    "completed": false,
+    "film": false
+  },
+  "mobile": {
+    "x": 0,
+    "y": 312.3125,
+    "width": 390,
+    "height": 219.375
+  },
+  "errors": [],
+  "videoRange": "PASS"
+}

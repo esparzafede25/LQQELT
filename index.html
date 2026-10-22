@@ -1,74 +1,35 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>Lo que quedó en la Tierra — Experiencia Narrativa Interactiva</title>
-  <meta name="description" content="Pieza transmedia complementaria y precuela emocional del cortometraje 'Lo que quedó en la Tierra'. Una experiencia interactiva contemplativa y poética sobre la memoria, la herencia y el duelo.">
-  <meta name="author" content="Lo que quedó en la Tierra">
-  <meta name="theme-color" content="#0a0a0c">
-
-  <!-- Estilos del Proyecto -->
-  <link rel="stylesheet" href="styles/main.css">
-  <link rel="stylesheet" href="styles/cinematic.css">
-  <link rel="stylesheet" href="styles/scenes.css">
-  <link rel="stylesheet" href="styles/archive.css">
-
-  <link rel="icon" type="image/svg+xml" href="assets/props/mate_placeholder.svg">
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lo que queda en la Tierra — Juego y cortometraje</title>
+  <meta name="description" content="Una historia, dos experiencias. Explorá el juego narrativo y el cortometraje de Lo que queda en la Tierra, un proyecto sobre la memoria, el duelo y la partida.">
+  <meta name="theme-color" content="#10100e">
+  <meta property="og:title" content="Lo que queda en la Tierra"><meta property="og:description" content="Una casa. Tres recuerdos. Un camino por seguir. Juego y cortometraje en un mismo universo."><meta property="og:image" content="assets/portal-v1/la-ruta.webp">
+  <link rel="icon" href="assets/ui/favicon.svg" type="image/svg+xml">
+  <link rel="preload" as="image" href="assets/portal-v1/la-ruta.webp">
+  <link rel="stylesheet" href="styles/portal.css">
+  <script>if(new URLSearchParams(location.search).has('scene'))location.replace('juego.html'+location.search+location.hash);</script>
+  <script type="module" src="scripts/portal.js"></script>
 </head>
 <body>
-  <!-- Contenedor Principal Widescreen -->
-  <main id="app-viewport">
-    
-    <!-- Barra Superior Discreta -->
-    <header id="top-bar">
-      <div class="top-bar-left">
-        <span class="top-bar-title">Lo que quedó en la Tierra</span>
+  <a class="skip-link" href="#experiencias">Ir a las experiencias</a>
+  <header class="site-header"><a class="brand" href="index.html" aria-label="Lo que queda en la Tierra — inicio"><img src="assets/ui/favicon.svg" width="30" height="34" alt=""><span>LO QUE QUEDA<br>EN LA TIERRA</span></a><nav aria-label="Navegación principal"><a href="index.html" aria-current="page">Inicio</a><a href="juego.html">Juego</a><a href="cortometraje.html">Cortometraje</a></nav></header>
+  <main>
+    <section class="hero" aria-labelledby="portal-title">
+      <img class="hero-image" src="assets/portal-v1/la-ruta.webp" width="1600" height="900" alt="Una ruta vacía entre montañas patagónicas y un árbol al atardecer" fetchpriority="high"><div class="hero-shade"></div>
+      <div class="hero-content"><p class="eyebrow"><span></span> UNA HISTORIA. DOS EXPERIENCIAS.</p><h1 id="portal-title">Lo que queda<br>en la <em>Tierra</em></h1><p class="hero-copy">Una casa. Tres recuerdos.<br>Un camino por seguir.</p><div class="hero-actions"><a class="button primary" href="juego.html"><span aria-hidden="true">▶</span> Entrar al juego</a><a class="button secondary" href="#experiencias">Explorar la historia <span aria-hidden="true">↓</span></a></div></div>
+      <p class="hero-caption">MEMORIA · DUELO · PARTIDA</p>
+    </section>
+    <section id="experiencias" class="catalogue" aria-labelledby="catalogue-title">
+      <div class="section-heading"><div><p class="eyebrow">EL UNIVERSO DE LA HISTORIA</p><h2 id="catalogue-title">Elegí cómo entrar.</h2></div><p>El juego abre los recuerdos.<br>El cortometraje continúa el camino.</p></div>
+      <div class="experience-grid">
+        <a class="experience game-card" href="juego.html" aria-label="Entrar al juego — Lo que queda en la Tierra"><div class="poster"><img src="assets/portal-v1/el-juego.webp" width="1200" height="675" alt="Valentino y su papá en la cocina, a punto de compartir un mate"><div class="poster-shade"></div><span class="badge available">DISPONIBLE PARA JUGAR</span><span class="poster-mark" aria-hidden="true">01 / RECUERDOS</span><span class="poster-title">Volver a<br><em>encontrarte.</em></span><span class="round-action" aria-hidden="true">▶</span></div><div class="experience-info"><div><p class="format">JUEGO NARRATIVO</p><h3>La experiencia interactiva</h3><p>Explorá la casa de Valentino. Hay objetos que todavía tienen algo que contar.</p></div><span class="text-action">Jugar ahora <span aria-hidden="true">↗</span></span></div></a>
+        <a class="experience film-card" href="cortometraje.html" aria-label="Ver el espacio del cortometraje — Próximamente"><div class="poster"><img src="assets/portal-v1/el-corto.webp" width="1200" height="675" alt="Valentino adulto mira hacia adelante desde el interior del auto"><div class="poster-shade"></div><span class="badge" data-film-badge>PRÓXIMAMENTE</span><span class="poster-mark" aria-hidden="true">02 / EL CAMINO</span><span class="poster-title">Lo que queda<br><em>por delante.</em></span><span class="round-action" aria-hidden="true">↗</span></div><div class="experience-info"><div><p class="format">CORTOMETRAJE</p><h3>La historia continúa</h3><p>Los recuerdos lo trajeron hasta acá. Ahora, queda un camino por recorrer.</p></div><span class="text-action" data-film-action>Conocer el corto <span aria-hidden="true">↗</span></span></div></a>
       </div>
-      <div class="top-bar-right">
-        <button id="btn-top-menu" class="top-btn" title="Menú Principal">
-          <span>Menú</span>
-        </button>
-        <button id="btn-top-archive" class="top-btn" title="Archivo y Museo Virtual">
-          <span>Archivo</span>
-        </button>
-        <button id="btn-top-audio" class="top-btn" title="Activar/Silenciar Sonido">
-          <svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z"/></svg>
-        </button>
-      </div>
-    </header>
-
-    <!-- Escenario Principal donde se montan las escenas -->
-    <div id="screen-stage">
-      <!-- Las capas de escenas se inyectan dinámicamente aquí -->
-    </div>
-
-    <!-- Partículas de Polvo Artesanal Flotante -->
-    <canvas id="dust-canvas"></canvas>
-
-    <!-- Efectos Cinematográficos Superpuestos -->
-    <div id="vignette-overlay"></div>
-    <div id="grain-overlay"></div>
-
-    <!-- Bandas Negras Formato Ancho (Letterbox 2.39:1) -->
-    <div class="cinema-bar top"></div>
-    <div class="cinema-bar bottom"></div>
-
-    <!-- Contenedor de Subtítulos y Diálogos -->
-    <div id="subtitles-container"></div>
-
-    <!-- Cortina de Transición entre Escenas -->
-    <div id="transition-curtain"></div>
-
+    </section>
+    <section class="closing"><span class="closing-rule"></span><p>Hay cosas que siguen con nosotros.<br><em>Incluso cuando es hora de partir.</em></p><span class="closing-rule"></span></section>
   </main>
-
-  <!-- Cursor Personalizado Cinematográfico -->
-  <div id="custom-cursor">
-    <div class="cursor-dot"></div>
-    <div class="cursor-label">INTERACTUAR</div>
-  </div>
-
-  <!-- Entrada del Código Modular -->
-  <script type="module" src="scripts/app.js"></script>
+  <footer class="site-footer"><span>LO QUE QUEDA EN LA TIERRA</span><p>Un proyecto de Federico Esparza</p><a href="#portal-title">Volver arriba ↑</a></footer>
 </body>
 </html>

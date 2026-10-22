@@ -2,11 +2,11 @@
   "name": "lqqelt",
   "version": "1.0.0",
   "private": true,
-  "description": "Lo que quedó en la Tierra — Experiencia narrativa interactiva y precuela transmedia del cortometraje",
+  "description": "Lo que queda en la Tierra — Experiencia narrativa interactiva y precuela transmedia del cortometraje",
   "scripts": {
     "dev": "node server.js",
     "start": "node server.js",
-    "build": "node -e \"console.log('Static build validation passed');\""
+    "build": "node scripts/validate.cjs"
   },
   "keywords": [
     "stop-motion",

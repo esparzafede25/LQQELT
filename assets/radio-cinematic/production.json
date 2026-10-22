@@ -1,0 +1,12 @@
+{
+  "imageMethod": "built-in image_gen",
+  "image": "00-radio.png",
+  "steps": [
+    {
+      "id": "power",
+      "file": "01-power.mp4",
+      "taskId": "99beeb05-6861-4f8f-817b-c6d70915ae04",
+      "prompt": "One continuous handcrafted wooden puppet shot from this EXACT frame. Eleven-year-old boy seated center starts with BOTH EMPTY hands resting on his knees. He leans forward toward the radio on the right, visibly lifts his right hand, reaches safely around the FRONT of the lamp without touching it, grasps the round knob on the radio's lower-right front corner, turns it clockwise gently. The radio dial lights softly amber. He releases the knob, withdraws his hand, leans back to his SAME stool and rests BOTH hands on his knees again. Father seated left follows the small action with his eyes and a subtle approving smile, hands on his knees. End with BOTH characters seated quietly listening, radio on. Show the complete reach, touch, turn, release and return to rest without cuts. Preserve exact carved wooden identities, child's age11, clothing, room geometry, radio design, lamp location and warm dusk light. Camera absolutely fixed, no cuts, no zoom, no morphing, no duplicate limbs, no dialogue, no lip-sync. The lamp remains stationary and untouched. Quiet natural puppet movement with a still ending."
+    }
+  ]
+}

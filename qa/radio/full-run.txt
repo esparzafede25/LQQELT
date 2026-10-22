@@ -1,0 +1,9 @@
+PASS Encendido bloquea clic repetido
+PASS Encendido llega al final real
+PASS No guarda al encender
+PASS Mala sintonía no permite seguir
+PASS 950 AM habilita escuchar
+PASS Escuchar bloquea cambios de sintonía
+PASS Relato e interferencias esperan al lector
+PASS Guarda recuerdo y desbloquea carta al terminar
+PASS Regresa y cancela esperas

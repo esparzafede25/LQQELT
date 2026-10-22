@@ -1,0 +1,3 @@
+PASS Error no guarda ni avanza
+PASS Ofrece reintento
+PASS Reintento llega al diálogo tras reproducir

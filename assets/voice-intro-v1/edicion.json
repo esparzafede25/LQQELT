@@ -1,0 +1,100 @@
+{
+  "source": "C:\\Users\\Usuario\\.codex\\.chatgpt-projects\\g-p-6ab9b82a2ba48191a0d6bfa2fc6e868b\\juego-pulido\\qa\\present\\voice-intro-v1\\original.m4a",
+  "sourceSha256": "40c51bd3e9207eb7ae80ad05a505fc8e2eac3f64ab6cd48508fe8b1a9c7bf7b2",
+  "sourceSeconds": 73.58933333333333,
+  "outputSeconds": 63.2,
+  "sampleRate": 48000,
+  "channels": 1,
+  "gainDb": 6.279999999999999,
+  "measurement": {
+    "input_i": "-29.84",
+    "input_tp": "-8.28",
+    "input_lra": "6.60",
+    "input_thresh": "-40.83",
+    "output_i": "-21.24",
+    "output_tp": "-2.00",
+    "output_lra": "5.50",
+    "output_thresh": "-32.23",
+    "normalization_type": "dynamic",
+    "target_offset": "1.24"
+  },
+  "notes": [
+    "Retakes 13.46..23.72 and 49.75..57.99 omitted; complete later takes retained.",
+    "Eight complete paragraphs; no voice cloning, pitch changes, artificial syllables or time stretch.",
+    "Cut positions checked against local ASR and quiet waveform regions; final artistic listening by user remains."
+  ],
+  "takes": [
+    {
+      "shot": 1,
+      "sourceStart": 0.65,
+      "sourceEnd": 6.98,
+      "editStart": 0.8,
+      "duration": 6.33,
+      "script": "Siempre sueño que todavía estás en casa. Que te levantaste un momento y vas a volver.",
+      "file": "VO_INTRO_01.wav"
+    },
+    {
+      "shot": 2,
+      "sourceStart": 7.09,
+      "sourceEnd": 13.46,
+      "editStart": 8.58,
+      "duration": 6.37,
+      "script": "A veces creo escuchar tu voz desde la otra pieza. Me quedo quieto, para no perderla.",
+      "file": "VO_INTRO_02.wav"
+    },
+    {
+      "shot": 3,
+      "sourceStart": 23.72,
+      "sourceEnd": 29.47,
+      "editStart": 16.4,
+      "duration": 5.75,
+      "script": "Dejaste todo en su lugar. Yo también lo dejo así. No sé dónde pondría tu ausencia.",
+      "file": "VO_INTRO_03.wav"
+    },
+    {
+      "shot": 4,
+      "sourceStart": 29.95,
+      "sourceEnd": 35.3,
+      "editStart": 23.6,
+      "duration": 5.35,
+      "script": "Quiero llegar hasta vos. Pero el pasillo se alarga cada vez que doy un paso.",
+      "file": "VO_INTRO_04.wav"
+    },
+    {
+      "shot": 5,
+      "sourceStart": 35.31,
+      "sourceEnd": 43.56,
+      "editStart": 30.4,
+      "duration": 8.25,
+      "script": "Después la casa empieza a desarmarse. Intento acordarme de algo pequeño. Cómo te reías. Cómo decías mi nombre.",
+      "file": "VO_INTRO_05.wav"
+    },
+    {
+      "shot": 6,
+      "sourceStart": 43.98,
+      "sourceEnd": 49.75,
+      "editStart": 40.1,
+      "duration": 5.77,
+      "script": "Te busco tanto que a veces dejo de verme. Los días pasan. Yo sigo en el mismo lugar.",
+      "file": "VO_INTRO_06.wav"
+    },
+    {
+      "shot": 7,
+      "sourceStart": 57.99,
+      "sourceEnd": 63.92,
+      "editStart": 47.32,
+      "duration": 5.93,
+      "script": "Me da miedo olvidar tu voz, papá. Y me da miedo que recordarla siempre duela así.",
+      "file": "VO_INTRO_07.wav"
+    },
+    {
+      "shot": 8,
+      "sourceStart": 64.95,
+      "sourceEnd": 72.05,
+      "editStart": 54.7,
+      "duration": 7.1,
+      "script": "Quiero despertarme. Pero sé que, cuando abra los ojos, tu silla va a seguir vacía.",
+      "file": "VO_INTRO_08.wav"
+    }
+  ]
+}

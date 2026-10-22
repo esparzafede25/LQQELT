@@ -1,0 +1,14 @@
+[
+  {
+    "identical": true,
+    "videoHash": "SHA256=2ef779fc502067380f1e6c7051748538e1c39918082861e724dce3bcea64d68d",
+    "original": "assets/departure-car-v5/04-sigh.mp4",
+    "new": "assets/car-sound-v1/04-start.mp4"
+  },
+  {
+    "identical": true,
+    "videoHash": "SHA256=0a46104ac0f3f5e137b28511ae15c07e2e3ed2a85d6bba02ccaaf6d15ccc9e19",
+    "original": "assets/departure-car-v5/05-away.mp4",
+    "new": "assets/car-sound-v1/05-away.mp4"
+  }
+]

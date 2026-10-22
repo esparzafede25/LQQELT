@@ -1,0 +1,47 @@
+[
+  {
+    "file": "scripts/AudioManager.js",
+    "before": "63fe8b579dbd98e1c434565a801d1d041df9b93db98e44f0291757c01e462148",
+    "after": "b756112a5db2cba667c617698356c1f325c8a7590ea5e6470184608e23cd4b91"
+  },
+  {
+    "file": "scenes/SceneManager.js",
+    "before": "29be5a254432450c61e6cb2574cb77bf988c19658ac8b6133fd80808289b1fba",
+    "after": "6801b1b8b91953785e220b7b17138758854a7bbf0b805afb479e67d62a48e430"
+  },
+  {
+    "file": "scripts/SubtitleManager.js",
+    "before": "52dcb93c97aaa158bd095614fd473674aaaf53498b3df6042d4601ff9e692190",
+    "after": "ac9cb98867a9889b6ac85e76b7a564022db0f509fab23e363f392de7806ceeaf"
+  },
+  {
+    "file": "scenes/OpeningScene.js",
+    "before": "bed1be5f3e897448b1798f9fa769c8164826a058cc2a8ec45d6c5feef34d3bf4",
+    "after": "e2b561e72e33a45ebc7fc6cb4197c193be57a2d3b39445227aeef8664d9d09d6"
+  },
+  {
+    "file": "scenes/CreditsScene.js",
+    "before": "8823db3911e4bc983b3a4746ea69625a2e3dabe580a682c4b746aed3090fbbdf",
+    "after": "4d8519b3159fc2803a706bddf1924b82e7353fa602e32e572a049b440b023e74"
+  },
+  {
+    "file": "scripts/PresentScore.js",
+    "before": null,
+    "after": "7755892ec63c81f8db05d80697de9bab816803f4879ddf7d7a566f2458b029a7"
+  },
+  {
+    "file": "qa/present/present-score.test.mjs",
+    "before": null,
+    "after": "c65f75b4429de57e3ad1f30153ee2474d6883bc6761cf3880a6cdf201a76db66"
+  },
+  {
+    "file": "assets/present-music-v1/ofelias-dream-original.mp3",
+    "before": null,
+    "after": "ea6918883539e11805ac1e17e746e43901ade6aed4e8f96a025f3d346e09832a"
+  },
+  {
+    "file": "assets/present-music-v1/PRODUCCION.md",
+    "before": null,
+    "after": "984bc8712ecbe1d0fb2c0427f43ef66bb58caacd735fcd49f4ed671fa2e5df89"
+  }
+]

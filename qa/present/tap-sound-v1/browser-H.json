@@ -1,0 +1,10 @@
+{
+  "beforeOpen": null,
+  "afterOpen": "playing",
+  "afterWash": "playing",
+  "closedSavedStepRestored": true,
+  "closedTapState": null,
+  "returnedToHall": true,
+  "finalTapState": null,
+  "logs": []
+}

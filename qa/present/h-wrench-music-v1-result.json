@@ -1,0 +1,52 @@
+[
+  {
+    "file": "scripts/AudioManager.js",
+    "before": "e89eac0d9d398b29ad007aa2125bb3bcb5109f26bd9561a3fb2572439a04fbbf",
+    "after": "46ac894df12fc2d4be165fbe7ed30a6e4c18f82ddfc21854649d1ed85ee1ed3d"
+  },
+  {
+    "file": "scenes/CreditsScene.js",
+    "before": "4d8519b3159fc2803a706bddf1924b82e7353fa602e32e572a049b440b023e74",
+    "after": "6ff7a198b2c73ba0a1199049084cece819a943ef573d53b5cae13e3097f2fb8d"
+  },
+  {
+    "file": "qa/present/wrench-music.test.mjs",
+    "before": null,
+    "after": "235320f844e1ed76f131f2c550c8562b6b4364bd0565ac7ef6b3451897e3ccd6"
+  },
+  {
+    "file": "PASADA_16_LLAVE_MUSICA.md",
+    "before": null,
+    "after": "5c2bd77955c1ec6673698dcaa2eb62a56fa5c1bf51e4407f59ad63190bca1535"
+  },
+  {
+    "file": "assets/wrench-music-v1/adios-nonino-desde-50.mp3",
+    "before": null,
+    "after": "fab6f849a1858ad09ea9a54d5e6371801f2769bdb8c1ac735535f8e1900878a0"
+  },
+  {
+    "file": "assets/wrench-music-v1/adios-nonino-original.mp3",
+    "before": null,
+    "after": "9e81012645e2e9e6215576f165b13228d172f626a062203b2ff08fbf8516feab"
+  },
+  {
+    "file": "assets/wrench-music-v1/PRODUCCION.md",
+    "before": null,
+    "after": "01e0e4ca6a577b806230ef6f4e0ae01be22fed9fcaf1a993a6a8dc23b50fe784"
+  },
+  {
+    "file": "CIERRE_PROYECTO.md",
+    "before": "8b46073d471e9207dab03a14e1673651591120a4bbe14cddb2c815cb55578b7d",
+    "after": "411b4eb7153dafbaece3b7dde972d460b4070110a31b4fca8a695ad518196be9"
+  },
+  {
+    "file": "qa/present/wrench-music-v1/browser-H.json",
+    "before": null,
+    "after": "990421438510462d838289a4fe0a2d28964a822428c82a0559aeb10649e9f17e"
+  },
+  {
+    "file": "qa/present/wrench-music-v1/workshop-H-proof.png",
+    "before": null,
+    "after": "c36fa1baee6814ef3605d4f6ac2eef3cc6ed64b68b18b2e519820b0c3976f519"
+  }
+]

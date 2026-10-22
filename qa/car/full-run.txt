@@ -1,0 +1,18 @@
+PASS Diálogo espera al lector
+PASS Caja abre selección
+PASS Volver recupera escena
+PASS Herramienta incorrecta no avanza
+PASS Bloquea clics en fetch
+PASS Clic repetido no duplica fetch
+PASS Video completo fetch
+PASS No guarda antes del cierre fetch
+PASS Bloquea clics en repair
+PASS Clic repetido no duplica repair
+PASS Video completo repair
+PASS No guarda antes del cierre repair
+PASS Bloquea clics en close
+PASS Clic repetido no duplica close
+PASS Video completo close
+PASS No guarda antes del cierre close
+PASS Guarda sólo al terminar
+PASS Salida limpia esperas

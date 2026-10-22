@@ -1,0 +1,32 @@
+[
+  {
+    "file": "scripts/DreamSoundtrack.js",
+    "before": "970643690a9773450c82dd2ac91644bf39b3aab11198252154fcce1c9bcb5c1f",
+    "after": "92c9fc5ea5e0ca220266815a6e120b9214e5ac5d2eda60bf468885d129b4bdcf"
+  },
+  {
+    "file": "qa/present/dream-audio.test.mjs",
+    "before": "d370bba68582a290560f93e165a8edc12dbe40762c6f5675eddeb2967a250b91",
+    "after": "66dac571efd6d8c4b8c7a94919b6a0a1d0889cd3eff2136de4ead261e43cf344"
+  },
+  {
+    "file": "CIERRE_PROYECTO.md",
+    "before": "c434bdd63feddce8134f155c194e46560d8c73fdbd483df794138bb1c1a9482e",
+    "after": "a9a11ddb0853753cc70227afeec9c0a2c359e2c40185d15f88d3f6bea029fb46"
+  },
+  {
+    "file": "assets/intro-music-only-v1/sueno-musica.mp3",
+    "before": null,
+    "after": "cd71771a99de77361b21bde81575c061fcd7bb326e326934b170a36e3c32a6c2"
+  },
+  {
+    "file": "assets/intro-music-only-v1/edicion.json",
+    "before": null,
+    "after": "61d6a19395cfa86fd37087ae36877c2e19a0ef21d54075ae5a92a3e26fe8d287"
+  },
+  {
+    "file": "assets/intro-music-only-v1/PRODUCCION.md",
+    "before": null,
+    "after": "401adbe5b7381427fb872418112327475cc75644a80bae8d0ead20f7f0f368dd"
+  }
+]

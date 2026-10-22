@@ -1,0 +1,72 @@
+[
+  {
+    "file": "index.html",
+    "before": "b4115ab277d235ac518ed55fd26d4b60dcb069f0efe46da345113628ae1be558",
+    "after": "fe4f7ec45755f898cb6b81eacf177bddbbccc86f5f46ac62106991779103f9ff"
+  },
+  {
+    "file": "juego.html",
+    "before": null,
+    "after": "56666eac0f7c0135a2a887baa33e1a79f273ee874ecfb58654f981016d7d37e4"
+  },
+  {
+    "file": "cortometraje.html",
+    "before": null,
+    "after": "ccf31293e131d1f34bec1d638921132ce3a402935b9be4cca73ce9062598055d"
+  },
+  {
+    "file": "styles/portal.css",
+    "before": null,
+    "after": "8cefbea164d2f69970c508b8ff5dd6d57b9bfabb00b1ad56232ac24a6580bb92"
+  },
+  {
+    "file": "scripts/portal.js",
+    "before": null,
+    "after": "09dca5534ac17e7be7507b42023e353cd682825bd394584f0c3c46d22ec826b5"
+  },
+  {
+    "file": "scripts/portal-config.js",
+    "before": null,
+    "after": "a600dc90f5b5a7fc0919e92ea39c587a62a29e6c486b64f1cead56ca090356f3"
+  },
+  {
+    "file": "PORTADA_WEB.md",
+    "before": null,
+    "after": "4ab74aee9c81d47b1e7e91e05a38c386a0af540d41916222a35d83156b6f94fa"
+  },
+  {
+    "file": "assets/portal-v1/el-corto.webp",
+    "before": null,
+    "after": "9ca57fabe961f030a167c796214c45050d949e09fe75e1f89e3d8386d050e500"
+  },
+  {
+    "file": "assets/portal-v1/el-juego.webp",
+    "before": null,
+    "after": "71919820ddaee93fd48afffd87929e6ec0324eea5bdd7a316612b220db29cfd1"
+  },
+  {
+    "file": "assets/portal-v1/la-ruta.webp",
+    "before": null,
+    "after": "937d5d0c9b7f0a76ccf000f9c2df6f64c426695a2cd89bf9526fe03e60da5ec4"
+  },
+  {
+    "file": "assets/portal-v1/PRODUCCION.md",
+    "before": null,
+    "after": "afc19fb98243ef2e6630bbed19bc063fd22ad9542b2b09d392e17c2ddaf5520c"
+  },
+  {
+    "file": "CIERRE_PROYECTO.md",
+    "before": "d336b3c71527d61658ecf76a3d2540d4ea6fb311df5d84baaf6ba21e419fdeb0",
+    "after": "c41d93cf79bfc30f98591ea324498ba28e1658785557e8b1e768e763dccf1aa8"
+  },
+  {
+    "file": "qa/present/portal-v1/browser-H.json",
+    "before": null,
+    "after": "1ff4db6aa3e626cafe132a44acb5b919feee335cf95b67a403f043c777986ac0"
+  },
+  {
+    "file": "qa/present/portal-v1/portal-H-proof.png",
+    "before": null,
+    "after": "6b746515a46b81e19d2e496bf82685ebcc0adc09011f1d73640e3f9fca05ca0f"
+  }
+]

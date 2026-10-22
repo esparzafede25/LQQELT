@@ -1,0 +1,42 @@
+[
+  {
+    "file": "scenes/PresentWalkScene.js",
+    "before": "80dc0f6506b91600da66b5dfec69af447c25a244f98a3bbad6dc4a8db36ce0ef",
+    "after": "f0ec21c37242ae66880651518ed7722113839db83c466aacca63699120704977"
+  },
+  {
+    "file": "scripts/TapSound.js",
+    "before": null,
+    "after": "ba51b3d61c9a76f97592e24ca61cff5a3a8a57171ac5e9100b3c9b670b3ef985"
+  },
+  {
+    "file": "qa/present/tap-sound.test.mjs",
+    "before": null,
+    "after": "0fc709862fb29d5e9c22299d628645e8c790ca965b06009ccd8ac77b390421cd"
+  },
+  {
+    "file": "PASADA_20_GRIFO.md",
+    "before": null,
+    "after": "7886eb9c3d16b0506852ad34fc80562b47ded3500e7f7e4c69c37128a9433dba"
+  },
+  {
+    "file": "assets/tap-sound-v1/agua-continua.mp3",
+    "before": null,
+    "after": "aa74698f1058d78433db9439e67576353f72a896ad23143da666085834ab06e1"
+  },
+  {
+    "file": "assets/tap-sound-v1/edicion.json",
+    "before": null,
+    "after": "1dd5487ecfc506fe9d863d749bc19266bbd52eda58c8409c8de1598931657f76"
+  },
+  {
+    "file": "assets/tap-sound-v1/grifo-original.mp3",
+    "before": null,
+    "after": "3bc2ccacb46021c5e5111de288a70b18f3c8aedab6e00a982819f5b39e37f724"
+  },
+  {
+    "file": "assets/tap-sound-v1/PRODUCCION.md",
+    "before": null,
+    "after": "5587684acfc5cd53d8c213f1a583180f0a074e7d9c19c78c404e4cca2812d769"
+  }
+]

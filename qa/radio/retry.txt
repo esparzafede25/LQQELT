@@ -1,0 +1,2 @@
+PASS Error ofrece reintento sin guardar
+PASS Reintento reproduce el movimiento

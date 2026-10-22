@@ -1,0 +1,173 @@
+{
+  "duration": 104.3,
+  "sampleRate": 48000,
+  "channels": 2,
+  "voiceGain": 0.72,
+  "voiceGainDb": -2.8533500713746314,
+  "tempo": 0.94,
+  "pitchChanged": false,
+  "voiceEchoSeconds": [
+    0.16,
+    0.3,
+    0.48,
+    0.72,
+    0.96
+  ],
+  "reverbTailSeconds": 1.8,
+  "musicGain": 0.65,
+  "musicDucking": 0.48,
+  "commonGain": 1,
+  "peakDb": -7.669711382625226,
+  "musicSource": "assets/intro-sound-v1/musica-original.mp3",
+  "clips": [
+    {
+      "shot": 1,
+      "imageStart": 0,
+      "imageDuration": 14,
+      "voiceStart": 3.8,
+      "voiceDuration": 7.303208333333333,
+      "source": "assets/voice-intro-v1/VO_INTRO_01.wav",
+      "sourceSha256": "d6e34f91b4fad79ac45f782e262b4ee9893847290ebc9808cd6e10a1ec079e9f",
+      "pauses": [
+        {
+          "sourceSecond": 3.168,
+          "insertedSeconds": 0.55
+        }
+      ]
+    },
+    {
+      "shot": 2,
+      "imageStart": 14,
+      "imageDuration": 12,
+      "voiceStart": 15.6,
+      "voiceDuration": 7.346604166666666,
+      "source": "assets/voice-intro-v1/VO_INTRO_02.wav",
+      "sourceSha256": "a49d5b5423620a1f6c1904803b4ad0fdacb90b0b5f98ba37019d61604a9b4ca6",
+      "pauses": [
+        {
+          "sourceSecond": 3.608,
+          "insertedSeconds": 0.55
+        }
+      ]
+    },
+    {
+      "shot": 3,
+      "imageStart": 26,
+      "imageDuration": 12.5,
+      "voiceStart": 27.6,
+      "voiceDuration": 7.067395833333333,
+      "source": "assets/voice-intro-v1/VO_INTRO_03.wav",
+      "sourceSha256": "ca17ad64ef7ff4985221ef78d994397ce8af58772d2274513bddddc226b4c81c",
+      "pauses": [
+        {
+          "sourceSecond": 1.682,
+          "insertedSeconds": 0.4
+        },
+        {
+          "sourceSecond": 3.472,
+          "insertedSeconds": 0.5
+        }
+      ]
+    },
+    {
+      "shot": 4,
+      "imageStart": 38.5,
+      "imageDuration": 11.5,
+      "voiceStart": 40.1,
+      "voiceDuration": 6.2632916666666665,
+      "source": "assets/voice-intro-v1/VO_INTRO_04.wav",
+      "sourceSha256": "a0953b7ca0eac655d4854cf25b26cb0d6ede9c6728260b4639a3a723c8cdb536",
+      "pauses": [
+        {
+          "sourceSecond": 1.716,
+          "insertedSeconds": 0.55
+        }
+      ]
+    },
+    {
+      "shot": 5,
+      "imageStart": 50.0,
+      "imageDuration": 14,
+      "voiceStart": 51.6,
+      "voiceDuration": 9.983520833333333,
+      "source": "assets/voice-intro-v1/VO_INTRO_05.wav",
+      "sourceSha256": "42823c3962bc4024edea63b2aa4f2fed71f048fc0b98b743107923da498a207d",
+      "pauses": [
+        {
+          "sourceSecond": 2.08,
+          "insertedSeconds": 0.4
+        },
+        {
+          "sourceSecond": 4.782,
+          "insertedSeconds": 0.35
+        },
+        {
+          "sourceSecond": 6.2,
+          "insertedSeconds": 0.4
+        }
+      ]
+    },
+    {
+      "shot": 6,
+      "imageStart": 64.0,
+      "imageDuration": 12.5,
+      "voiceStart": 65.6,
+      "voiceDuration": 7.028520833333333,
+      "source": "assets/voice-intro-v1/VO_INTRO_06.wav",
+      "sourceSha256": "cadb2122bb228e8f5e2f210b654e821f6f1bdd68d94c6c127afe5c4490fa1f08",
+      "pauses": [
+        {
+          "sourceSecond": 2.838,
+          "insertedSeconds": 0.5
+        },
+        {
+          "sourceSecond": 4.364,
+          "insertedSeconds": 0.35
+        }
+      ]
+    },
+    {
+      "shot": 7,
+      "imageStart": 76.5,
+      "imageDuration": 12,
+      "voiceStart": 78.1,
+      "voiceDuration": 7.150479166666667,
+      "source": "assets/voice-intro-v1/VO_INTRO_07.wav",
+      "sourceSha256": "85fd907aff6b625b5fb4ef13ba3c07201e351fe9c3982e1dc3ab1226712b3eb6",
+      "pauses": [
+        {
+          "sourceSecond": 2.152,
+          "insertedSeconds": 0.25
+        },
+        {
+          "sourceSecond": 2.88,
+          "insertedSeconds": 0.55
+        }
+      ]
+    },
+    {
+      "shot": 8,
+      "imageStart": 88.5,
+      "imageDuration": 13,
+      "voiceStart": 90.1,
+      "voiceDuration": 8.815375,
+      "source": "assets/voice-intro-v1/VO_INTRO_08.wav",
+      "sourceSha256": "993d68bb49aabd4d81d84c1c339f463650ed66e59606c6611459e05f33a0f3d4",
+      "pauses": [
+        {
+          "sourceSecond": 1.458,
+          "insertedSeconds": 0.5
+        },
+        {
+          "sourceSecond": 2.772,
+          "insertedSeconds": 0.3
+        },
+        {
+          "sourceSecond": 4.01,
+          "insertedSeconds": 0.4
+        }
+      ]
+    }
+  ],
+  "note": "Voz original con pausas añadidas sólo en fronteras silenciosas; dicción 6% más lenta sin bajar tono. Voz directa -2.85dB, eco más presente y reverberación estéreo. Planos ampliados, originales v1 intactos."
+}

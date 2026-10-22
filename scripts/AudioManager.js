@@ -4,6 +4,10 @@
  * Viento patagónico, silencio, motor, herramientas, mate, agua, radio y estática
  */
 
+import {PresentScore,PRESENT_MUSIC_SCENES} from './PresentScore.js';
+export const MATE_BIRD_SCENES = new Set(['MISSION_MATE','MISSION_MATE_ROUTE']);
+export const WRENCH_MUSIC_SCENES = new Set(['MISSION_CAR','MISSION_CAR_FILM']);
+
 export class AudioManager {
   constructor(storageManager) {
     this.storage = storageManager;
@@ -15,7 +19,7 @@ export class AudioManager {
     this.musicGain = null;
     
     this.isMuted = !this.storage.get('soundEnabled');
-    this.volume = this.storage.get('volume') || 0.8;
+    this.volume = this.storage.get('volume') ?? 0.8;
     this.activeNodes = [];
     this.currentAtmosphere = null;
   }
@@ -80,6 +84,37 @@ export class AudioManager {
     }
   }
 
+  setStoryScene(name, visible = false) {
+    if(!WRENCH_MUSIC_SCENES.has(name))this.wrenchMusic?.pause(.8);
+    else if(visible){
+      if(!this.wrenchMusic)this.wrenchMusic=new PresentScore(this,state=>{
+        if(typeof document!=='undefined'&&document.documentElement)document.documentElement.dataset.wrenchMusic=state;
+      },{src:'assets/wrench-music-v1/adios-nonino-desde-50.mp3',level:.35,duckLevel:.22});
+      this.wrenchMusic.duck(this.storyDialogueActive);this.wrenchMusic.play();
+    }
+    if(!MATE_BIRD_SCENES.has(name))this.mateBirds?.pause(.55);
+    else if(visible){
+      if(!this.mateBirds)this.mateBirds=new PresentScore(this,state=>{
+        if(typeof document!=='undefined'&&document.documentElement)document.documentElement.dataset.mateBirds=state;
+      },{src:'assets/mate-birds-v1/aves-ambiente.mp3',level:1.5,duckLevel:1});
+      this.mateBirds.duck(this.storyDialogueActive);this.mateBirds.play();
+    }
+    if(!PRESENT_MUSIC_SCENES.has(name)){this.presentScore?.pause();return;}
+    if(!visible)return;
+    if(!this.presentScore)this.presentScore=new PresentScore(this,state=>{
+      if(typeof document!=='undefined'&&document.documentElement)document.documentElement.dataset.presentMusic=state;
+    });
+    this.presentScore.duck(this.storyDialogueActive);
+    this.presentScore.play();
+  }
+
+  setStoryDialogue(active) {
+    this.storyDialogueActive=Boolean(active);
+    this.presentScore?.duck(this.storyDialogueActive);
+    this.mateBirds?.duck(this.storyDialogueActive);
+    this.wrenchMusic?.duck(this.storyDialogueActive);
+  }
+
   // --------------------------------------------------------------------------
   // GENERADORES DE RUIDO PROCEDURAL (Viento patagónico, estática, agua)
   // --------------------------------------------------------------------------
@@ -128,7 +163,15 @@ export class AudioManager {
     this.currentAtmosphere = type;
     const now = this.ctx.currentTime;
 
-    if (type === 'workshop') {
+    if (type === 'house_present') {
+      const source = this.ctx.createBufferSource();
+      source.buffer = this.createNoiseBuffer('brown'); source.loop = true;
+      const filter = this.ctx.createBiquadFilter(); filter.type = 'lowpass'; filter.frequency.value = 180;
+      const gain = this.ctx.createGain();
+      gain.gain.setValueAtTime(.0001, now); gain.gain.linearRampToValueAtTime(.09, now + 1.5);
+      source.connect(filter); filter.connect(gain); gain.connect(this.ambientGain);
+      source.start(); this.currentAmbientNodes = [source, filter, gain];
+    } else if (type === 'workshop') {
       // Viento exterior suave filtrado por paredes de chapa y madera
       const noise = this.ctx.createBufferSource();
       noise.buffer = this.createNoiseBuffer('brown');
@@ -158,12 +201,9 @@ export class AudioManager {
 
       this.currentAmbientNodes = [noise, lfo, gain, filter];
       this.playGentleDrone(110, 165, 'cold');
-    } else if (type === 'mate_morning') {
-      // Mañana soleada, atmósfera cálida y pacífica
-      this.playGentleDrone(130.81, 196.00, 'warm'); // C3 y G3
-    } else if (type === 'car_garage') {
-      // Taller, garaje, eco contenido
-      this.playGentleDrone(98.00, 146.83, 'neutral'); // G2 y D3
+    } else if (type === 'mate_morning' || type === 'car_garage') {
+      // Memories keep their recorded music and action sounds, without a tonal bed.
+      // stopAtmosphere above also clears any drone carried over from the menu.
     } else if (type === 'desert_sunset') {
       // Viento patagónico abierto y solitario
       const noise = this.ctx.createBufferSource();
@@ -256,6 +296,57 @@ export class AudioManager {
   // --------------------------------------------------------------------------
   // EFECTOS SONOROS DE ACCIÓN PUNTUAL (Foley)
   // --------------------------------------------------------------------------
+
+  // Quiet sole contact for the kitchen walks; cues follow video time.
+  playPackingContact(material = 'cloth') {
+    this.ensureContext();
+    if (!this.ctx) return;
+    if (this.ctx.state !== 'running' && typeof this.ctx.startRendering !== 'function') return;
+    const profiles = {
+      paper: ['bandpass', 1400, .10, .35], cloth: ['lowpass', 700, .06, .25],
+      leather: ['lowpass', 500, .10, .28], ceramic: ['bandpass', 1900, .025, .12],
+      metal: ['bandpass', 1700, .025, .13], soft: ['lowpass', 250, .045, .14],
+      door: ['lowpass', 300, .08, .22]
+    };
+    const [type, frequency, volume, duration] = profiles[material] || profiles.cloth;
+    const now = this.ctx.currentTime, source = this.ctx.createBufferSource();
+    source.buffer = this.createNoiseBuffer('pink');
+    const filter = this.ctx.createBiquadFilter(); filter.type = type; filter.frequency.value = frequency;
+    const gain = this.ctx.createGain();
+    gain.gain.setValueAtTime(.0001, now);
+    gain.gain.linearRampToValueAtTime(volume, now + .015);
+    gain.gain.exponentialRampToValueAtTime(.0001, now + duration);
+    source.connect(filter); filter.connect(gain); gain.connect(this.masterGain);
+    source.onended = () => { source.disconnect(); filter.disconnect(); gain.disconnect(); };
+    source.start(now); source.stop(now + duration + .02);
+    if (['ceramic', 'metal', 'door'].includes(material)) {
+      const tone = this.ctx.createOscillator(), level = this.ctx.createGain();
+      tone.frequency.setValueAtTime(material === 'door' ? 90 : material === 'metal' ? 1700 : 900, now);
+      if (material === 'door') tone.frequency.exponentialRampToValueAtTime(45, now + duration);
+      level.gain.setValueAtTime(material === 'door' ? .075 : .018, now);
+      level.gain.exponentialRampToValueAtTime(.0001, now + duration);
+      tone.connect(level); level.connect(this.masterGain);
+      tone.onended = () => { tone.disconnect(); level.disconnect(); };
+      tone.start(now); tone.stop(now + duration + .02);
+    }
+  }
+
+  playSoftStep() {
+    this.ensureContext();
+    if (!this.ctx) return;
+    const now = this.ctx.currentTime;
+    const source = this.ctx.createBufferSource();
+    source.buffer = this.createNoiseBuffer('pink');
+    const filter = this.ctx.createBiquadFilter();
+    filter.type = 'lowpass';
+    filter.frequency.value = 350;
+    const gain = this.ctx.createGain();
+    gain.gain.setValueAtTime(.001, now);
+    gain.gain.linearRampToValueAtTime(.09, now + .012);
+    gain.gain.exponentialRampToValueAtTime(.001, now + .12);
+    source.connect(filter); filter.connect(gain); gain.connect(this.masterGain);
+    source.start(now); source.stop(now + .13);
+  }
 
   // Sonido de verter agua caliente / vapor
   playPourWater() {
@@ -392,10 +483,25 @@ export class AudioManager {
   }
 
   // Arranque del motor (burro de arranque -> ronroneo parejo)
+  bindCarVideo(video) {
+    this.ensureContext();
+    if(!this.ctx||!this.masterGain)return null;
+    try{
+      const source=this.ctx.createMediaElementSource(video),gain=this.ctx.createGain();
+      gain.gain.setValueAtTime(.55,this.ctx.currentTime);
+      source.connect(gain);gain.connect(this.masterGain);
+      return {dispose(){video.muted=true;source.disconnect();gain.disconnect();}};
+    }catch{return null;}
+  }
+
   playCarStart() {
     this.ensureContext();
     if (!this.ctx) return;
+    this.stopEngine();
     const now = this.ctx.currentTime;
+    this.engineGain.gain.cancelScheduledValues(now);
+    this.engineGain.gain.setValueAtTime(.55, now);
+    this.engineStartNodes = [];
 
     // Sonido de arranque: varios giros mecánicos
     for (let i = 0; i < 4; i++) {
@@ -413,17 +519,22 @@ export class AudioManager {
       g.connect(this.engineGain);
       osc.start(t);
       osc.stop(t + 0.2);
+      this.engineStartNodes.push(osc, g);
     }
 
     // Arranque definitivo y ralentí constante
-    setTimeout(() => {
+    this.engineStartTimer = setTimeout(() => {
+      this.engineStartTimer = null;
+      this.engineStartNodes?.forEach(node => node.disconnect());
+      this.engineStartNodes = null;
       this.startEngineIdle();
     }, 950);
   }
 
   startEngineIdle() {
-    if (!this.ctx) return;
+    if (!this.ctx || this.engineNodes) return;
     const now = this.ctx.currentTime;
+    this.engineGain.gain.setTargetAtTime(.55, now, .08);
 
     const osc1 = this.ctx.createOscillator();
     const osc2 = this.ctx.createOscillator();
@@ -453,6 +564,13 @@ export class AudioManager {
   }
 
   stopEngine() {
+    clearTimeout(this.engineStartTimer);
+    this.engineStartTimer = null;
+    for (const node of this.engineStartNodes || []) {
+      try { node.stop?.(); } catch { /* A crank may already have finished. */ }
+      node.disconnect();
+    }
+    this.engineStartNodes = null;
     if (this.engineNodes) {
       const now = this.ctx ? this.ctx.currentTime : 0;
       this.engineNodes.forEach(n => {
@@ -506,6 +624,10 @@ export class AudioManager {
     heterodyne.start();
 
     this.radioStaticNodes = { noise, filter, heterodyne, hetGain, gain };
+    if(!this.radioMatch)this.radioMatch=new PresentScore(this,state=>{
+      if(typeof document!=='undefined'&&document.documentElement)document.documentElement.dataset.radioMatch=state;
+    },{src:'assets/radio-match-v1/partido-radio.mp3',level:.0007,duckLevel:.0007});
+    this.radioMatch.play();
   }
 
   tuneRadioDial(freqFactor, signalQuality) {
@@ -520,12 +642,19 @@ export class AudioManager {
     this.radioStaticNodes.heterodyne.frequency.setValueAtTime(dialHz * 0.75, now);
 
     // Si la señal es buena, la estática baja de volumen
-    const staticVol = Math.max(0.04, (1 - signalQuality) * 0.28);
+    const quality = Math.max(0,Math.min(1,signalQuality));
+    const staticVol = Math.max(this.radioMatch?.desired ? 0.10 : 0.04, (1 - quality) * 0.28);
     this.radioStaticNodes.gain.gain.setValueAtTime(staticVol, now);
     this.radioStaticNodes.hetGain.gain.setValueAtTime((1 - signalQuality) * 0.05, now);
+    if(this.radioMatch?.desired){
+      // The stadium stays behind the interference, even on the tuned station.
+      this.radioMatch.level=.0007+.0033*quality;
+      this.radioMatch.ramp(this.radioMatch.level,.3);
+    }
   }
 
   stopRadioStatic() {
+    this.radioMatch?.pause(.25);
     if (this.radioStaticNodes) {
       try {
         this.radioStaticNodes.noise.stop();
@@ -574,3 +703,4 @@ export class AudioManager {
     window.speechSynthesis.speak(utterance);
   }
 }
+

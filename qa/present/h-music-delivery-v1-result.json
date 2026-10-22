@@ -1,0 +1,37 @@
+[
+  {
+    "file": "CIERRE_PROYECTO.md",
+    "before": "44c38ebbbce710509d911e8b2a1b1ac952a70c7800bd03d1359935fe49adc8e8",
+    "after": "6dc5ef3ac0fb2f9ba1dd9e650c6ca1b95f2ed31b3c7f9ad14f23072e9ed83e06"
+  },
+  {
+    "file": "PASADA_13_VOZ_INTRO.md",
+    "before": null,
+    "after": "0f38999f9e62daaff598420ce4afdf23c85e17ad4e29b109c8c4ed7cd1de124c"
+  },
+  {
+    "file": "PASADA_14_MUSICA_PRESENTE.md",
+    "before": null,
+    "after": "5036e25510cf988be650cda818b2564c2a74b6c48661a3b6ca8cde7529bb95a7"
+  },
+  {
+    "file": "qa/present/intro-sound-v1/intro-H-proof.png",
+    "before": null,
+    "after": "23a4c28fb53c6d0c2bb2511ecfe6ac2a7cfcc781d433f09a98038c8c44fa1a02"
+  },
+  {
+    "file": "qa/present/story-music-v1/present-H-proof.png",
+    "before": null,
+    "after": "9765738834920b7b916491e993cd97a121e0d0c72c563ce493a0a74694bb5d87"
+  },
+  {
+    "file": "qa/present/story-music-v1/browser-H.json",
+    "before": null,
+    "after": "7bdaab250eac700bc770689e164bcf5801a0364111d0dff919f2d8527e352bec"
+  },
+  {
+    "file": "qa/present/story-music-v1/tests-H.txt",
+    "before": null,
+    "after": "4290015f695f9e533998a566672839121d856768b01d01dbd441c6a4b63ad39b"
+  }
+]

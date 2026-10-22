@@ -1,0 +1,10 @@
+{
+  "source": "assets/intro-sound-v1/musica-original.mp3",
+  "sourceSha256": "23a1c474d6c725d982ae592e815c3c499405e5a896e9a284e54f1e2fa0ac8125",
+  "voice": false,
+  "duration": 104.3,
+  "gain": 0.65,
+  "fadeIn": 2.8,
+  "fadeOut": 4.5,
+  "ducking": false
+}

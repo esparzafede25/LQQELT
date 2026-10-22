@@ -1,21 +1,50 @@
 # Sistema y dependencias locales
 .DS_Store
 Thumbs.db
+desktop.ini
 node_modules/
 .vscode/
 .idea/
+.tools/
+.agents/
+.gemini/
+SUBIR_A_GITHUB.bat
 
-# Logs
+# Logs y temporales
 *.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+*.tmp
+*.temp
 
-# Servidor de prueba local (opcional)
-server.js
-
+# Despliegues y credenciales
 .vercel
-
-# Variables de entorno
 .env
 .env.*
+*.pem
+*.key
+
+# Scratch y archivos temporales de trabajo
+scratch/
+scratch_*
+scratch*
+
+# Respaldos de integración
+*.before.js
+*.bak
+*.backup
+
+# Diagnóstico pesado y capturas de QA (conservando scripts de prueba, configs y documentación)
+qa/**/*.mp4
+qa/**/*.webm
+qa/**/*.png
+qa/**/*.jpg
+qa/**/*.jpeg
+qa/**/*.before.js
+qa/*.mp4
+qa/*.webm
+qa/*.png
+qa/*.jpg
+qa/*.jpeg
+qa/*.before.js

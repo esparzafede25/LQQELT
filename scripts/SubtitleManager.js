@@ -10,6 +10,8 @@ export class SubtitleManager {
     this.audio = audioManager;
     this.timeoutId = null;
     this.isDisplaying = false;
+    this.sequenceVersion = 0;
+    this.sequenceCancel = null;
   }
 
   show({ speaker = '', text = '', thought = false, duration = 4000, onComplete = null }) {
@@ -38,6 +40,7 @@ export class SubtitleManager {
     });
 
     this.isDisplaying = true;
+    this.audio?.setStoryDialogue?.(true);
 
     if (duration > 0) {
       this.timeoutId = setTimeout(() => {
@@ -101,27 +104,36 @@ export class SubtitleManager {
     });
 
     this.isDisplaying = true;
+    this.audio?.setStoryDialogue?.(true);
   }
 
   fadeOutBlock(block, onComplete) {
     if (!block || !block.parentNode) return;
     block.classList.remove('visible');
     setTimeout(() => {
+      if (block.parentNode !== this.container) return;
       if (block.parentNode) {
         block.parentNode.removeChild(block);
       }
       this.isDisplaying = false;
+      this.audio?.setStoryDialogue?.(false);
       if (onComplete) onComplete();
     }, 450);
   }
 
   clear() {
+    if (!this.sequenceShowing) {
+      this.sequenceVersion++;
+      this.sequenceCancel?.();
+      this.sequenceCancel = null;
+    }
     if (this.timeoutId) {
       clearTimeout(this.timeoutId);
       this.timeoutId = null;
     }
     this.container.innerHTML = '';
     this.isDisplaying = false;
+    this.audio?.setStoryDialogue?.(false);
   }
 
   /**
@@ -130,33 +142,28 @@ export class SubtitleManager {
    * @param {Function} onFinish 
    */
   async playSequence(sequence, onFinish = null) {
+    this.clear();
+    const version = this.sequenceVersion;
     for (const item of sequence) {
-      if (item.delay) {
-        await new Promise(r => setTimeout(r, item.delay));
-      }
-
-      if (item.voice === 'father' && this.audio) {
-        this.audio.speakFatherVoice(item.text);
-      } else if (item.voice === 'announcer' && this.audio) {
-        this.audio.speakRadioFragment(item.text, 'announcer');
-      }
-
-      const duration = item.duration || Math.max(3000, item.text.length * 75);
-
-      await new Promise(resolve => {
-        this.show({
-          speaker: item.speaker,
-          text: item.text,
-          thought: item.thought,
-          duration: duration,
-          onComplete: resolve
-        });
+      if (item.delay) await new Promise(resolve => setTimeout(resolve, item.delay));
+      if (this.sequenceVersion !== version) return false;
+      if (item.voice === 'father' && this.audio) this.audio.speakFatherVoice(item.text);
+      else if (item.voice === 'announcer' && this.audio) this.audio.speakRadioFragment(item.text, 'announcer');
+      const ok = await new Promise(resolve => {
+        this.sequenceCancel = () => resolve(false);
+        this.sequenceShowing = true;
+        try {
+          this.show({speaker:item.speaker,text:item.text,thought:item.thought,
+            duration:item.duration || Math.max(3000,item.text.length * 75),
+            onComplete:() => resolve(true)});
+        } finally { this.sequenceShowing = false; }
       });
-
-      // Pausa contemplativa entre líneas
-      await new Promise(r => setTimeout(r, 600));
+      if (!ok || this.sequenceVersion !== version) return false;
+      this.sequenceCancel = null;
+      await new Promise(resolve => setTimeout(resolve,600));
+      if (this.sequenceVersion !== version) return false;
     }
-
     if (onFinish) onFinish();
+    return true;
   }
 }

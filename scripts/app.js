@@ -1,5 +1,5 @@
 /**
- * LO QUE QUEDÓ EN LA TIERRA
+ * LO QUE QUEDA EN LA TIERRA
  * App — Punto de entrada de la aplicación, inicialización y efectos globales
  */
 
@@ -10,11 +10,19 @@ import { SceneManager } from '../scenes/SceneManager.js';
 
 import { MenuScene } from '../scenes/MenuScene.js';
 import { IntroScene } from '../scenes/IntroScene.js';
+import { PresentScene } from '../scenes/PresentScene.js';
+import { PresentKitchenScene } from '../scenes/PresentKitchenScene.js';
+import { PresentWalkScene } from '../scenes/PresentWalkScene.js';
+import { OpeningScene } from '../scenes/OpeningScene.js';
 import { MateScene } from '../scenes/MateScene.js';
+import { MateScene as MateRouteScene } from '../scenes/MateRouteScene.js';
 import { CarScene } from '../scenes/CarScene.js';
+import { CarFilmScene } from '../scenes/CarFilmScene.js';
 import { RadioScene } from '../scenes/RadioScene.js';
+import { RadioFilmScene } from '../scenes/RadioFilmScene.js';
 import { EnvelopeScene } from '../scenes/EnvelopeScene.js';
-import { DepartureScene } from '../scenes/DepartureScene.js';
+import { PackingFilmScene } from '../scenes/PackingFilmScene.js';
+import { CarDepartureScene } from '../scenes/CarDepartureScene.js';
 import { EpilogueScene } from '../scenes/EpilogueScene.js';
 import { ArchiveScene } from '../scenes/ArchiveScene.js';
 import { CreditsScene } from '../scenes/CreditsScene.js';
@@ -44,16 +52,29 @@ class App {
   }
 
   init() {
-    console.log('Iniciando Lo que quedó en la Tierra...');
+    console.log('Iniciando Lo que queda en la Tierra...');
 
     // Registrar todas las escenas
     this.sceneManager.register('MENU', new MenuScene());
-    this.sceneManager.register('INTRO', new IntroScene());
-    this.sceneManager.register('MISSION_MATE', new MateScene());
-    this.sceneManager.register('MISSION_CAR', new CarScene());
-    this.sceneManager.register('MISSION_RADIO', new RadioScene());
+    this.sceneManager.register('OPENING', new OpeningScene());
+    this.sceneManager.register('INTRO', new PresentWalkScene());
+    this.sceneManager.register('PRESENT_PREVIEW', new PresentScene());
+    this.sceneManager.register('PRESENT_KITCHEN_THIRD', new PresentKitchenScene());
+    this.sceneManager.register('PRESENT_THIRD_PREVIEW', new PresentWalkScene());
+    this.sceneManager.register('INTRO_LEGACY', new IntroScene());
+    this.sceneManager.register('PRESENT_BATHROOM', new PresentScene('bathroom'));
+    this.sceneManager.register('MISSION_MATE', new MateRouteScene());
+    this.sceneManager.register('MISSION_MATE_LEGACY', new MateScene());
+    this.sceneManager.register('MISSION_MATE_ROUTE', new MateRouteScene());
+    this.sceneManager.register('MISSION_CAR', new CarFilmScene());
+    this.sceneManager.register('MISSION_CAR_LEGACY', new CarScene());
+    this.sceneManager.register('MISSION_CAR_FILM', new CarFilmScene());
+    this.sceneManager.register('MISSION_RADIO', new RadioFilmScene());
+    this.sceneManager.register('MISSION_RADIO_LEGACY', new RadioScene());
+    this.sceneManager.register('MISSION_RADIO_FILM', new RadioFilmScene());
     this.sceneManager.register('ENVELOPE', new EnvelopeScene());
-    this.sceneManager.register('DEPARTURE', new DepartureScene());
+    this.sceneManager.register('DEPARTURE', new PackingFilmScene());
+    this.sceneManager.register('CAR_DEPARTURE', new CarDepartureScene());
     this.sceneManager.register('EPILOGUE', new EpilogueScene());
     this.sceneManager.register('ARCHIVE', new ArchiveScene());
     this.sceneManager.register('CREDITS', new CreditsScene());
@@ -236,3 +257,4 @@ window.addEventListener('DOMContentLoaded', () => {
   app.init();
   window.__APP__ = app;
 });
+

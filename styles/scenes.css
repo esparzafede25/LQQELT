@@ -673,6 +673,35 @@
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.9);
 }
 
+/* Fotografías de utilería: mapa y sobre, con la textura completa del papel. */
+.envelope-present .drawer-content {
+  width: min(92%, 900px);
+  gap: 28px;
+  align-items: stretch;
+}
+.envelope-present .drawer-item-card { width: 50%; }
+.envelope-present .drawer-item-card img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: contain;
+}
+.envelope-present .inspect-media-wrapper {
+  width: min(90%, 800px);
+  max-height: 86dvh;
+}
+.envelope-present .inspect-media-wrapper img {
+  max-height: 54dvh;
+  object-fit: contain;
+}
+@media (max-width: 600px) {
+  .envelope-present .drawer-content { gap: 12px; }
+  .envelope-present .drawer-item-card { padding: 16px 10px; gap: 10px; }
+  .envelope-present .drawer-item-title { font-size: 12px; letter-spacing: 1px; }
+  .envelope-present .drawer-item-desc { font-size: 14px; }
+  .envelope-present .inspect-caption { font-size: 17px; margin-top: 16px; }
+}
+
 /* --------------------------------------------------------------------------
    PREPARACIÓN DEL VIAJE Y EPÍLOGO
    -------------------------------------------------------------------------- */

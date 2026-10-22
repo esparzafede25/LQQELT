@@ -1,0 +1,52 @@
+[
+  {
+    "file": "scripts/AudioManager.js",
+    "before": "b756112a5db2cba667c617698356c1f325c8a7590ea5e6470184608e23cd4b91",
+    "after": "e89eac0d9d398b29ad007aa2125bb3bcb5109f26bd9561a3fb2572439a04fbbf"
+  },
+  {
+    "file": "scripts/PresentScore.js",
+    "before": "7755892ec63c81f8db05d80697de9bab816803f4879ddf7d7a566f2458b029a7",
+    "after": "23cb6178445a958003f5f6ca0c6c912183431f490e68e2610ff0c81065973dcf"
+  },
+  {
+    "file": "qa/present/mate-birds.test.mjs",
+    "before": null,
+    "after": "a21ddb2f2dbafd81d9595e35e3769818324990ed340e081edc735c89932f9899"
+  },
+  {
+    "file": "PASADA_15_AVES_MATE.md",
+    "before": null,
+    "after": "fe6c744fb5ae257ff58217645af989966d21492637b47bfd813df747d0f4f076"
+  },
+  {
+    "file": "assets/mate-birds-v1/aves-ambiente.mp3",
+    "before": null,
+    "after": "4f6603e502c2944390f97a9d38cf40171ecfef1e9253e8d870d6c065569b2cf6"
+  },
+  {
+    "file": "assets/mate-birds-v1/aves-original.mp3",
+    "before": null,
+    "after": "3c833deb149d90f36e03c80ef171074f742844987fba39cfe3f746b2ce77a07f"
+  },
+  {
+    "file": "assets/mate-birds-v1/PRODUCCION.md",
+    "before": null,
+    "after": "02ec997cb2ed59380d9660f653efe2953a847abc2e714b345a6a785cc683f5af"
+  },
+  {
+    "file": "CIERRE_PROYECTO.md",
+    "before": "6dc5ef3ac0fb2f9ba1dd9e650c6ca1b95f2ed31b3c7f9ad14f23072e9ed83e06",
+    "after": "8b46073d471e9207dab03a14e1673651591120a4bbe14cddb2c815cb55578b7d"
+  },
+  {
+    "file": "qa/present/mate-birds-v1/browser-H.json",
+    "before": null,
+    "after": "990421438510462d838289a4fe0a2d28964a822428c82a0559aeb10649e9f17e"
+  },
+  {
+    "file": "qa/present/mate-birds-v1/mate-H-proof.png",
+    "before": null,
+    "after": "3afcddd488db4a9acc130125ba0fca40f507a30c9c1e5851201e9935aea36003"
+  }
+]

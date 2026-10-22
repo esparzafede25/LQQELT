@@ -1,0 +1,37 @@
+[
+  {
+    "file": "assets/departure-car-v5/04-sigh.mp4",
+    "after": "bbf902a3887f51a55a296ce67c531e5035ee018d70318e13e96374ec0b9cfbd4",
+    "before": null
+  },
+  {
+    "file": "assets/departure-car-v5/04-sigh-end.png",
+    "after": "083aac9af9b3844a5762e9f5ca02c65a0fac4633c3559bed7e481aa678868b2e",
+    "before": null
+  },
+  {
+    "file": "assets/departure-car-v5/05-away.mp4",
+    "after": "77fecbe941915d1b263bfae0dad05e508b879a50c144ca6e939c24ea5863c753",
+    "before": null
+  },
+  {
+    "file": "assets/departure-car-v5/05-away-end.png",
+    "after": "e2ba56c717f26e92298cdc82d1f550b2fd154ca214fea98b4c6f526c77fb675b",
+    "before": null
+  },
+  {
+    "file": "assets/departure-car-v5/06-empty-road.png",
+    "after": "e2ba56c717f26e92298cdc82d1f550b2fd154ca214fea98b4c6f526c77fb675b",
+    "before": null
+  },
+  {
+    "file": "scripts/CarDepartureProgress.js",
+    "after": "92bacc7f4c6130a442dae38fe3c20ba74a309487e75e3efe549ca0331b2015ac",
+    "before": "84249ea1a175ec6793e8af0c085b01c9b88091ca4108047d38fe92dcd78f2b43"
+  },
+  {
+    "file": "scenes/EpilogueScene.js",
+    "after": "4892c30e537f52adea9a8706f9c9a8f425d8468bcc09e9c52dc155f658c100ad",
+    "before": "41fe80f65695728fb79d15d7a56e2293cdd4b99009768c87a28ea9da3d80d49d"
+  }
+]

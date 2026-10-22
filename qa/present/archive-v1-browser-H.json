@@ -1,0 +1,101 @@
+{
+  "date": "2026-10-20",
+  "origin": "http://127.0.0.33:3019",
+  "images": [
+    {
+      "complete": true,
+      "height": 1536,
+      "src": "assets/archive-v1/valentino-11.png",
+      "width": 1024
+    },
+    {
+      "complete": true,
+      "height": 1536,
+      "src": "assets/archive-v1/valentino-adolescente.png",
+      "width": 1024
+    },
+    {
+      "complete": true,
+      "height": 1536,
+      "src": "assets/archive-v1/valentino-18.png",
+      "width": 1024
+    },
+    {
+      "complete": true,
+      "height": 1024,
+      "src": "assets/archive-v1/valentino-adulto.png",
+      "width": 1536
+    },
+    {
+      "complete": true,
+      "height": 1536,
+      "src": "assets/archive-v1/padre.png",
+      "width": 1024
+    },
+    {
+      "complete": true,
+      "height": 1024,
+      "src": "assets/archive-v1/gestos-y-materiales.png",
+      "width": 1536
+    },
+    {
+      "complete": true,
+      "height": 1299,
+      "src": "assets/archive-v1/edades-y-proporciones.png",
+      "width": 1211
+    },
+    {
+      "complete": true,
+      "height": 682,
+      "src": "assets/archive-v1/concepto-madera.jpg",
+      "width": 1024
+    },
+    {
+      "complete": true,
+      "height": 1024,
+      "src": "assets/archive-v1/mapa.png",
+      "width": 1536
+    },
+    {
+      "complete": true,
+      "height": 1024,
+      "src": "assets/archive-v1/sobre.png",
+      "width": 1536
+    },
+    {
+      "complete": true,
+      "height": 941,
+      "src": "assets/mate-route/00-kitchen.png",
+      "width": 1672
+    },
+    {
+      "complete": true,
+      "height": 941,
+      "src": "assets/car-cinematic/00-workshop.png",
+      "width": 1672
+    },
+    {
+      "complete": true,
+      "height": 576,
+      "src": "assets/archive-v1/dormitorio.png",
+      "width": 1024
+    },
+    {
+      "complete": true,
+      "height": 952,
+      "src": "assets/present-bath-adult-v4/00-closed.png",
+      "width": 1652
+    }
+  ],
+  "checks": {
+    "fourArchiveTabs": true,
+    "mapEnlarged": true,
+    "escapeCloses": true,
+    "returnToMenu": true,
+    "envelopeMapInspectAndReturn": true,
+    "envelopeImageReviewed": true,
+    "envelopeDialogueReachesPacking": true
+  },
+  "consoleArchive": [],
+  "consoleEnvelope": []
+}

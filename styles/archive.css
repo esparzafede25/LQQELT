@@ -128,12 +128,116 @@
 .character-card-img-wrapper img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   transition: transform 0.5s ease;
 }
 
 .character-card:hover .character-card-img-wrapper img {
-  transform: scale(1.03);
+  transform: none;
+}
+
+.character-card-img-wrapper img[src$="valentino-adulto.png"] {
+  object-fit: cover;
+}
+
+.archive-header .btn-cinema {
+  margin-top: 22px;
+}
+
+.archive-nav-tabs { flex-wrap: wrap; }
+
+.archive-zoom-button {
+  display: block;
+  width: 100%;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  color: inherit;
+  cursor: zoom-in;
+}
+
+.archive-zoom-button:focus-visible,
+.archive-tab:focus-visible {
+  outline: 2px solid var(--accent-gold);
+  outline-offset: 4px;
+}
+
+.character-card-img-wrapper > .archive-zoom-button { height: 100%; }
+
+.archive-art-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.archive-art-grid .art-showcase { margin: 0; padding: 18px; }
+.archive-art-grid .art-showcase img {
+  display: block;
+  aspect-ratio: 3 / 2;
+  object-fit: contain;
+  background: #0b0c0e;
+  margin: 0;
+}
+
+.archive-art-grid .art-caption { margin-top: 18px; }
+.art-caption h3 {
+  font-family: var(--font-title);
+  font-size: 20px;
+  font-style: normal;
+  color: var(--paper-cream);
+  margin-bottom: 10px;
+}
+.art-caption p { line-height: 1.5; }
+.archive-intro {
+  font-family: var(--font-narrative);
+  color: var(--text-muted);
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 28px;
+  max-width: 760px;
+}
+
+.archive-lightbox {
+  max-width: min(94vw, 1500px);
+  max-height: 94dvh;
+  margin: auto;
+  padding: 20px;
+  background: #0b0d10;
+  border: 1px solid var(--accent-gold);
+  color: var(--paper-cream);
+  overflow: auto;
+}
+.archive-lightbox::backdrop { background: rgba(0, 0, 0, 0.94); }
+.archive-lightbox-close { display: block; margin: 0 0 18px auto; }
+.archive-lightbox figure { margin: 0; }
+.archive-lightbox img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: calc(88dvh - 110px);
+  object-fit: contain;
+  margin: auto;
+}
+.archive-lightbox figcaption {
+  font-family: var(--font-narrative);
+  text-align: center;
+  margin-top: 14px;
+}
+
+@media (max-width: 768px) {
+  .archive-container { padding: 70px 20px 60px; }
+  .archive-title { font-size: 27px; letter-spacing: 3px; }
+  .archive-tagline { letter-spacing: 2px; }
+  .archive-nav-tabs { gap: 8px; }
+  .archive-tab { padding: 10px; letter-spacing: 1px; font-size: 11px; }
+  .archive-tab.active::after { bottom: 0; }
+  .archive-art-grid, .character-grid { grid-template-columns: minmax(0, 1fr); }
+  .character-card-img-wrapper { height: 360px; }
+  .art-showcase { padding: 16px; }
+  .document-box { padding: 22px; }
+  .archive-lightbox { padding: 12px; }
 }
 
 .character-card-body {

@@ -1,0 +1,92 @@
+{
+  "duration": 86.3,
+  "sampleRate": 48000,
+  "channels": 2,
+  "music": "Stifled Screams — Bensound; archivo proporcionado por el usuario",
+  "musicSourceSha256": "23a1c474d6c725d982ae592e815c3c499405e5a896e9a284e54f1e2fa0ac8125",
+  "musicGain": 0.65,
+  "musicDucking": 0.48,
+  "voiceEchoSeconds": [
+    0.105,
+    0.165,
+    0.285,
+    0.43
+  ],
+  "commonGain": 1,
+  "peakDb": -5.015299822617566,
+  "clips": [
+    {
+      "shot": 1,
+      "imageStart": 0,
+      "imageDuration": 12,
+      "voiceStart": 3.8,
+      "voiceDuration": 6.33,
+      "source": "assets/voice-intro-v1/VO_INTRO_01.wav",
+      "sourceSha256": "d6e34f91b4fad79ac45f782e262b4ee9893847290ebc9808cd6e10a1ec079e9f"
+    },
+    {
+      "shot": 2,
+      "imageStart": 12,
+      "imageDuration": 10,
+      "voiceStart": 13.6,
+      "voiceDuration": 6.37,
+      "source": "assets/voice-intro-v1/VO_INTRO_02.wav",
+      "sourceSha256": "a49d5b5423620a1f6c1904803b4ad0fdacb90b0b5f98ba37019d61604a9b4ca6"
+    },
+    {
+      "shot": 3,
+      "imageStart": 22,
+      "imageDuration": 10,
+      "voiceStart": 23.6,
+      "voiceDuration": 5.75,
+      "source": "assets/voice-intro-v1/VO_INTRO_03.wav",
+      "sourceSha256": "ca17ad64ef7ff4985221ef78d994397ce8af58772d2274513bddddc226b4c81c"
+    },
+    {
+      "shot": 4,
+      "imageStart": 32,
+      "imageDuration": 9.5,
+      "voiceStart": 33.6,
+      "voiceDuration": 5.35,
+      "source": "assets/voice-intro-v1/VO_INTRO_04.wav",
+      "sourceSha256": "a0953b7ca0eac655d4854cf25b26cb0d6ede9c6728260b4639a3a723c8cdb536"
+    },
+    {
+      "shot": 5,
+      "imageStart": 41.5,
+      "imageDuration": 11.5,
+      "voiceStart": 43.1,
+      "voiceDuration": 8.25,
+      "source": "assets/voice-intro-v1/VO_INTRO_05.wav",
+      "sourceSha256": "42823c3962bc4024edea63b2aa4f2fed71f048fc0b98b743107923da498a207d"
+    },
+    {
+      "shot": 6,
+      "imageStart": 53.0,
+      "imageDuration": 10.5,
+      "voiceStart": 54.6,
+      "voiceDuration": 5.77,
+      "source": "assets/voice-intro-v1/VO_INTRO_06.wav",
+      "sourceSha256": "cadb2122bb228e8f5e2f210b654e821f6f1bdd68d94c6c127afe5c4490fa1f08"
+    },
+    {
+      "shot": 7,
+      "imageStart": 63.5,
+      "imageDuration": 10,
+      "voiceStart": 65.1,
+      "voiceDuration": 5.93,
+      "source": "assets/voice-intro-v1/VO_INTRO_07.wav",
+      "sourceSha256": "85fd907aff6b625b5fb4ef13ba3c07201e351fe9c3982e1dc3ab1226712b3eb6"
+    },
+    {
+      "shot": 8,
+      "imageStart": 73.5,
+      "imageDuration": 10,
+      "voiceStart": 75.1,
+      "voiceDuration": 7.1,
+      "source": "assets/voice-intro-v1/VO_INTRO_08.wav",
+      "sourceSha256": "993d68bb49aabd4d81d84c1c339f463650ed66e59606c6611459e05f33a0f3d4"
+    }
+  ],
+  "note": "Mezcla de originales del usuario, sin voz sintética ni cambios de velocidad. Últimos 2.8 s acompañan fundido a negro antes del despertar."
+}

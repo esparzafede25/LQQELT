@@ -1,0 +1,2 @@
+PASS Salida temprana no guarda
+PASS Salida cancela video y esperas

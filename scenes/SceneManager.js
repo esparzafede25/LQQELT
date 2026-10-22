@@ -25,12 +25,17 @@ export class SceneManager {
   }
 
   async changeScene(name, transitionType = 'black', param = null) {
+    if (this.isTransitioning) return;
     if (!this.scenes[name]) {
       console.error(`Scene ${name} does not exist`);
       return;
     }
 
     console.log(`Transitioning from ${this.currentSceneName} to ${name} (${transitionType})`);
+    this.isTransitioning = true;
+    try {
+
+    this.audio?.setStoryScene?.(name, false);
 
     // Iniciar cortina de transición
     await this.fadeTransitionOut(transitionType);
@@ -54,6 +59,13 @@ export class SceneManager {
 
     // Levantar cortina
     await this.fadeTransitionIn();
+    this.isTransitioning = false;
+    this.audio?.setStoryScene?.(name, true);
+    const visible = this.currentScene.onVisible?.();
+    if (visible?.catch) visible.catch(error => console.error('Scene performance failed', error));
+    } finally {
+      this.isTransitioning = false;
+    }
   }
 
   fadeTransitionOut(type) {
