@@ -48,3 +48,7 @@ qa/*.png
 qa/*.jpg
 qa/*.jpeg
 qa/*.before.js
+qa/**/*-result.json
+qa/*-result.json
+qa/
+

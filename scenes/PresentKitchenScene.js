@@ -1,4 +1,5 @@
 import { PresentScene } from './PresentScene.js';
+import {mediaPath} from '../scripts/MediaAssets.js';
 
 /** Independent third-person kitchen entry while the bathroom is in production. */
 export class PresentKitchenScene extends PresentScene {
@@ -33,7 +34,7 @@ export class PresentKitchenScene extends PresentScene {
 
   async chairPoster(file, visit) {
     const image = new Image();
-    image.src = `assets/present-chair-v1/${file}`;
+    image.src = mediaPath(`assets/present-chair-v1/${file}`);
     try { await image.decode(); }
     catch { return false; }
     if (!this.alive || this.chairVisit !== visit) return false;
@@ -86,7 +87,7 @@ export class PresentKitchenScene extends PresentScene {
     this.lock();
     this.room = 'kitchen';
     this.frame.dataset.room = 'kitchen';
-    this.still.src = 'assets/present-third-person/kitchen-base-v1.png';
+    this.still.src = mediaPath('assets/present-third-person/kitchen-base-v1.png');
     this.still.alt = 'Valentino, sin mochila, sentado frente a la silla vacía de papá. El mate, la radio y las herramientas siguen en la cocina.';
     try { await this.still.decode(); }
     catch { if (this.alive) this.fail(() => this.showRoom()); return; }
@@ -106,12 +107,12 @@ export class PresentKitchenScene extends PresentScene {
     const mate = this.storage.get('MATE_COMPLETED');
     const car = this.storage.get('CAR_COMPLETED');
     const radio = this.storage.get('RADIO_COMPLETED');
-    // Completion unlocks the next memory, but the object remains a replay trigger.
+    // Completed objects remain clickable for Valentino's response, without replaying.
     this.spot('mate', 'El mate', 46, 43, 6, 13, () => this.remember('MISSION_MATE'));
     this.spot('chair', 'La silla de papá', 71, 44, 14, 12, () => this.look());
     this.spot('plant', 'Mirar la planta', 0, 25, 13, 29, () => this.observe('Me olvidé de regarla.'));
-    this.spot('tools', 'Las herramientas', 90, 33, 10, 14, () => !mate ? this.observe('Primero, un mate.') : car ? this.observe('La diez sigue ahí.') : this.remember('MISSION_CAR'));
-    this.spot('radio', 'Escuchar la radio', 81, 35, 8, 11, () => !car ? this.observe('Ahora no.') : radio ? this.observe('Sólo estática.') : this.remember('MISSION_RADIO'));
+    this.spot('tools', 'Las herramientas', 90, 33, 10, 14, () => !mate ? this.observe('Primero, un mate.') : this.remember('MISSION_CAR'));
+    this.spot('radio', 'Escuchar la radio', 81, 35, 8, 11, () => !car ? this.observe('Ahora no.') : this.remember('MISSION_RADIO'));
     if (radio) this.spot('drawer', 'Abrir el cajón', 91, 49, 8, 7, () => this.remember('ENVELOPE', 'black'));
   }
 }

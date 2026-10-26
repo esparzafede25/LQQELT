@@ -26,6 +26,8 @@ import { CarDepartureScene } from '../scenes/CarDepartureScene.js';
 import { EpilogueScene } from '../scenes/EpilogueScene.js';
 import { ArchiveScene } from '../scenes/ArchiveScene.js';
 import { CreditsScene } from '../scenes/CreditsScene.js';
+import {isMobileEdition} from './MediaAssets.js';
+import {installMobileUI} from './MobileUI.js';
 
 class App {
   constructor() {
@@ -83,7 +85,8 @@ class App {
     this.setupCursor();
     this.setupDustParticles();
     this.setupTopBar();
-    this.setupParallax();
+    if(!isMobileEdition())this.setupParallax();
+    installMobileUI(this.stage);
 
     // Comenzar en la escena solicitada o en el Menú Principal
     const urlParams = new URLSearchParams(window.location.search);
@@ -127,6 +130,7 @@ class App {
   // PARTÍCULAS DE POLVO FLOTANTES (Atmósfera artesanal en contraluz)
   // --------------------------------------------------------------------------
   setupDustParticles() {
+    if(isMobileEdition())return;
     if (!this.dustCanvas) return;
     const ctx = this.dustCanvas.getContext('2d');
     let width = this.dustCanvas.width = window.innerWidth;

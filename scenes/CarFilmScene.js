@@ -1,5 +1,6 @@
 import { resolveMemoryReturnScene } from '../scripts/PresentProgress.js';
 import { MateScene as FilmScene } from './MateRouteScene.js';
+import {mediaPath,mediaPreload} from '../scripts/MediaAssets.js';
 
 const ROOT = 'assets/car-cinematic/';
 export const CAR_ACTIONS = [
@@ -25,7 +26,7 @@ export class CarFilmScene extends FilmScene {
     this.layer.className = 'mate-film car-film';
     this.layer.setAttribute('aria-label', 'Pasame la diez. Valentino y su padre en el taller');
     this.layer.innerHTML = `<div class="mate-frame">
-      <img class="mate-shot" src="${ROOT}00-workshop.png" alt="Valentino de 18 años junto a su padre, auto con capó abierto y herramientas a la derecha" draggable="false">
+      <img class="mate-shot" src="${mediaPath(ROOT+'00-workshop.png')}" alt="Valentino de 18 años junto a su padre, auto con capó abierto y herramientas a la derecha" draggable="false">
       <div class="mate-clips"></div><div class="mate-hotspots"></div>
       <div class="mate-title"><span>RECUERDO II</span><h1>Pasame la diez</h1></div>
       <div class="mate-caption" role="status" aria-live="polite"><button type="button" class="mate-speech"><span></span><p></p><small>Clic para seguir</small></button></div>
@@ -39,8 +40,8 @@ export class CarFilmScene extends FilmScene {
     this.videos = {};
     for (const action of CAR_ACTIONS) {
       const video = document.createElement('video');
-      video.className = 'mate-clip'; video.src = ROOT + action.file;
-      video.preload = 'metadata'; video.muted = true; video.playsInline = true;
+      video.className = 'mate-clip'; video.src = mediaPath(ROOT + action.file);
+      video.preload = mediaPreload('metadata'); video.muted = true; video.playsInline = true;
       video.setAttribute('aria-hidden', 'true');
       this.layer.querySelector('.mate-clips').appendChild(video);
       this.videos[action.id] = video;

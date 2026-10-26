@@ -1,3 +1,4 @@
+import {mediaPath,mediaHTML} from '../scripts/MediaAssets.js';
 /**
  * LO QUE QUEDÓ EN LA TIERRA
  * ArchiveScene — Sección de Archivo, Museo Virtual y Making Of
@@ -16,7 +17,7 @@ export class ArchiveScene {
     const layer = document.createElement('div');
     layer.className = 'scene-layer';
 
-    layer.innerHTML = `
+    layer.innerHTML = mediaHTML(`
       <div class="archive-container">
         <div class="archive-header">
           <div class="archive-tagline">MUSEO VIRTUAL & PROCESO ARTÍSTICO</div>
@@ -143,7 +144,7 @@ export class ArchiveScene {
           </div>
         </div>
       </div>
-    `;
+    `);
 
     container.appendChild(layer);
     this.controller = new AbortController();

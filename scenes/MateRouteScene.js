@@ -1,5 +1,6 @@
 import { resolveMemoryReturnScene } from '../scripts/PresentProgress.js';
 import { MateScene as DialogueScene } from './MateScene.js';
+import {mediaPath,mediaPreload} from '../scripts/MediaAssets.js';
 
 const ROOT = 'assets/mate-route/';
 // Positions refer to the full kitchen image, before the camera crop.
@@ -35,7 +36,7 @@ export class MateScene extends DialogueScene {
     this.layer.setAttribute('aria-label', 'Preparar y compartir el mate con papá');
     this.layer.innerHTML = `<div class="mate-frame">
       <div class="mate-camera-window"><div class="mate-world">
-        <img class="mate-shot" src="${ROOT}00-kitchen.png" alt="Cocina: ventana a la izquierda, mesa con papá en el centro y mesada a la derecha" draggable="false">
+        <img class="mate-shot" src="${mediaPath(ROOT+'00-kitchen.png')}" alt="Cocina: ventana a la izquierda, mesa con papá en el centro y mesada a la derecha" draggable="false">
         <div class="mate-clips"></div><div class="mate-hotspots"></div>
       </div></div>
       <div class="mate-title"><span>RECUERDO I</span><h1>Una mañana cualquiera</h1></div>
@@ -52,8 +53,8 @@ export class MateScene extends DialogueScene {
     for (const action of ACTIONS) {
       const video = document.createElement('video');
       video.className = 'mate-clip';
-      video.src = ROOT + action.file;
-      video.preload = 'metadata';
+      video.src = mediaPath(ROOT + action.file);
+      video.preload = mediaPreload('metadata');
       video.muted = true;
       video.playsInline = true;
       video.setAttribute('aria-hidden', 'true');

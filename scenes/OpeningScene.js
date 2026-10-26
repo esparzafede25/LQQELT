@@ -1,4 +1,5 @@
 import {DreamSoundtrack} from '../scripts/DreamSoundtrack.js';
+import {mediaPath,mediaPreload} from '../scripts/MediaAssets.js';
 
 export const DREAM_SHOTS = [
   ['assets/nightmare/01-empty-chair-v1.png', 'Una silla vacía y un mate, rodeados de oscuridad.', 'Siempre sueño que todavía estás en casa. Que te levantaste un momento y vas a volver.', 'left', 14000],
@@ -21,10 +22,10 @@ export class OpeningScene {
     this.layer = document.createElement('section');
     this.layer.className = 'opening-scene';
     this.layer.setAttribute('aria-label','Introducción: la pesadilla y el despertar de Valentino');
-    this.layer.innerHTML = `<img src="assets/present-third-person/bedroom-sleep-v1.png" alt="Valentino duerme en su pieza, bajo la luz fría de la mañana.">
-      <video muted playsinline preload="auto" src="assets/present-home-v1/bedroom-wake-adult-v2.mp4"></video>
+    this.layer.innerHTML = `<img src="${mediaPath('assets/present-third-person/bedroom-sleep-v1.png')}" alt="Valentino duerme en su pieza, bajo la luz fría de la mañana.">
+      <video muted playsinline preload="${mediaPreload()}" src="${mediaPath('assets/present-home-v1/bedroom-wake-adult-v2.mp4')}"></video>
       <div class="opening-dream" aria-label="La pesadilla">
-        ${DREAM_SHOTS.map(([src,alt])=>`<img src="${src}" alt="${alt}">`).join('')}
+        ${DREAM_SHOTS.map(([src,alt])=>`<img src="${mediaPath(src)}" alt="${alt}">`).join('')}
         <div class="dream-shadow" aria-hidden="true"></div>
       </div>
       <div class="opening-title"><h1>Lo que queda en la Tierra</h1></div>

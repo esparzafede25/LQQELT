@@ -4,6 +4,7 @@
  * "LO QUE QUEDA EN LA TIERRA" -> "CONTINÚA EN EL CORTOMETRAJE"
  */
 
+import {mediaPath} from '../scripts/MediaAssets.js';
 export class EpilogueScene {
   constructor() {
     this.sceneManager = null;
@@ -17,10 +18,10 @@ export class EpilogueScene {
     this.timers = new Set();
 
     const layer = document.createElement('div');
-    layer.className = 'scene-layer';
-    layer.style.backgroundImage = "url('assets/departure-car-v5/06-empty-road.png')";
+    layer.className = 'scene-layer sunrise-ending';
 
     layer.innerHTML = `
+      <div class="sunrise-road"><img src="${mediaPath('assets/departure-car-v12/05-empty-road.png')}" alt="La ruta vacía bajo la luz del amanecer. El auto ya se fue."></div>
       <div id="final-blackout" style="position:absolute; top:0; left:0; width:100%; height:100%; background:#000; opacity:0; transition:opacity 3.5s ease; z-index:650; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; padding:40px;">
         <h1 id="title-part-1" style="font-family:var(--font-title); font-size:42px; letter-spacing:8px; color:var(--paper-cream); margin-bottom:24px; opacity:0; transition:opacity 2s ease;">
           LO QUE QUEDA EN LA TIERRA

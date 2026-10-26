@@ -1,12 +1,13 @@
 import {PACKING_ACTIONS as actions,PACKING_POSTERS as posters,resolvePackingFilmStep,packedAfterStep} from '../scripts/PackingFilmProgress.js';
 import {applyPackingTone} from '../scripts/PresentVisualTone.js';
 import {bindVideoSoundCues} from '../scripts/VideoSoundCues.js';
+import {mediaPath,mediaPreload} from '../scripts/MediaAssets.js';
 
 const packingSounds = [
-  [[.19,'playPackingContact','cloth'],[.60,'playPackingContact','ceramic']],
-  [[.19,'playPackingContact','cloth'],[.60,'playPackingContact','metal']],
-  [[.22,'playPackingContact','paper'],[.60,'playPackingContact','paper']],
-  [[.22,'playPackingContact','paper'],[.60,'playPackingContact','paper']],
+  [[.19,'playPackingContact','cloth'],[.74,'playPackingContact','ceramic']],
+  [[.19,'playPackingContact','cloth'],[.78,'playPackingContact','metal']],
+  [[.30,'playPackingContact','paper'],[.73,'playPackingContact','paper']],
+  [[.30,'playPackingContact','paper'],[.73,'playPackingContact','paper']],
   [[.16,'playPackingContact','leather'],[.34,'playPackingContact','leather'],[.44,'playPackingContact','cloth']]
 ];
 
@@ -24,6 +25,7 @@ export class PackingFilmScene {
       <footer><p role="status"></p><button class="packing-action" type="button"></button></footer>`;
     container.appendChild(this.layer);
     this.still=this.layer.querySelector('img');this.video=this.layer.querySelector('video');
+    this.video.preload=mediaPreload();
     this.spot=this.layer.querySelector('.present-walk-spot');this.action=this.layer.querySelector('.packing-action');
     this.status=this.layer.querySelector('[role="status"]');
     this.soundCues=bindVideoSoundCues(this.video,this.audio,()=>packingSounds[this.index]||[],()=>this.alive&&this.phase==='playing');
@@ -59,7 +61,7 @@ export class PackingFilmScene {
   async show(){
     const visit=this.visit;
     this.phase='loading';this.lock(true);
-    const image=new Image();image.src=posters[this.index];
+    const image=new Image();image.src=mediaPath(posters[this.index]);
     try{await image.decode();}catch{if(this.alive&&this.visit===visit)this.fail('image');return;}
     if(!this.alive||this.visit!==visit)return;
     this.still.src=image.src;
@@ -70,7 +72,7 @@ export class PackingFilmScene {
     this.spot.hidden=atCar||holdingBag;
     if(!atCar&&!holdingBag){
       const [,label,file,area]=actions[this.index];
-      this.video.src=file;this.video.load();
+      this.video.src=mediaPath(file);this.video.load();
       this.spot.setAttribute('aria-label',label);
       ['left','top','width','height'].forEach((key,n)=>this.spot.style[key]=`${area[n]}%`);
     }

@@ -1,0 +1,50 @@
+:root{--mobile-tray-height:0px;color-scheme:dark}
+html,body{height:100%;height:100dvh;overscroll-behavior:none;touch-action:manipulation}
+.mobile-game #app-viewport{position:fixed;inset:0;width:100%;height:100%;max-height:none;max-width:none;transform:none}
+.mobile-game #screen-stage{position:absolute;inset:58px 0 calc(var(--mobile-tray-height) + 12px);width:100%;height:auto;aspect-ratio:auto;box-shadow:none}
+.mobile-game #top-bar{top:env(safe-area-inset-top,0px);left:max(8px,env(safe-area-inset-left));right:max(8px,env(safe-area-inset-right));height:50px;opacity:1!important;transform:none!important;pointer-events:auto!important;background:#090c10ed;border-bottom:1px solid #ffffff18}
+.mobile-game .top-bar-title{display:none}.mobile-game .top-bar-right{width:100%;justify-content:space-between;gap:4px}
+.mobile-game .top-btn{min-width:44px;min-height:44px;padding:8px 10px;font-size:11px;letter-spacing:.06em}
+.mobile-game #dust-canvas,.mobile-game #custom-cursor,.mobile-game #grain-overlay,.mobile-game .cinema-bar{display:none!important}
+.mobile-game #vignette-overlay{opacity:.10;pointer-events:none}
+.mobile-action-tray{position:fixed;z-index:910;left:0;right:0;bottom:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;padding:12px max(12px,env(safe-area-inset-right)) max(12px,env(safe-area-inset-bottom)) max(12px,env(safe-area-inset-left));background:linear-gradient(#0c1014f5,#090c10);border-top:1px solid #bca98140}
+.mobile-action-tray[hidden]{display:none}.mobile-action-tray button{font:500 13px/1.35 var(--font-ui);min-height:48px;padding:10px;border:1px solid #bba58255;border-radius:5px;background:#1a2026;color:#eee3d2;touch-action:manipulation}
+.mobile-action-tray button:only-child{grid-column:1/-1}.mobile-action-tray button:active{background:#38434a}.mobile-action-tray button:focus-visible{outline:2px solid #e4c38e}
+.mobile-game .mate-object,.mobile-game .present-object{min-width:44px;min-height:44px}
+.mobile-game .mate-object::after,.mobile-game .present-object::after{opacity:.7}
+.mobile-game .mate-caption{position:fixed!important;left:12px!important;right:12px!important;top:auto!important;bottom:max(18px,env(safe-area-inset-bottom))!important;width:auto!important;max-width:700px;margin:0 auto;z-index:905}
+.mobile-game .mate-speech{padding:15px 16px 12px;background:#141414f5;min-height:76px}.mobile-game .mate-speech::after{display:none}
+.mobile-game .mate-caption p{font-size:19px;line-height:1.4}.mobile-game .mate-caption span{font-size:11px}.mobile-game .mate-caption small{font-size:10px}
+.mobile-game .mate-camera-nav{position:fixed;bottom:calc(var(--mobile-tray-height) + 20px);left:12px;right:12px}
+.mobile-game .mate-camera-nav button{min-width:64px;min-height:44px}.mobile-game .mate-guidance{display:none}
+.mobile-game .radio-film-tuner{position:fixed;top:auto;bottom:18px;left:12px;right:12px;padding:12px;z-index:905}
+.mobile-game .radio-film-tuner input{min-height:44px}.mobile-game .radio-film-tuner button{min-height:48px}
+.mobile-game .car-tool-choice{position:fixed;inset:auto 12px 18px;padding:16px 8px;z-index:905}.mobile-game .car-tool-choice button{min-height:48px}
+.mobile-game .present-walk{padding:8px 8px 12px;gap:8px}.mobile-game .present-walk footer{gap:8px;justify-content:center}
+.mobile-game .present-walk footer p{flex-basis:100%;min-width:0;text-align:center;font-size:13px}.mobile-game .present-walk footer button{min-height:48px;padding:11px 13px;font-size:14px}
+.mobile-game .present-footer{width:95%}.mobile-game .present-help{min-height:44px;font-size:11px}
+.mobile-game .menu-container{padding:16px 20px 30px;overflow-y:auto;justify-content:center}.mobile-game .menu-header{margin-bottom:24px}
+.mobile-game .menu-title{font-size:clamp(23px,6vw,42px);letter-spacing:.10em;line-height:1.35}.mobile-game .menu-tagline{font-size:9px;letter-spacing:.13em;line-height:1.8;margin-top:8px}
+.mobile-game .menu-options{gap:10px;width:min(100%,300px)}.mobile-game .menu-btn{min-height:48px;letter-spacing:.17em;font-size:12px;padding:12px}
+.mobile-game .menu-footer{position:static;font-size:8px;line-height:1.7;text-align:center;margin-top:24px}
+.mobile-game #subtitles-container{position:fixed;bottom:max(16px,env(safe-area-inset-bottom));width:calc(100% - 24px)}
+.mobile-game .subtitle-block{padding:15px 18px;max-height:45dvh;overflow-y:auto}.mobile-game .subtitle-text{font-size:20px;line-height:1.45}.mobile-game .subtitle-speaker-badge{font-size:10px;letter-spacing:.18em}
+.mobile-game .dream-narration,.mobile-game .dream-narration[data-side=right]{top:auto;bottom:80px;left:12px;right:12px;width:auto;padding:12px 15px;background:#080b0ee8}
+.mobile-game .dream-narration>p{font-size:19px;line-height:1.4}.mobile-game .opening-scene button{min-height:44px;bottom:12px;padding:10px 12px;font-size:12px}
+.mobile-game .opening-skip{right:12px}.mobile-game .opening-retry,.mobile-game .opening-sound-retry{left:12px}
+.mobile-game .envelope-present .drawer-content{width:95%;flex-wrap:wrap;overflow-y:auto;max-height:calc(100dvh - 100px);padding:12px 0}
+.mobile-game .envelope-present .drawer-item-card{width:100%;max-width:420px;min-height:44px;padding:12px}.mobile-game .envelope-present .drawer-item-card img{max-height:180px}
+.mobile-game .envelope-present .inspect-media-wrapper{width:95%;max-height:calc(100dvh - 80px);overflow-y:auto}.mobile-game .envelope-present .inspect-media-wrapper img{max-height:40dvh}
+.mobile-game #final-blackout{padding:20px!important}.mobile-game #title-part-1{font-size:clamp(22px,5vw,38px)!important;letter-spacing:.12em!important}.mobile-game #title-part-2{font-size:11px!important;letter-spacing:.13em!important;line-height:1.6}
+.mobile-game #final-nav-buttons{flex-wrap:wrap;justify-content:center;gap:10px!important}.mobile-game .btn-cinema{min-height:44px;padding:11px 15px;font-size:11px}
+.mobile-game .archive-container{padding:12px 16px 35px}.mobile-game .archive-title{font-size:26px}.mobile-game .archive-nav-tabs{display:flex;overflow-x:auto;justify-content:flex-start;gap:8px}.mobile-game .archive-tab{min-height:44px;flex-shrink:0;padding:10px;font-size:10px}.mobile-game .character-grid{grid-template-columns:1fr}
+@media(orientation:landscape) and (max-height:540px){
+ .mobile-game #screen-stage{inset:48px 0 calc(var(--mobile-tray-height) + 4px)}
+ .mobile-action-tray{display:flex;overflow-x:auto;padding:6px 10px;gap:6px}.mobile-action-tray[hidden]{display:none}.mobile-action-tray button{flex:1 0 auto;min-height:44px;padding:8px 12px}
+ .mobile-game .mate-camera-nav{bottom:calc(var(--mobile-tray-height) + 8px)}.mobile-game .mate-camera-nav button{min-height:38px;padding:5px 10px}
+ .mobile-game .mate-caption{left:12%!important;right:12%!important;bottom:8px!important}.mobile-game .mate-speech{min-height:65px;padding:9px 14px}.mobile-game .mate-caption p{font-size:17px}.mobile-game .mate-caption small{margin-top:3px}
+ .mobile-game .menu-container{flex-direction:row;gap:28px;padding:8px 24px}.mobile-game .menu-header{width:44%;margin:0}.mobile-game .menu-title{font-size:25px}.mobile-game .menu-options{width:44%;gap:5px}.mobile-game .menu-btn{min-height:38px;padding:7px}.mobile-game .menu-footer{display:none}
+ .mobile-game .dream-narration,.mobile-game .dream-narration[data-side=right]{left:3%;right:auto;width:42%;bottom:60px}.mobile-game .dream-narration>p{font-size:17px}
+ .mobile-game .envelope-present .drawer-content{flex-wrap:nowrap}.mobile-game .envelope-present .drawer-item-card{width:48%}.mobile-game .envelope-present .drawer-item-card img{max-height:90px}
+ .mobile-game .present-walk footer p{flex-basis:auto;flex:1}.mobile-game .present-walk footer button{min-height:44px;padding:8px 12px}
+}

@@ -1,5 +1,6 @@
 import {PRESENT_WALK_STAGES as stages, PRESENT_WALK_EMPTY, PRESENT_WALK_TO_KITCHEN, resolveWalkStep} from '../scripts/PresentWalkProgress.js';
 import {TapSound} from '../scripts/TapSound.js';
+import {mediaPath,mediaPreload} from '../scripts/MediaAssets.js';
 
 export class PresentWalkScene {
   async enter(container) {
@@ -19,6 +20,7 @@ export class PresentWalkScene {
     container.appendChild(this.layer);
     this.still = this.layer.querySelector('img');
     this.video = this.layer.querySelector('video');
+    this.video.preload=mediaPreload();
     this.tap=new TapSound(this.audio,state=>{if(this.alive)this.layer.dataset.tapSound=state;});
     this.tap.prepare();
     this.spot = this.layer.querySelector('.present-walk-spot');
@@ -63,7 +65,7 @@ export class PresentWalkScene {
     if (!this.alive || !['ready','video-error'].includes(this.phase) || this.index !== 1) return;
     const visit = this.visit;
     this.destination = 'kitchen'; this.phase = 'playing'; this.lock(true);
-    this.video.src = PRESENT_WALK_TO_KITCHEN; this.video.load();
+    this.video.src = mediaPath(PRESENT_WALK_TO_KITCHEN); this.video.load();
     this.status.textContent = 'Ir a la cocina…';
     this.timer = setTimeout(()=>{if(this.alive && this.visit === visit && this.phase === 'playing')this.fail();},45000);
     try { await this.video.play(); }
@@ -80,7 +82,7 @@ export class PresentWalkScene {
     this.layer.dataset.room=room.toLowerCase();
     this.layer.dataset.restored = image.startsWith('assets/present-bath-adult-v4/') ? 'true' : 'false';
     const next = new Image();
-    next.src = completed ? PRESENT_WALK_EMPTY : image;
+    next.src = mediaPath(completed ? PRESENT_WALK_EMPTY : image);
     try { await next.decode(); }
     catch { if (this.alive && this.visit === visit) this.fail('image'); return; }
     if (!this.alive || this.visit !== visit) return;
@@ -90,7 +92,7 @@ export class PresentWalkScene {
     this.spot.hidden = completed;
     this.kitchen.hidden = this.kitchenSpot.hidden = index !== 1;
     if (!completed) {
-      this.video.src = file; this.video.load();
+      this.video.src = mediaPath(file); this.video.load();
       this.spot.setAttribute('aria-label', label);
       ['left','top','width','height'].forEach((key,n) => this.spot.style[key] = `${area[n]}%`);
     }

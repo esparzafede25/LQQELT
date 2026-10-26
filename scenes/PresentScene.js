@@ -1,4 +1,5 @@
 import { resolvePresentRoom } from '../scripts/PresentProgress.js';
+import {mediaPath,mediaPreload} from '../scripts/MediaAssets.js';
 const ROOT = 'assets/present-cinematic/';
 const ROOMS = {
   bedroom: ['bedroom.png', 'Dormitorio vacío, cama deshecha y una puerta hacia el pasillo.'],
@@ -130,7 +131,7 @@ export class PresentScene {
     this.room = room;
     this.frame.dataset.room = room;
     const file = room === 'bathroom' && this.bathState === 'closed' ? 'bathroom-closed.png' : ROOMS[room][0];
-    this.still.src = ROOT + file;
+    this.still.src = mediaPath(ROOT + file);
     this.still.alt = ROOMS[room][1];
     try { await this.still.decode(); }
     catch { if (this.alive) this.fail(() => this.showRoom(room, false)); return; }
@@ -179,11 +180,11 @@ export class PresentScene {
       if (['dry', 'closed'].includes(this.bathState)) this.spot('leave', 'Volver al pasillo', 92, 12, 8, 76, go('hall'));
     } else {
       const mate = this.storage.get('MATE_COMPLETED'), car = this.storage.get('CAR_COMPLETED'), radio = this.storage.get('RADIO_COMPLETED');
-      this.spot('mate', 'El mate', 48, 44, 7, 12, () => mate ? this.observe('Se enfrió.') : this.remember('MISSION_MATE'));
+      this.spot('mate', 'El mate', 48, 44, 7, 12, () => this.remember('MISSION_MATE'));
       this.spot('chair', 'Mirar la silla', 70, 44, 10, 11, () => this.look());
       this.spot('plant', 'Mirar la planta', 2, 26, 15, 21, () => this.observe('Me olvidé de regarla.'));
-      this.spot('tools', 'Las herramientas', 90, 34, 10, 13, () => !mate ? this.observe('Primero, un mate.') : car ? this.observe('La diez sigue ahí.') : this.remember('MISSION_CAR'));
-      this.spot('radio', 'Escuchar la radio', 82, 36, 8, 10, () => !car ? this.observe('Ahora no.') : radio ? this.observe('Sólo estática.') : this.remember('MISSION_RADIO'));
+      this.spot('tools', 'Las herramientas', 90, 34, 10, 13, () => !mate ? this.observe('Primero, un mate.') : this.remember('MISSION_CAR'));
+      this.spot('radio', 'Escuchar la radio', 82, 36, 8, 10, () => !car ? this.observe('Ahora no.') : this.remember('MISSION_RADIO'));
       if (radio) this.spot('drawer', 'Abrir el cajón', 90, 48, 9, 7, () => this.remember('ENVELOPE', 'black'));
       this.spot('hall', 'Volver al pasillo', 0, 73, 8, 25, go('hall'));
     }
@@ -222,7 +223,8 @@ export class PresentScene {
     this.video.pause();
     // Keep the previous gesture's still visible while the next clip loads.
     this.video.classList.remove('visible');
-    this.video.src = assetRoot + file;
+    this.video.preload=mediaPreload();
+    this.video.src = mediaPath(assetRoot + file);
     this.video.muted = true;
     return new Promise(resolve => {
       let settled = false;
@@ -295,11 +297,23 @@ export class PresentScene {
   }
 
   remember(name, transition = 'warm-fade') {
+    const completed = {MISSION_MATE:'MATE_COMPLETED', MISSION_CAR:'CAR_COMPLETED', MISSION_RADIO:'RADIO_COMPLETED'}[name];
+    // Keep the object clickable, but never replay a completed memory or reset its progress.
+    if (completed && this.storage.get(completed)) return this.declineMemory();
     this.lock();
     const origin = this.sceneManager.currentSceneName;
     this.storage.set('PRESENT_RETURN_SCENE', ['INTRO', 'PRESENT_KITCHEN_THIRD'].includes(origin) ? origin : 'PRESENT_PREVIEW');
     this.storage.set('PRESENT_MEMORY_RETURN', true);
     this.sceneManager.changeScene(name, transition);
+  }
+
+  async declineMemory() {
+    const signal = this.controller.signal;
+    this.lock();
+    const completed = await this.subtitles.playSequence([{
+      speaker:'VALENTINO', text:'Por hoy, prefiero dejarlo ahí.', thought:true, duration:3200
+    }]);
+    if (completed && this.alive && !signal.aborted) this.arm();
   }
 
   exit() {

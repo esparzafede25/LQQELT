@@ -1,0 +1,9 @@
+/* The light follows video time. No warping, new movement, or wall-clock animation. */
+.sunrise-road{isolation:isolate;overflow:hidden}
+.sunrise-ending{--dawn-brightness:1.05;--dawn-saturation:1;--dawn-cold:0;--dawn-sun:1;--dawn-sunY:35%}
+.departure-on-road .sunrise-road img,.departure-on-road .sunrise-road video,.sunrise-ending .sunrise-road img{filter:brightness(var(--dawn-brightness)) saturate(var(--dawn-saturation)) contrast(1.025)}
+.sunrise-road::before{content:'';position:absolute;inset:0;z-index:2;pointer-events:none;opacity:var(--dawn-sun);background:radial-gradient(circle at 8% var(--dawn-sunY),#fff3c9 0 .65%,#ffe8b0 .9%,#f7ca7840 2.7%,transparent 16%);clip-path:polygon(0 0,100% 0,100% 43%,92% 45%,87% 46%,80% 45%,74% 47%,67% 44%,62% 46%,57% 43%,52% 45%,48% 44%,43% 43%,40% 41%,37% 39%,34% 42%,30% 40%,27% 37%,25% 35%,23% 37%,21% 36%,18% 40%,15% 39%,12% 42%,9% 41%,6% 43%,3% 42%,0 41%)}
+.car-departure.departure-on-road .sunrise-road::after,.sunrise-ending .sunrise-road::after{content:'';position:absolute;inset:0;z-index:3;background:#344858;mix-blend-mode:color;opacity:var(--dawn-cold);pointer-events:none}
+.car-departure:not(.departure-on-road) .sunrise-road::before{display:none}
+.sunrise-ending .sunrise-road{position:absolute;left:50%;top:50%;width:min(calc(100% - 32px),calc((100dvh - 190px)*16/9));aspect-ratio:16/9;transform:translate(-50%,-50%)}
+.sunrise-ending .sunrise-road img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}

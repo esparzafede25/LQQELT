@@ -1,4 +1,5 @@
 import { MateScene as FilmScene } from './MateRouteScene.js';
+import {mediaPath,mediaPreload} from '../scripts/MediaAssets.js';
 
 const ROOT = 'assets/radio-cinematic/';
 export class RadioFilmScene extends FilmScene {
@@ -10,7 +11,7 @@ export class RadioFilmScene extends FilmScene {
     this.layer = document.createElement('section'); this.layer.className = 'mate-film radio-film';
     this.layer.setAttribute('aria-label', 'Quedate, que falta poco. Escuchar la radio con papá');
     this.layer.innerHTML = `<div class="mate-frame">
-      <img class="mate-shot" src="${ROOT}00-radio.png" alt="Valentino de 11 años y su padre sentados junto a una radio al atardecer">
+      <img class="mate-shot" src="${mediaPath(ROOT+'00-radio.png')}" alt="Valentino de 11 años y su padre sentados junto a una radio al atardecer">
       <div class="mate-clips"></div><div class="mate-hotspots"></div>
       <div class="mate-title"><span>RECUERDO III</span><h1>Quedate, que falta poco</h1></div>
       <div class="mate-caption" role="status" aria-live="polite"><button type="button" class="mate-speech"><span></span><p></p><small>Clic para seguir</small></button></div>
@@ -21,7 +22,7 @@ export class RadioFilmScene extends FilmScene {
     container.appendChild(this.layer);
     for (const [key,selector] of Object.entries({frame:'.mate-frame',still:'.mate-shot',caption:'.mate-caption',hotspots:'.mate-hotspots',guidance:'.mate-guidance',tuner:'.radio-film-tuner',mediaError:'.mate-media-error'})) this[key]=this.layer.querySelector(selector);
     this.world=this.frame; this.dial=this.tuner.querySelector('input'); this.listen=this.tuner.querySelector('button');
-    const video=document.createElement('video'); video.className='mate-clip'; video.src=ROOT+'01-power.mp4'; video.preload='auto'; video.muted=true; video.playsInline=true; video.setAttribute('aria-hidden','true');
+    const video=document.createElement('video'); video.className='mate-clip'; video.src=mediaPath(ROOT+'01-power.mp4'); video.preload=mediaPreload(); video.muted=true; video.playsInline=true; video.setAttribute('aria-hidden','true');
     this.layer.querySelector('.mate-clips').appendChild(video); this.videos={power:video};
     const fit=()=>{const w=Math.min(container.clientWidth,Math.max(160,container.clientHeight-190)*16/9);this.frame.style.width=`${w}px`;this.frame.style.height=`${w*9/16}px`;if(this.advanceDialogue)this.placeDialogue();};
     this.observer=new ResizeObserver(fit);this.observer.observe(container);fit();
@@ -86,8 +87,8 @@ export class RadioFilmScene extends FilmScene {
       ['RELATOR','...últimos minutos en el reloj...'],
       ['INTERFERENCIA','...la estela... sector sur...']
     ])if(!await this.transmission(speaker,text))return;
+    if(!await this.transmission('RELATOR','Se está yendo... ¡Se vaaaa!'))return;
     this.audio.stopRadioStatic();
-    if(!await this.transmission('VALENTINO · AHORA','Se está yendo... ¡Se vaaaa!'))return;
     if(!await this.wait(1500))return;
     this.state='complete';this.storage.set('RADIO_COMPLETED',true);this.storage.set('RADIO_RETURN_PENDING',true);this.sceneManager.changeScene('PRESENT_KITCHEN_THIRD','black');
   }

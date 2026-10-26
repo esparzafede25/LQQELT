@@ -1,10 +1,12 @@
 import {CAR_CLIPS as clips,CAR_POSTERS as posters,resolveCarStage} from '../scripts/CarDepartureProgress.js';
 import {bindVideoSoundCues} from '../scripts/VideoSoundCues.js';
+import {applyDepartureLight} from '../scripts/DepartureLight.js';
+import {mediaPath,mediaPreload} from '../scripts/MediaAssets.js';
 
 const carSounds = [
   [[.20,'playPackingContact','leather'],[.82,'playPackingContact','soft']],
-  [[.30,'playPackingContact','cloth']],
-  [[.15,'playPackingContact','door']], [], []
+  [[.03,'playPackingContact','door'],[.30,'playPackingContact','cloth']],
+  [[.15,'playPackingContact','cloth']], [], []
 ];
 
 export class CarDepartureScene {
@@ -21,10 +23,12 @@ export class CarDepartureScene {
     this.layer.innerHTML='<div class="present-walk-frame"><img alt=""><video muted playsinline preload="auto"></video></div><footer><p role="status"></p><button class="car-action" type="button"></button></footer>';
     container.appendChild(this.layer);
     this.still=this.layer.querySelector('img');this.video=this.layer.querySelector('video');
+    this.video.preload=mediaPreload();
     this.videoAudio=this.audio.bindCarVideo?.(this.video);
     this.status=this.layer.querySelector('[role="status"]');this.action=this.layer.querySelector('.car-action');
     this.soundCues=bindVideoSoundCues(this.video,this.audio,()=>carSounds[this.index]||[],()=>this.alive&&this.phase==='playing');
     const frame=this.layer.querySelector('.present-walk-frame');
+    frame.classList.add('sunrise-road');
     const fit=()=>{
       const width=Math.min(Math.max(160,container.clientWidth-32),Math.max(100,container.clientHeight-120)*1024/576);
       frame.style.width=width+'px';frame.style.height=width*576/1024+'px';
@@ -32,7 +36,8 @@ export class CarDepartureScene {
     this.observer=new ResizeObserver(fit);this.observer.observe(container);fit();
     const options={signal:this.controller.signal};
     this.action.addEventListener('click',()=>this.play(),options);
-    this.video.addEventListener('playing',()=>{if(this.alive&&this.phase==='playing'){this.video.classList.add('visible');this.startPlaybackAudio();}},options);
+    this.video.addEventListener('playing',()=>{if(this.alive&&this.phase==='playing'){this.video.classList.add('visible');this.startPlaybackAudio();this.followLight();}},options);
+    this.video.addEventListener('seeked',()=>{if(this.index===4)this.updateLight();},options);
     this.video.addEventListener('ended',()=>this.finishAction(),options);
     this.video.addEventListener('error',()=>{if(this.alive&&this.phase==='playing'&&this.video.error)this.fail();},options);
     await this.show();
@@ -40,20 +45,29 @@ export class CarDepartureScene {
   onVisible() {
     if(this.alive&&this.phase==='ready'&&this.index!==3)return this.play();
   }
+  updateLight(){applyDepartureLight(this.layer,this.video.duration>0?this.video.currentTime/this.video.duration:0);}
+  followLight(){
+    if(this.lightFrame!=null)cancelAnimationFrame(this.lightFrame);
+    if(!this.alive||this.phase!=='playing'||this.index!==4)return;
+    this.updateLight();
+    this.lightFrame=requestAnimationFrame(()=>this.followLight());
+  }
   async show() {
     const visit=this.visit;
     this.phase='loading';this.action.disabled=true;
-    const image=new Image();image.src=posters[this.index];
+    const image=new Image();image.src=mediaPath(posters[this.index]);
     try{await image.decode();}catch{if(this.alive&&this.visit===visit)this.fail('image');return;}
     if(!this.alive||this.visit!==visit)return;
     this.still.src=image.src;
-    this.still.alt=['Valentino junto al auto, con la mochila preparada.','La mochila está dentro del auto.','Valentino se sienta al volante.','Valentino dentro del auto, con la puerta cerrada.','Valentino respira antes de partir.','El auto se aleja por la ruta.'][this.index];
+    this.still.alt=['Valentino junto al auto, con la mochila preparada.','La mochila está dentro del auto.','Valentino termina de acomodarse en el asiento.','Valentino dentro del auto, con la puerta cerrada.','Valentino respira antes de partir.','La ruta queda vacía después de la partida.'][this.index];
     this.video.pause();this.video.classList.remove('visible');
     const road=this.index>=4;
     this.layer.classList.toggle('departure-on-road',road);
+    if(this.lightFrame!=null)cancelAnimationFrame(this.lightFrame);
+    applyDepartureLight(this.layer,this.index===5?1:0);
     this.layer.style.setProperty('--present-brightness',road?'1':'.94');
     this.layer.style.setProperty('--present-saturation',road?'1':'.84');
-    if(this.index<clips.length){this.video.src=clips[this.index];this.video.load();}
+    if(this.index<clips.length){this.video.src=mediaPath(clips[this.index]);this.video.load();}
     this.action.textContent=this.index===3?'Arrancar el motor':'Continuar';
     this.status.textContent=['La mochila viene conmigo.','Todavía pesa.','Es hora de irse.','Ya está todo.','Un último respiro.','El camino sigue.'][this.index];
     this.phase='ready';this.action.disabled=false;
@@ -101,6 +115,7 @@ export class CarDepartureScene {
   exit() {
     this.alive=false;this.visit=(this.visit||0)+1;this.playId++;
     clearTimeout(this.timer);this.controller?.abort();this.observer?.disconnect();
+    if(this.lightFrame!=null)cancelAnimationFrame(this.lightFrame);
     this.soundCues?.dispose();this.audio.stopEngine?.();
     this.videoAudio?.dispose();this.videoAudio=null;
     this.video?.pause();this.video?.removeAttribute('src');this.video?.load();

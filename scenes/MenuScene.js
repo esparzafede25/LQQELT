@@ -3,6 +3,7 @@
  * MenuScene — Pantalla inicial sobria y cinematográfica
  */
 
+import {mediaPath} from '../scripts/MediaAssets.js';
 export class MenuScene {
   constructor() {
     this.sceneManager = null;
@@ -17,7 +18,7 @@ export class MenuScene {
 
     const layer = document.createElement('div');
     layer.className = 'scene-layer';
-    layer.style.backgroundImage = "url('assets/backgrounds/title_menu_bg.jpg')";
+    layer.style.backgroundImage = `url('${mediaPath('assets/backgrounds/title_menu_bg.jpg')}')`;
 
     layer.innerHTML = `
       <div class="menu-container">

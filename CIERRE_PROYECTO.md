@@ -135,3 +135,30 @@ Por pedido del usuario se retiró la voz grabada de la introducción. DreamSound
 ## 22/10/2026 — Bloqueo tras introducción en GitHub
 
 Confirmados seis medios del recorrido ausentes en HEAD 6b5586f por exclusión de qa. Recursos de despertar/dormitorio/pasillo copiados idénticos a assets/present-home-v1 y rutas activas corregidas. Validación exige assets para medios del recorrido. Cuatro verificaciones aprobadas. Ver CORRECCION_PUBLICACION.md y qa/present/production-paths-v1/media.json. Falta que usuario publique esta corrección desde Antigravity; no se hizo push.
+
+
+## Entrega de calidad visual V12 — 22/10/2026
+
+PASADA ENTREGADA en staging y en H, después de revisión visual y pruebas. Quedan superados los estados anteriores que dicen «no integrado», «calculando» o «sin aprobar» para los candidatos efectivamente usados. No reejecutar integradores ni renders terminados.
+
+31clips activos comprobados en altura1080 y decodificados completos:13con restauración moderada de detalle,11HDoriginales conservados y7acciones reconstruidas (5mochila +2montajeinterior). Los2pasillos conservan aspecto1872x1080; resto1920x1080. Las7fuentesSR con geometría rechazada NO están activas. Valentino conserva cuerpo/cara/cuello nativamente animados; objetos sobre actor nativo, sin cabeza pegada.
+
+Mochila completa jugada por clics, recarga tras llave recuperó2/4 correctamente;5acciones y salida alauto. Ingreso sustituye plano exterior deforme por corte alinterior y acomodo25+12cuadros; puerta suena al corte, no tarde sobre ventana cerrada. Suspiro y alejamiento conservan grabación real delauto (hashpayload idéntico) y ruta vacía alfinal. Niveles/música y diálogos aprobados conservados.
+
+Prueba de introducción SIN SALTAR desdeINICIAR: ocho planos +despertar llegaron a dormitorio jugable sinerror. Dormitorio->pasillo->baño, abrir/lavar/cerrar/salir->pasillo->cocina, silla baja cabeza y regresa; mate abre recuerdoI. Recorridos nuevos reproducidos con el tono frío/oscuro real del juego. Validación40scripts/49cinemáticos/20walk y6tests funcionales PASS.31mediosH coinciden porSHA con staging revisado. Main3019: ingreso completo, botónmotor, suspiro, ruta y título final comprobados, consola sinerrores.
+
+Integrados36archivos con preflight SHA de TODOS los destinos antes de escribir, backups-main-v12 y sustitución temporal/atómica por archivo. Antigravity preservado; Hantes coincidía con baselineStage. Ningún sources editado, sin publicaciónGitHub, sin descargas/modelos nuevos/Runway/compras. Publicación anterior corregida por44b3528 según confirmación usuario; esta pasadaV12 todavía debe publicarse conAntigravity, incluyendo nuevas carpetasassets/departure-motion-v12 ydeparture-car-v12.
+
+Evidencia actual: qa/present/deformation-v11/{staging-v12.json,h-quality-v12-result.json,active-v12-checks.json,main-v12-checks.json,gameplay-v12.json,browser-checks.json}; fotosmain-v12-car-reviewed.png ymain-v12-ending-verified.png. Backups Stage/H separados. Informe raíz CALIDAD_VISUAL_V12.md. URL probada: http://localhost:3019/juego.html (portada: http://localhost:3019/).
+
+Revisión artística por muestras, cuadros intermedios críticos y continuidad; no se promete geometría perfecta píxel a píxel. No dar por buenos otros prototiposV10/TPS/rigid-props.py antiguos: siguen rechazados. Se cierra el seguimiento de esta pasada tras entregar enlace; futuras observaciones del usuario serán correcciones nuevas.
+
+
+## 24/10/2026 — Recuerdos una sola vez y relator
+
+Mate, llave y radio ya completados no vuelven a iniciar desde la cocina: muestran pensamiento de VALENTINO, «Por hoy, prefiero dejarlo ahí.», y devuelven los controles sin alterar el progreso. Compatible con partidas guardadas; una partida nueva habilita los recuerdos nuevamente. «Se está yendo... ¡Se vaaaa!» cierra la intervención de RELATOR antes de apagar la estática; la frase de Valentino se conserva al regresar al presente. Ver PASADA_23_RECUERDOS_UNA_VEZ.md y qa/present/memory-once-v1/integration.json. Cinco pruebas funcionales y validador PASS; revisión real de mate completo, segundo clic/recarga y cierre del relator. Tres archivos integrados en H con respaldo y SHA previos. No modifica audio/video, sources o GitHub; usuario publica con Antigravity.
+
+
+## 25/10/2026 — Amanecer y edición móvil entregados
+
+Entregado en H: transición de gris azulado a amanecer sincronizada con el video; sol y ruta vacía conservados en epílogo. Nueva tarjeta de celular y juego-movil.html, controles táctiles, 31 videos y 57 imágenes livianas. Ver AMANECER_Y_CELULAR.md para tamaños, pruebas y publicación. 26 pruebas funcionales PASS; validador Stage/H PASS; medios originales preservados por SHA. 114 archivos integrados con preflight y respaldo. Evidencia en qa/present/sunrise-mobile-v1; no repetir integrador ni lote de medios. Sin sources/GitHub/Runway/Comfy modificados. Publicación desde Antigravity a cargo del usuario.

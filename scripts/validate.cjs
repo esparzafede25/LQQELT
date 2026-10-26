@@ -87,6 +87,7 @@ const walkSource = fs.readFileSync(path.join(root, 'scripts/PresentWalkProgress.
 const walkFiles = new Set([...walkSource.matchAll(/'([^']+\.(?:png|mp4))'/g)].map(match => match[1]));
 for (const file of ['01-bow.mp4','01-bow-end.png','02-return.mp4','02-return-end.png']) walkFiles.add(`assets/present-chair-v1/${file}`);
 for (const match of openingSource.matchAll(/src="([^"]+\.(?:png|mp4))"/g)) walkFiles.add(match[1]);
+for (const match of openingSource.matchAll(/mediaPath\('([^']+\.(?:png|mp4))'\)/g)) walkFiles.add(match[1]);
 for (const file of walkFiles) {
   assert.ok(file.startsWith('assets/'), `Production media outside assets (may be excluded from deploy): ${file}`);
   const bytes = fs.readFileSync(path.join(root, file));
@@ -95,4 +96,15 @@ for (const file of walkFiles) {
   assert.equal(bytes.subarray(video ? 4 : 1, video ? 8 : 4).toString(), video ? 'ftyp' : 'PNG', `Invalid walk candidate: ${file}`);
 }
 console.log(`Validated ${walkFiles.size} present walk candidate assets (visual approval pending).`);
+const mobileSource=fs.readFileSync(path.join(root,'scripts/MobileAssets.js'),'utf8');
+const mobileAssets=JSON.parse(mobileSource.slice(mobileSource.indexOf('=')+1).trim().replace(/;$/,''));
+assert.equal(Object.keys(mobileAssets).filter(file=>file.endsWith('.mp4')).length,31,'Mobile edition must cover all active clips');
+for(const [source,target] of Object.entries(mobileAssets)){
+  assert.ok(target.startsWith('assets/mobile-v1/'),'Mobile media must be deployable');
+  assert.ok(fs.statSync(path.join(root,source)).size>1000,`Missing mobile source: ${source}`);
+  assert.ok(fs.statSync(path.join(root,target)).size>1000,`Missing mobile asset: ${target}`);
+}
+assert.ok(fs.readFileSync(path.join(root,'index.html'),'utf8').includes('experience mobile-card'),'Mobile portal entry required');
+assert.ok(fs.readFileSync(path.join(root,'juego-movil.html'),'utf8').includes('data-edition="mobile"'),'Mobile entry must select lightweight media');
+console.log(`Validated ${Object.keys(mobileAssets).length} mobile media files and portal entry.`);
 console.log(`Validated ${count} scripts, relative imports and ${11 + routeFiles.length + carFiles.length + 3 + presentFiles.length + thirdPersonFiles.length + dreamFiles.length} cinematic assets. Present: ${presentIsMain ? 'main route' : 'development preview'}.`);

@@ -1,3 +1,4 @@
+import {mediaPath,mediaHTML} from '../scripts/MediaAssets.js';
 /**
  * LO QUE QUEDÓ EN LA TIERRA
  * Secuencia Final — El Sobre + El Mapa
@@ -23,9 +24,9 @@ export class EnvelopeScene {
 
     const layer = document.createElement('div');
     layer.className = 'scene-layer grade-present envelope-present';
-    layer.style.backgroundImage = "url('assets/present-third-person/kitchen-base-v1.png')";
+    layer.style.backgroundImage = `url('${mediaPath('assets/present-third-person/kitchen-base-v1.png')}')`;
 
-    layer.innerHTML = `
+    layer.innerHTML = mediaHTML(`
       <!-- Presencia de Valentino junto al cajón -->
       <div class="drawer-modal">
         <div class="drawer-content">
@@ -44,7 +45,7 @@ export class EnvelopeScene {
           </div>
         </div>
       </div>
-    `;
+    `);
 
     container.appendChild(layer);
 
@@ -83,13 +84,13 @@ export class EnvelopeScene {
 
       const modal = document.createElement('div');
       modal.className = 'inspect-modal';
-      modal.innerHTML = `
+      modal.innerHTML = mediaHTML(`
         <div class="inspect-media-wrapper">
           <img src="assets/archive-v1/mapa.png" alt="Mapa de la Ruta 40 con una cruz junto al árbol del kilómetro 142">
           <div class="inspect-caption">"Ruta 40... El árbol solitario del kilómetro 142. Allí donde él estuvo cuando tenía 23 años."</div>
           <button class="btn-cinema" style="margin-top: 24px;">VOLVER AL CAJÓN</button>
         </div>
-      `;
+      `);
       layer.appendChild(modal);
 
       const closeBtn = modal.querySelector('button');
@@ -110,7 +111,7 @@ export class EnvelopeScene {
 
       const modal = document.createElement('div');
       modal.className = 'inspect-modal';
-      modal.innerHTML = `
+      modal.innerHTML = mediaHTML(`
         <div class="inspect-media-wrapper">
           <!-- Enfocamos el sobre y las manos, NUNCA el papel interior desplegado -->
           <img src="assets/archive-v1/sobre.png" alt="Sobre de papel envejecido dirigido a Valentino, sin mostrar su contenido">
@@ -118,7 +119,7 @@ export class EnvelopeScene {
             Valentino desliza los dedos y abre el sobre...
           </div>
         </div>
-      `;
+      `);
       layer.appendChild(modal);
 
       // Leyendas en pantalla: estos fragmentos no llevan voz ni etiqueta V.O.
